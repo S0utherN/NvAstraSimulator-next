@@ -1,0 +1,341 @@
+Step 7 astronomical scene data (local reviewed numerical derivatives)
+
+NGC 7009: Walsh, Monreal-Ibero, Barlow, Ueta, Wesson, Zijlstra, Kimeswenger,
+Leal-Ferreira and Otsuka (2018), A&A 620 A169; CDS J/A+A/620/A169.
+https://cdsarc.cds.unistra.fr/ftp/J/A+A/620/A169/
+H-beta and [OIII]4959 are independent source maps. H-alpha and [OIII]5007
+in this simulator are explicitly assumed line-ratio derivatives.
+
+H-alpha all-sky template: D. Finkbeiner (2003), version 1.1, using WHAM,
+VTSS and SHASSA; distributed by NASA LAMBDA.
+https://lambda.gsfc.nasa.gov/product/foreground/fg_halpha_info.html
+Nominal 6 arcmin resolution is retained as source metadata. OIII is absent.
+
+Original FITS and papers are not distributed. Public accessibility does not
+establish a reviewed redistribution licence for every contributing data set.
+These derivatives remain local pending any separately authorized publication.
+
+Step 5 statistical algorithms and official test vectors
+
+NumPy 2.3.3 distributions.c: Poisson PTRS and Gamma rejection algorithm references.
+https://github.com/numpy/numpy/blob/v2.3.3/numpy/random/src/distributions/distributions.c
+
+Copyright (c) 2005-2025, NumPy Developers.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+       copyright notice, this list of conditions and the following
+       disclaimer in the documentation and/or other materials provided
+       with the distribution.
+
+    * Neither the name of the NumPy Developers nor the names of any
+       contributors may be used to endorse or promote products derived
+       from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Random123: Philox4x32-10 and known-answer vectors.
+https://github.com/DEShawResearch/random123
+
+/** @page LICENSE
+Copyright 2010-2012, D. E. Shaw Research.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+* Redistributions of source code must retain the above copyright
+  notice, this list of conditions, and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions, and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+* Neither the name of D. E. Shaw Research nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+Circular field morphology references (0.2.0, local evaluation)
+------------------------------------------------------------
+DSS2 red photographic survey cutouts served through CDS hips2fits, using
+CDS/P/DSS2/red. This research made use of the hips2fits service, developed
+at CDS, Strasbourg, France. DSS material originates from the Digitized Sky
+Survey / STScI and the contributing photographic surveys. Source overview:
+https://irsa.ipac.caltech.edu/data/hips/CDS/DSS2/red/
+https://alasky.cds.unistra.fr/hips-image-services/hips2fits
+Cutouts are used for explicitly assumed morphology; not measured emission
+line maps or calibrated radiance. The raw FITS are not redistributed.
+
+Hipparcos and Tycho Catalogues, ESA 1997, ESA SP-1200; CDS catalogue I/239.
+https://cdsarc.cds.unistra.fr/ftp/I/239/ReadMe
+HIP identifiers, ICRS positions at epoch J1991.25 and V magnitude rankings
+are used in lightweight derived scene lists. Stellar spectral shape and
+flux zero point are this project's assumptions, not ESA measurements.
+
+The new wide fields reuse Finkbeiner (2003) Halpha v1.1 data distributed by
+NASA LAMBDA, incorporating WHAM/VTSS/SHASSA; earlier acknowledgements apply.
+Original masked datasets remain separately available in the simulator.
+Sources are credited; full public redistribution permission review is
+incomplete. This local delivery does not constitute a public publication.
+
+--- Eyepiece app (atlas v2, 2026-09-27) ---
+
+Northern Sky Narrowband Survey (NSNS) DR0.2 by Stefan Ziegenbalg:
+Halpha, [O III] 500.7 nm and [S II] 671.7/673.0 nm maps in Rayleighs.
+http://www.simg.de/nebulae3/dr0_2 ; doi:10.3847/2515-5172/adfec7
+Licence: Creative Commons Attribution-NonCommercial-ShareAlike 4.0.
+Cutouts obtained through the CDS hips2fits service. Derived maps are
+resampled, rescaled to W m^-2 sr^-1, clipped at zero and asinh-encoded;
+any redistribution of these derivatives must keep this attribution and
+the same licence, non-commercially.
+
+Gaia Data Release 3 (Gaia Collaboration, 2023, A&A 674, A1), CDS catalogue
+I/355, queried through VizieR TAP: positions, G and BP-RP. Johnson V and
+B-V are derived with the Gaia DR3 documentation Table 5.9 relations.
+Hipparcos (ESA 1997, CDS I/239) supplies stars brighter than V = 7.
+
+Orion nebula line ratios: Esteban C., Peimbert M., Garcia-Rojas J., Ruiz
+M. T., Peimbert A., Rodriguez M., 2004, MNRAS 355, 229 (Table 2, observed
+fluxes). Numbers are cited; no text or figure of the paper is included.
+Colour temperatures: Ballesteros F. J., 2012, EPL 97, 34008.
+
+--- Eyepiece app 0.4.0 (tube, objective, atmosphere; 2026-09-27) ---
+
+ESO SkyCalc Sky Model Calculator (Noll et al. 2012, A&A 543, A92; Jones
+et al. 2013, A&A 560, A91): the airglow components flux_ael + flux_arc
+of the same Paranal requests already used for the natural sky were
+re-downloaded and split out as a float32 derivative (airglow slider).
+The target transmission uses the ESO transmission rows of that model.
+
+EBI versus temperature: Li Xiaofeng et al. (李晓峰 等), 超二代与三代像增强器
+性能比较, Infrared Technology (红外技术) 2022, 44(8), Fig. 8 (GaAs and
+Na2KSb(Cs) curves), digitized from a user-supplied screenshot. Numbers
+only; no figure or text of the paper is included.
+
+Domestic Gen III preset: the "Modeled Gen III thin-film" responsivity
+curve from a user-supplied figure, digitized; a user model, not a
+measured datasheet.
+
+Gaussian approximation of the Airy core (sigma = 0.42 lambda N): Zhang B.,
+Zerubia J., Olivo-Marin J.-C., 2007, Applied Optics 46, 1819.
+
+--- Eyepiece app 0.4.1 (tube mechanisms from published measurements) ---
+
+Only numbers and relations are cited from these papers (user-supplied
+copies); no text, table or figure of any paper is included.
+  胡中 等, Infrared Technology (红外技术) 2026, 48(5): ion-barrier film
+    transmittance versus cathode voltage.
+  李晓峰 等, Infrared Technology 2022, 44(8): filmed/thin-filmed tubes,
+    SNR versus cathode voltage, EBI versus temperature.
+  曾进能 等, Infrared Technology 2025, 47(6): SNR versus luminance gain.
+  曾进能 等, MCP输入增强膜对像增强器主要性能的影响研究, Infrared
+    Technology 2020, 42(8): 735-741 (detection efficiency, MgO film).
+  杨武丽 等, Journal of Applied Optics (应用光学) 2022, 43(6): phosphor
+    luminous efficiencies.
+  李亚情 等, Infrared Technology 2022, 44(8): temperature drift of
+    cathode sensitivity and screen efficiency.
+  李晓峰 等, 影响超二代像增强器最高增益的因数分析, Acta Photonica Sinica
+    (光子学报) 2022, 51(3): 0304001 (sample SNR/sensitivity/EBI; dark
+    scintillations; optical feedback).
+  李晓峰 等, 超二代像增强器分辨力随输入照度变化研究, Infrared Technology
+    2022, 44(4): 377-382 (EBI/SNR samples; cathode gap 0.15 mm).
+  王子薇 等, 微光像增强器低照度分辨力分析, Optoelectronic Technology
+    (光电子技术) 2024, 44(4): 350-354 (Gen 2+/Gen III samples).
+  李晓峰 等, 超二代像增强器多碱阴极电子逸出机理研究, Infrared Technology
+    2012, 34(12): 729-733 (915 nm absorption limit).
+  李晓峰 等, 高性能超二代像增强器及发展, Infrared Technology 2021, 43(9):
+    811-816; 潘京生, 像增强器的迭代性能及其评价标准, Infrared Technology
+    2020, 42(6): 509-518 (typical EBI and noise-factor values).
+--- Eyepiece app 0.5.0 (new targets, 135-2000 mm, 80 deg southern scenes) ---
+
+Cutouts obtained through the CDS hips2fits service (Boch & Fernique;
+HiPS by CDS / survey teams); only processed derivatives are included:
+  SHASSA, Southern H-Alpha Sky Survey Atlas: Gaustad J. E., McCullough
+    P. R., Rosing W., Van Buren D., 2001, PASP 113, 1326; courtesy of
+    Swarthmore College; HiPS ov-gso/P/SHASSA and ov-gso/P/SHASSA/CONT
+    (D. Paradis, IRAP/CADE). Hα in deci-Rayleigh and the continuum image.
+  The Digitized Sky Survey II (red and blue plates of the UK Schmidt
+    SERC-ER / SERC-J surveys) was produced at the Space Telescope
+    Science Institute under U.S. Government grant NAG W-2166; the plates
+    are copyright the Anglo-Australian Observatory / Royal Observatory
+    Edinburgh (UK Schmidt Telescope). Used for the Helix detail level.
+  VPHAS+ DR4 (Drew J. E. et al. 2014, MNRAS 440, 2036): based on data
+    obtained from the ESO Science Archive Facility (ESO programme
+    177.D-3023), CC BY 4.0; Hα and r for the Carina detail levels.
+  NSNS DR0.2 as above for Rosette and the 8 deg bases.
+Gaia DR3 (Gaia Collaboration 2023, A&A 674, A1; ESA/Gaia/DPAC) and
+Hipparcos (ESA 1997) via VizieR (CDS), as above.
+Helix integrated line fluxes used for the estimated [O III] scale:
+Sánchez S. F. et al. 2026, SDSS-V LVM Helix Nebula data (arXiv:2602.10072),
+and O'Dell (1998) as cited there. Numbers only.
+
+Visual acuity versus luminance: Shlaer S., 1937, J. Gen. Physiol. 21, 165;
+Hecht S., 1947 (as tabulated in vision handbooks). Tilt and scintillation:
+Fried D. L., 1965, JOSA 55, 1427; Young A. T., 1967, AJ 72, 747.
+
+--- Eyepiece app 0.5.2 (M31) ---
+
+  NSNS DR0.2 as above (Hα, [O III], [S II] and the star-subtracted visual
+    continuum, HiPS simg.de/P/NSNS/DR0_2/vc), CC-BY-NC-SA 4.0, via CDS
+    hips2fits; processed derivatives only.
+  Integrated magnitudes and colour of M31 and M32: Third Reference
+    Catalogue of Bright Galaxies (RC3; de Vaucouleurs G. et al. 1991).
+    Numbers only. M32's shape in the image is a model (assumed).
+
+--- Eyepiece app 0.5.3 (M8, M16) ---
+
+  M8: SHASSA Hα (as above) for the 8 deg base; VPHAS+ DR4 Hα and r
+    (Drew et al. 2014; ESO programme 177.D-3023; CC BY 4.0) for the
+    3.7 deg and 1 deg levels.
+  M16: NSNS DR0.2 (CC-BY-NC-SA 4.0) for the base and 3.7 deg level;
+    VPHAS+ DR4 Hα and r (CC BY 4.0) for the 1 deg core level.
+  Stars: Gaia DR3 and Hipparcos via VizieR, as above.
+  All via CDS hips2fits / VizieR TAP; processed derivatives only.
+
+--- Eyepiece app 2026-09-30 cathode estimates and boundary samples (D53) ---
+User-supplied domestic Gen III editor screenshot, L3 Gen III acceptance-sheet
+numbers and PT7864W sheet numbers. A duplicate 800 nm label on the PT7864W
+sheet was corrected by the user to 850 nm. Two additional user test sheets
+supply numerical control-boundary fixtures only. No original images, headers,
+identity or serial fields are shipped. Source SHA256 values are recorded.
+The reconstructed full spectra are engineering estimates, not new measured
+spectra. The original R13/R16 reference-shape notices above still apply to
+the corresponding fitted spectra; redistribution rights of the user
+materials have not been independently established.
+
+--- Eyepiece app D54: qualitative noise appearance and eye contrast ---
+Thomas P. J., Allison R. S., Jennings S., Yip K., Savchenko E., Tsang I.,
+Macuda T., Hornsey R. (2004), Validation of synthetic imagery for night
+vision devices, Proc. SPIE 5442, DOI 10.1117/12.542618.
+https://percept.eecs.yorku.ca/papers/Thomas%20validation%202004.pdf
+Pattanaik S. N., Ferwerda J. A., Fairchild M. D., Greenberg D. P. (1998),
+A Multiscale Model of Adaptation and Spatial Vision.
+https://jamesferwerda.com/wp-content/uploads/2015/06/j06_pattanaik98_sig.pdf
+Scotopic spatiotemporal sensitivity differences between young and old adults
+(2010): https://pmc.ncbi.nlm.nih.gov/articles/PMC2917330/
+These works were read for model direction and limitations. No paper images,
+complete text, code or digitized device/human curves are shipped. The app's
+threshold coefficients and noise appearance implementation are original
+engineering choices, not a reproduction of the full published models.
+User-supplied local videos provide qualitative references and numerical
+encoded-video summaries only. Original videos and extracted frames are not
+distributed; source redistribution rights were not independently verified.
+
+--- Eyepiece app 0.7.0 / D55 ---
+NSNS DR0.2 processed H-alpha/[O III]/[S II] cutouts: Ziegenbalg,
+Northern Sky Narrowband Survey, DOI 10.3847/2515-5172/adfec7.
+https://www.simg.de/nebulae3/dr0_2/ ; CC BY-NC-SA 4.0.
+SHASSA H-alpha and continuum, Gaustad et al. 2001, courtesy of
+Swarthmore College / CDS HiPS as previously acknowledged. New cutouts,
+processed derivatives only; source notice retained, no commercial-rights claim.
+Finkbeiner (2003) large-scale H-alpha data as previously acknowledged.
+Reynolds (1985), ApJ 298 L27; Sahu & Sahu (1993), A&A 280 231:
+line-ratio context only; southern OIII maps remain assumed scenarios.
+Sanchez S. F. et al. (2026), SDSS-V LVM Helix Nebula public data,
+arXiv:2602.10072. DR19 second-order sky-corrected fiber line table:
+https://ifs.astroscu.unam.mx/LVM_DR19_Helix/Helix_DR19_cor.fits.gz
+Only derived surface-brightness maps are distributed; no original paper text.
+User-provided single-exposure Helix H-alpha FITS: morphology and approximate
+LVM-tied scale. Original FITS, private location and original header are omitted.
+Jones et al. (2013), A&A 560 A91, DOI10.1051/0004-6361/201322433;
+ESO SkyCalc CLI: existing LUT reused for a representative average moonlight.
+Adaptive grain/scintillation appearance coefficients are project assumptions,
+not manufacturer measurements or a reproduction of a published full model.
+
+--- Eyepiece app 0.8.0 / D56 ---
+US6150650A (Bowen et al., ITT/K&M, 2000), Variable gain image intensifier:
+https://patents.google.com/patent/US6150650A/en
+ABC mechanism reference only; no circuit, text, figures or calibrated tube curve copied.
+Pattanaik et al., SIGGRAPH 1998, as previously acknowledged, and
+Kilpelainen et al., PLOS ONE 2011, doi:10.1371/journal.pone.0017200:
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0017200
+Qualitative luminance/contrast adaptation context only. Dynamic centre metering,
+EV/gamma mapping and smoothing coefficients are project engineering assumptions;
+no paper figures/data reproduced or complete published model claimed.
+
+2026-10-01 D57: Hamamatsu II_TII0007E glossary and Photonis/Exosens XR5 specifications were read online to verify EBI definition and units; no figures or data tables redistributed.
+https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/99_SALES_LIBRARY/etd/II_TII0007E.pdf
+https://cdn.photonis.com/system/files/2026-06/Exosens%20NV_Leaflet%20XR5_VD.pdf
+Restrained EV/gamma coefficients are project-authored engineering assumptions prompted by user feedback. Manufacturer specifications do not calibrate these coefficients. The optional dual-filter sky multiplier is derived from a user-perceived covered/open-sky comparison and this project's model, not a measured spectrum or manufacturer tube constant; original spectral assets remain unchanged.
+
+--- Eyepiece app 0.8.2 / D58 ---
+Existing Li Xiaofeng et al. (2022), Infrared Technology 44(8), Figure 8,
+digitized EBI-temperature curves are reused with their original notices.
+The default +20 C scene offset is a user-requested, project-authored
+engineering correction, not a measured internal temperature rise or a
+manufacturer calibration. No new source curves, figures or documents were
+downloaded or redistributed. Historical dual-sky reference behavior is
+retained for old links; its interactive calibration controls are replaced.
+
+--- Eyepiece app 0.9.2 / D61 ---
+Sanchez et al. 2026, SDSS-V Local Volume Mapper (LVM): Helix Nebula
+public data, Data Analysis Pipeline data products, arXiv:2602.10072:
+https://arxiv.org/html/2602.10072v1
+https://ifs.astroscu.unam.mx/LVM_DR19_Helix/Helix_DR19_cor.fits.gz
+Reuses the corrected DR19 table already stored locally for D55. Derived
+35.3 arcsec aperture-mean Ha/OIII5007/NII6583 maps and named-column
+integrated fluxes; no new raw download, FITS, paper figure or original
+header redistributed. Prior LVM/SDSS source notices continue to apply.
+NII6548/6583=1/3 and the fallback integrated NII/Ha ratio are explicitly
+identified approximations; they are not independent spatial measurements.
+Gaustad et al. 2001, SHASSA, arXiv:astro-ph/0108518:
+https://arxiv.org/abs/astro-ph/0108518
+Filter transmissions in sections 2.2 and 4 inform the deblending of the
+already stored Helix Ha-equivalent fallback; source data notices unchanged.
+Existing NSNS/DSS2/SHASSA/VPHAS+/Gaia derivatives are reused unchanged
+except removal of zero-coded absent SII planes in two detail layers.
+User-provided Helix frame and private site/header metadata are not
+redistributed; its unvalidated radiometric fine layer is only retained
+in the frozen atlas4 for historical links, excluded from the new default.
+
+--- Licence review 2026-10-02 (supersedes earlier wording above; see docs/DATA_LICENSES.md) ---
+Gaia DR3: data distributed under CC BY-NC 3.0 IGO; credit ESA/Gaia/DPAC.
+  Commercial use is governed by the ESA space science archive terms
+  (https://www.cosmos.esa.int/web/gaia-users/license).
+SHASSA: images copyright Las Cumbres Observatory, Inc.; scientific and
+  educational use free with acknowledgement; commercial use requires
+  express permission. Required acknowledgement: "the Southern H-Alpha Sky
+  Survey Atlas (SHASSA), which is supported by the National Science
+  Foundation"; Gaustad J. E., McCullough P. R., Rosing W., Van Buren D.,
+  2001, PASP 113, 1326 (https://amundsen.swarthmore.edu/ack.html).
+DSS2: copyrighted material; research, teaching and other non-profit use
+  free with acknowledgement; commercial use prohibited without permission
+  (https://gsss.stsci.edu/Acknowledgements/DSSCopyrights.htm).
+SDSS (SDSS-V LVM): public data release; use for a commercial publication
+  or other commercial purpose requires explicit approval by the
+  Astrophysical Research Consortium (https://sdss.org/collaboration/image-use-policy/).
+CIE tables: the CIE open-access dataset page states no licence; to be
+  confirmed before any commercial use.
+This site is free and non-commercial; all of the above are used on that basis.
