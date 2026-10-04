@@ -339,3 +339,23 @@ SDSS (SDSS-V LVM): public data release; use for a commercial publication
 CIE tables: the CIE open-access dataset page states no licence; to be
   confirmed before any commercial use.
 This site is free and non-commercial; all of the above are used on that basis.
+
+--- D67 halo research and project-authored implementation, 2026-10-04 ---
+Li Xiaofeng et al., Performance Comparison Between Super Second Generation
+and Third Generation Image Intensifiers, Infrared Technology 44(8), 764-778 (2022).
+  https://hwjs.nvir.cn/cn/article/Y2022/I8/764
+Guo Bingtao et al., Modeling and simulation of halo effect of night vision system,
+High Power Laser and Particle Beams 28, 119001 (2016), doi:10.11884/HPLPB201628.160081.
+  https://www.hplpb.com.cn/en/article/doi/10.11884/HPLPB201628.160081
+Zacher et al., Effects of image intensifier halo on perceived layout,
+Proc. SPIE 6557, 65570U (2007), doi:10.1117/12.719892.
+  https://www.eecs.yorku.ca/~rallison/papers/Effects%20of%20image%20intensifier%20halo%20on%20perceived%20layout.pdf
+These papers motivate physical mechanisms and qualitative profiles only.
+No figures, digitized profiles, source code or paper PDFs are distributed.
+Halo coefficients, normalized two-disc kernels, MTF derivation, resampling
+compensation, GPU packed taps and ROI compound-noise adjoints are project-authored
+engineering models; numerical verification is not experimental calibration.
+The added J2 evaluation uses a project-authored implementation of the standard
+Bessel power series and large-argument expansion (NIST DLMF 10.2.2, 10.17.3):
+  https://dlmf.nist.gov/10.2#E2 ; https://dlmf.nist.gov/10.17#E3
+The existing J1 approximation and its earlier attribution remain unchanged.
