@@ -3,12 +3,12 @@
   "kind": "iit-pages-release",
   "product": {
     "name": "NvAstraSimulator",
-    "version": "0.9.20",
+    "version": "0.9.24",
     "modelVersion": "eyepiece-d69",
     "dataFamily": "atlas5-v1",
     "linkVersion": 15
   },
-  "sourceCommit": "1519b9c438ecd9df414c10e3e4a5f4174cc5b97f",
+  "sourceCommit": "7edf5fcb43c5aa39e3f9cc9ee6237c5bbbd27b12",
   "entry": "index.html",
   "files": {
     ".nojekyll": {
@@ -25,7 +25,7 @@
     },
     "app.html": {
       "bytes": 3621,
-      "sha256": "dc4ef0a06bf9c048ab9bab7c7cff4b1a612dd312e802292d36230d968f1762fa"
+      "sha256": "33fe41f66916c7ee664d25fd04a05deac543634ed1ee664be544e3de93cc3ffd"
     },
     "app.webmanifest": {
       "bytes": 759,
@@ -35,33 +35,33 @@
       "bytes": 8,
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
-    "assets/app-DnNbJkd4.js": {
+    "assets/app-_Pcg-xUh.js": {
       "bytes": 3539,
-      "sha256": "ea910327d9e6e4e4fb2196df6ba223376bf7f3515932f1e057d6a731b20b90eb"
+      "sha256": "42b3939171373d70d830113be8267ab63a39e31092227824ff8b394b70bb543b"
     },
-    "assets/boot-BBN0QY9z.js": {
-      "bytes": 412643,
-      "sha256": "1088b228eebf48946929232b30ce611c3a7f7b6e1e6eccbdaa5c34a6b5125742"
+    "assets/boot-BsT5Z8oN.js": {
+      "bytes": 439491,
+      "sha256": "a40d885d839c99920407bdfd190aa040b0a9003e16727a09b9e955ef63b340f4"
     },
-    "assets/boot-d_qygRTk.css": {
-      "bytes": 62978,
-      "sha256": "372c3e152db541b46ababc7dcc45b71e662172f00aeae4c512610c3b7b429464"
+    "assets/boot-CcQP1RU8.css": {
+      "bytes": 66762,
+      "sha256": "348fffcd27d9a1b3dd71c42924b85b86b808c670ee0af2d97250cb4ab58a8296"
     },
     "assets/favicon-Cr225KxK.svg": {
       "bytes": 896,
       "sha256": "1a62088b173d67ba6de9395aca6912ca301aa8282d3ea579f7b9a8b2f6a9af2c"
     },
-    "assets/FilterBench-D-Z_6ij1.js": {
+    "assets/FilterBench-DBVuZnWT.js": {
       "bytes": 18532,
-      "sha256": "359dad4e5b76d3f74a82df85351ef1559dcddc112d2a897128f4ecdee09dd0c0"
+      "sha256": "23e6dbc6a485690a0ded0ae92b4c5db96401cf9536ea5d0b882b69df10059a7f"
     },
     "assets/i18n-data-en-CUgHkGzP.js": {
       "bytes": 19973,
       "sha256": "b5e8dfed1efe2e859121028651410775cd19ce53fc5780bed0d19f7a6ac79da1"
     },
-    "assets/i18n-en-Cx_OLET1.js": {
-      "bytes": 144245,
-      "sha256": "b2173f8c56b374958d66552e98171ed445a7fca52fb8c698c58fbba1204925de"
+    "assets/i18n-en-cVf9L3w3.js": {
+      "bytes": 157095,
+      "sha256": "34bfe724cfeb8ca3eb33228da732e10e0de3257c0e571cbe8efdfed23ca3e930"
     },
     "assets/ibm-plex-mono-latin-400-DMJ8VG8y.woff2": {
       "bytes": 14708,
@@ -87,21 +87,21 @@
       "bytes": 43480,
       "sha256": "29e56164e5e71821f4223702e8d224c63f07a446d89117e65915cb2d3dfbf96a"
     },
-    "assets/snapshot-sheet-B55hT6xH.js": {
-      "bytes": 32592,
-      "sha256": "1b7da7fc1b252b845067505c1262d23f1e667c0f275807dddfe15ef92e15bbae"
+    "assets/snapshot-sheet-BGq0v3mu.js": {
+      "bytes": 62849,
+      "sha256": "0e270db0b4ce43cfd689b93e2c336ff0b273f366c19d8c052203f8634d960e72"
     },
     "assets/spectral-worker-DsJdeUE2.js": {
       "bytes": 42297,
       "sha256": "484157c062b6dc49ca23df5e19fd88e59248aa61c79d0fee7fb1a63d28ffb5de"
     },
-    "assets/vendor-D5j7eyu-.js": {
-      "bytes": 223052,
-      "sha256": "359eb82abf82a37e6763242cd0162cb0230709e1dd2122f794b95a05e5caae59"
+    "assets/vendor--Do4GtAm.js": {
+      "bytes": 223060,
+      "sha256": "4f40c71d78717c5038d981783148aa9139463091b5c52579a7d5eac39daf1d73"
     },
-    "assets/VerifyPanel-D9jUDDj0.js": {
-      "bytes": 17337,
-      "sha256": "a669045520bd4ed8d5ac31989e7f34097c993995f7e2abc103352ee8fd561374"
+    "assets/VerifyPanel-hzZ3XfaN.js": {
+      "bytes": 17368,
+      "sha256": "b293789198b074ee8e56f48c89f9d75c84cd2dcc9dda995aa785250730a69dca"
     },
     "data/.gitattributes": {
       "bytes": 8,
@@ -553,11 +553,11 @@
     },
     "index.html": {
       "bytes": 3621,
-      "sha256": "dc4ef0a06bf9c048ab9bab7c7cff4b1a612dd312e802292d36230d968f1762fa"
+      "sha256": "33fe41f66916c7ee664d25fd04a05deac543634ed1ee664be544e3de93cc3ffd"
     },
     "product.json": {
       "bytes": 140,
-      "sha256": "52e2e2b3dd807b851ff063fb291dfc90f23736c6212ff3b984ff764fbd94bee0"
+      "sha256": "078f5e9ae8e417cedbb5a074925a60abfce2a354a5192f01b86c35c63920acfc"
     },
     "share-card.jpg": {
       "bytes": 124603,
@@ -565,11 +565,11 @@
     },
     "sw.js": {
       "bytes": 2883,
-      "sha256": "3be8d5c53e675a1d6c67398c4019d051f9cbd47a66c3b10aed451e5a958c9e74"
+      "sha256": "cfeeb00e1684498b9855296390bd6a0c0053417ef88bdfe79660f54bb99a8e52"
     },
     "THIRD_PARTY_NOTICES.txt": {
-      "bytes": 26274,
-      "sha256": "e6f89535392f1a178372bc9e77b6dd56636070ffea09778b7a709b910eeab178"
+      "bytes": 27757,
+      "sha256": "9a70d8c5dc0c1b11dff11275fb2217c84558e080149d6a63c440b1507e08bd49"
     }
   }
 }
