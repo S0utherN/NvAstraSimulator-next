@@ -483,3 +483,7 @@ SOFTWARE.
 
 The word "QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
 The unit tests decode the code with jsQR 1.4.0 (Apache-2.0, development only, not shipped).
+
+D73: Andrew Crumey (2014), Human Contrast Threshold and Astronomical Visibility, MNRAS 442, 2600; https://arxiv.org/html/1405.4209. Point-source threshold equations and Blackwell spectral reference; project implementation and display coefficients independently authored, no source figures/data copied. Midori Tanaka et al. (2017), DOI10.2352/J.ImagingSci.Technol.2017.61.6.060401, star-size perception research cited as design context only.
+
+D74: CIE 191:2010, Recommended System for Mesopic Photometry Based on Visual Performance (Commission Internationale de l'Eclairage); only the published adaptation-coefficient formula m = 0.7670 + 0.3334 log10(L_mes) is used for the rod/cone weight, implemented independently (bisection). No CIE tables, figures or text copied. Tone curve, star brightness steps and colour coefficients are project display design.
