@@ -3,12 +3,12 @@
   "kind": "iit-pages-release",
   "product": {
     "name": "NvAstraSimulator",
-    "version": "0.9.30",
+    "version": "0.9.32",
     "modelVersion": "eyepiece-d78",
     "dataFamily": "atlas5-v1",
     "linkVersion": 15
   },
-  "sourceCommit": "95017612644caeeba21f0371f8bc3717543a92a3",
+  "sourceCommit": "6ea9ca4f6cc48f7fe9e007ec43d7c5614726a4ce",
   "entry": "index.html",
   "files": {
     ".nojekyll": {
@@ -25,7 +25,7 @@
     },
     "app.html": {
       "bytes": 3621,
-      "sha256": "5aa5ba169fc3f80b42cae3ebe1530a8ef42a687b74482216f8cd4dd980bbcb8b"
+      "sha256": "0609134b8ce7539a6a2bc4e2a22be47c9cf4e3bf37cbbb4bed0aab1b9cda93af"
     },
     "app.webmanifest": {
       "bytes": 759,
@@ -35,33 +35,33 @@
       "bytes": 8,
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
-    "assets/app-Dxz_5WXp.js": {
+    "assets/app-DiVkvvsT.js": {
       "bytes": 3539,
-      "sha256": "2b457449b84fef950f1ea39f9c3b770d58ea97f00d96b64b1cc7a80766621986"
-    },
-    "assets/boot-CLbPgFWY.js": {
-      "bytes": 467068,
-      "sha256": "0dc7fb2068642229348560659d40148086efef0a40ddfd70f3a5ab6f9d57e2cd"
+      "sha256": "c2172b20b0bb91121d5a52e042ab75e1e0f14c1500b2ebc59175272fab2ef22e"
     },
     "assets/boot-ggiW6cf6.css": {
       "bytes": 66762,
       "sha256": "f45de057e4639120161f2ead642a5f530cd90fa8c42d5b49ab3091f837547a1d"
     },
+    "assets/boot-ZF531Asv.js": {
+      "bytes": 471323,
+      "sha256": "59f02c94f0633c6a1733cbd5a74f6ebc1397e8457c297906f695477d3919796e"
+    },
     "assets/favicon-Cr225KxK.svg": {
       "bytes": 896,
       "sha256": "1a62088b173d67ba6de9395aca6912ca301aa8282d3ea579f7b9a8b2f6a9af2c"
     },
-    "assets/FilterBench-C5dUP_gv.js": {
+    "assets/FilterBench-DpDV8hY2.js": {
       "bytes": 18532,
-      "sha256": "0af96b8bfabd59af01621fde254480a057e7a6890ed1b3a559df3177dec6ae95"
+      "sha256": "45faa54cd52960b9c4e1d9953b6f612b7a145c221318dc4627351157b2c79cb1"
     },
     "assets/i18n-data-en-CUgHkGzP.js": {
       "bytes": 19973,
       "sha256": "b5e8dfed1efe2e859121028651410775cd19ce53fc5780bed0d19f7a6ac79da1"
     },
-    "assets/i18n-en-4SakQ1_R.js": {
-      "bytes": 174735,
-      "sha256": "aec4a85a4db8af138f6f40d01de273dc96d651c8508409d333e72df1f6d02e9e"
+    "assets/i18n-en-C-RRBWZ3.js": {
+      "bytes": 175604,
+      "sha256": "cbbc635bc2da29a7cc1d4925a300c06811a34b07c8b39f1d9b31d24b1f1ae9c6"
     },
     "assets/ibm-plex-mono-latin-400-DMJ8VG8y.woff2": {
       "bytes": 14708,
@@ -87,9 +87,9 @@
       "bytes": 45508,
       "sha256": "55b4bf77ae30dbe9258c9eab6297cfd525463d9c4de50cf9e60449cae7d6da20"
     },
-    "assets/snapshot-sheet-CILBsixv.js": {
+    "assets/snapshot-sheet-DnvBsXfO.js": {
       "bytes": 58453,
-      "sha256": "fc68dcf0f15a52e0f62d2da7444663333e8a7d490e352eec79a7fa0c4462eb0e"
+      "sha256": "8b1c52023847526139d49e0edeb5e4709acd9b186b446e6370cfd64dc102f47f"
     },
     "assets/spectral-worker-CaYMbCQf.js": {
       "bytes": 44513,
@@ -99,9 +99,9 @@
       "bytes": 223060,
       "sha256": "4f40c71d78717c5038d981783148aa9139463091b5c52579a7d5eac39daf1d73"
     },
-    "assets/VerifyPanel-DakqlDmc.js": {
+    "assets/VerifyPanel-spyBnt5c.js": {
       "bytes": 17368,
-      "sha256": "7c788466ff3fc096068c3e459b3de5e64dd08515486b8edec4ef986cb2796f58"
+      "sha256": "03075926a1d4b5f0d983c7687f7bdb48c15c3e625205c737d5b751f37d3c9ed5"
     },
     "data/.gitattributes": {
       "bytes": 8,
@@ -553,11 +553,11 @@
     },
     "index.html": {
       "bytes": 3621,
-      "sha256": "5aa5ba169fc3f80b42cae3ebe1530a8ef42a687b74482216f8cd4dd980bbcb8b"
+      "sha256": "0609134b8ce7539a6a2bc4e2a22be47c9cf4e3bf37cbbb4bed0aab1b9cda93af"
     },
     "product.json": {
       "bytes": 140,
-      "sha256": "b94aad73706205a898cccd5b68087e6318b92f08a54e3588ebfdb2c239d24f0a"
+      "sha256": "f9324d9f1319d74b2a3ecf940f9df36dc03e1df7ef8b618e3ca97a0ca0a1d525"
     },
     "share-card.jpg": {
       "bytes": 124603,
@@ -565,7 +565,7 @@
     },
     "sw.js": {
       "bytes": 2883,
-      "sha256": "b6964ae6335db7effb46b14130c9b49926915ef5018ad8f0bf7764425df3fbcb"
+      "sha256": "4d26a9be7b348fb42c103c2bbd3899778cc678779111be3ee64a55b74d191412"
     },
     "THIRD_PARTY_NOTICES.txt": {
       "bytes": 28613,
