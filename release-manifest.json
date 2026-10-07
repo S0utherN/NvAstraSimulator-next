@@ -3,12 +3,12 @@
   "kind": "iit-pages-release",
   "product": {
     "name": "NvAstraSimulator",
-    "version": "0.9.43",
+    "version": "0.9.46",
     "modelVersion": "eyepiece-d84",
-    "dataFamily": "atlas6-v1",
+    "dataFamily": "atlas7-v1",
     "linkVersion": 15
   },
-  "sourceCommit": "c6caa0f532fd10b285836b23036cf752f7579b4f",
+  "sourceCommit": "f8dffab6d6e622bd9d90760334617dbf978e0e95",
   "entry": "index.html",
   "files": {
     ".nojekyll": {
@@ -16,16 +16,16 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "about-en.html": {
-      "bytes": 11079,
-      "sha256": "ea0f93f0fa9a31f997c08537cf66040f7b0db7c837b4673062450cb121731f5e"
+      "bytes": 11325,
+      "sha256": "511c32e706d2e8600de1d0eeaf0a706f3ba4b745fce932db7979fb5069520ad9"
     },
     "about.html": {
-      "bytes": 10560,
-      "sha256": "aa1b5bdd773175bb4a96a6565de14ae9d857d718cf3e428361691a9a2f19f624"
+      "bytes": 10765,
+      "sha256": "43772acaf6b957afc1e5e7e0d2e4b104b100f307d7cb55122f89f1fceccdbf9a"
     },
     "app.html": {
       "bytes": 3621,
-      "sha256": "33b8744ce45e84ce011978a15ca17b9dd951b681770e42bcf4d0639aa1a4f9f8"
+      "sha256": "26327a9302ecf02519747eddac88e7e9c9d7afab7283c0e3064dccecc23dc277"
     },
     "app.webmanifest": {
       "bytes": 759,
@@ -35,33 +35,33 @@
       "bytes": 8,
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
-    "assets/app-DSgiSTdd.js": {
+    "assets/app-CI2cZh4d.js": {
       "bytes": 3539,
-      "sha256": "132b8a94c7586f43992679fbae7b8e6aa9e7f8d67ffa970f07e945fc6760a887"
+      "sha256": "1c0b787d0639d3e7eeb17bcc414f754c6916757091f4b92684ce41a2ad046c87"
     },
-    "assets/boot-C1Ilnn6l.js": {
-      "bytes": 488373,
-      "sha256": "a3a708d19b32f669fa6e94fcddaf07baef6818d3039ec86c458e338b1ad6d6f9"
+    "assets/boot-h25Jt_sr.css": {
+      "bytes": 66762,
+      "sha256": "fe7f74b3570fddfe43aaa956b177e4ef22491b8596437d329b05b84f83c986ad"
     },
-    "assets/boot-D42j-q0v.css": {
-      "bytes": 67118,
-      "sha256": "f28a42019e851ee5d3ea894fb22a4189170c7d363abb23092f7b1838c999a195"
+    "assets/boot-ZzUqWwq0.js": {
+      "bytes": 495254,
+      "sha256": "694067f07f236cf68671ba491db3627da338a2086eee19e78ff5d38a48e8ea30"
     },
     "assets/favicon-Cr225KxK.svg": {
       "bytes": 896,
       "sha256": "1a62088b173d67ba6de9395aca6912ca301aa8282d3ea579f7b9a8b2f6a9af2c"
     },
-    "assets/FilterBench-B5oBO7MA.js": {
+    "assets/FilterBench-CDlzl1On.js": {
       "bytes": 18532,
-      "sha256": "31b4741313cdcabb712a2f6c2458a49ec8c366a69579278a7a4c8f4a82ceff35"
+      "sha256": "d927484dae9f3542c488071a1597874938e4a4cebbf1832ffd37819f1bdd52e0"
     },
-    "assets/i18n-data-en-Cc0mFw1G.js": {
-      "bytes": 21201,
-      "sha256": "94774d0d576988c099ba02809b086958074900ca6be6a5cb06dc86bdbafa4e46"
+    "assets/i18n-data-en-ORgdpfBQ.js": {
+      "bytes": 22915,
+      "sha256": "3de71bc210f658352bfaff1190d89317e58afd7bbab2ef64286e0500a2d91058"
     },
-    "assets/i18n-en-DhIPxXoJ.js": {
-      "bytes": 184828,
-      "sha256": "27cb51bd53d0e7806130c0eee51557a282597de03a3c34e397b364e8b763459e"
+    "assets/i18n-en-BX5U5kD9.js": {
+      "bytes": 188213,
+      "sha256": "9a0c7e6b15094a34a0c2c2ee8176f0fcdda4f191ca935fd9fe53974904c057fe"
     },
     "assets/ibm-plex-mono-latin-400-DMJ8VG8y.woff2": {
       "bytes": 14708,
@@ -83,33 +83,33 @@
       "bytes": 24252,
       "sha256": "8960851d691c054ed38e259bdcf1a6190d157b4203ed5bb32c632a863fb8ec2f"
     },
-    "assets/iit-engrave-Bx3XOCNf.woff2": {
-      "bytes": 49012,
-      "sha256": "98f639055346d1b4efdc36b1b4e0e8059b3cb3b2e797be585e3db5700870c5c2"
+    "assets/iit-engrave-B0wF9iae.woff2": {
+      "bytes": 53272,
+      "sha256": "ea119b2a8c3d23d00403c9ce2e12b4ef27740caeb67ee3b2f2c6dbd30397c3e2"
     },
-    "assets/snapshot-sheet-BhY28U5-.js": {
-      "bytes": 58570,
-      "sha256": "77b73f20ed417332ef7743f76536b36f1c8f002c7bff8855d7ca41bb2b47fdad"
+    "assets/snapshot-sheet-lBEpjeUA.js": {
+      "bytes": 58571,
+      "sha256": "bee792757d992aed27dfb293585a4fb0843a16be11d984af8ce2d985c43b0e2f"
     },
-    "assets/spectral-worker-DFkVdcAn.js": {
-      "bytes": 45127,
-      "sha256": "464740d48cace811a10aa13855d87a67f1706d02b1e4e10ebf3062584ff4ded4"
+    "assets/spectral-worker-WVR3T3y9.js": {
+      "bytes": 46739,
+      "sha256": "3b0c8812bf230c16fea2ef26a85ca85d829650f1d8aaf18b9072910cc8c093ee"
     },
     "assets/vendor--Do4GtAm.js": {
       "bytes": 223060,
       "sha256": "4f40c71d78717c5038d981783148aa9139463091b5c52579a7d5eac39daf1d73"
     },
-    "assets/VerifyPanel-qq130ERv.js": {
-      "bytes": 17674,
-      "sha256": "deb3ad507b7c08adf75bc40544c9094c07c62eff1016002e2f58e277ae03c383"
+    "assets/VerifyPanel-B9BGVzC3.js": {
+      "bytes": 17917,
+      "sha256": "936dfd227eea1e9b0050de6aa0a39379bbcc4b3f3b226d795be99e1b6c410acb"
     },
     "data/.gitattributes": {
       "bytes": 8,
       "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     },
-    "data/atlas2-versions.42989ed3d2775657.json.gz": {
-      "bytes": 1269,
-      "sha256": "7ad627c4d633d9965ad17a74d3e45e62ad618f74861a0782d631df709ed81b98"
+    "data/atlas2-versions.af37e2389a1c65c6.json.gz": {
+      "bytes": 1887,
+      "sha256": "661cecada0a5b55bdd0b83ece2ff60ee264ed9ac1b0cd42f02832a3402e814b1"
     },
     "data/atlas2/barnard-stars.81463b666b7a4fc9.bin.gz": {
       "bytes": 471663,
@@ -455,6 +455,222 @@
       "bytes": 9393408,
       "sha256": "2616ca137f0279c35d75484bbd6c2f4e618f12117b25d02f1a2179f173365aba"
     },
+    "data/atlas7/auriga-detail.8dd4f358087e6e82.bin.gz": {
+      "bytes": 18819094,
+      "sha256": "1fc0781a5e51a2120e4eaeeb9777af1d66eb0691c4047c72e3875694dd988432"
+    },
+    "data/atlas7/auriga-stars.8ce8772a2af86a9f.bin.gz": {
+      "bytes": 617479,
+      "sha256": "06ddc36016da6d8ac4a078e5e3e4d8ad61b9318b807e3fab44d33aacb6f13ece"
+    },
+    "data/atlas7/auriga.06c706b981c2ed1d.json.gz": {
+      "bytes": 3202,
+      "sha256": "2803bb07b23daacf8b963a6e310cbdd4d3699f5d7084372a6e0d4954f9395d6b"
+    },
+    "data/atlas7/auriga.ab80aa0e5073fbb3.bin.gz": {
+      "bytes": 20244874,
+      "sha256": "67d7ff3f690534ae24c19a52798f28ed4bc88ae25dff134d280c644d99b0268a"
+    },
+    "data/atlas7/bubble-detail.61d607a45efefe14.bin.gz": {
+      "bytes": 5940699,
+      "sha256": "eff65e90d0954deb3f6b2d756e4a5e03296ca82d76cea85c093276f10f3e417a"
+    },
+    "data/atlas7/bubble-stars.08321c8a266381f4.bin.gz": {
+      "bytes": 814863,
+      "sha256": "594966c49392bac0304c7f435bba938428510599071b06a06c28b5a5af6bcc50"
+    },
+    "data/atlas7/bubble.0b3bc9992760057f.bin.gz": {
+      "bytes": 5575932,
+      "sha256": "8811f2a7973f32d730d1513ba5da951b44ce0e93e356ea724a1d4432276f054e"
+    },
+    "data/atlas7/bubble.fcc402f31d9fb2ed.json.gz": {
+      "bytes": 2868,
+      "sha256": "4b85b9bad40e58b6b75c1d66eb2575bb4bb78f0d18f29218da4948def93c5941"
+    },
+    "data/atlas7/butterfly.1abf770fdbdf98fa.bin.gz": {
+      "bytes": 12992262,
+      "sha256": "21bd3b3daf2d0514ea6fb1287229cbe773b115b52077c05baa2b7da663495c18"
+    },
+    "data/atlas7/california-detail.c90276423a8a4e86.bin.gz": {
+      "bytes": 12066727,
+      "sha256": "732e885b4c97db85632fdc5f1a4eba052b93c01aab2173f8f3d3aa31931f0b05"
+    },
+    "data/atlas7/california-stars.a14f49e8fa9a0657.bin.gz": {
+      "bytes": 357207,
+      "sha256": "f6d97eac2a809b4458453737fdf5d64ab82278905cd66d81baf6bbb8626834df"
+    },
+    "data/atlas7/california.14b1e52618966b79.json.gz": {
+      "bytes": 2898,
+      "sha256": "4d937638b1570864a087bf8d7eb2c4b2a4024c73bb49f1194100c7a31bacd432"
+    },
+    "data/atlas7/california.50f56fcef976a2cd.bin.gz": {
+      "bytes": 5074389,
+      "sha256": "ad6669364f4466789054edf804dc591e1d87653806c22ea6261c0f58524fe1bd"
+    },
+    "data/atlas7/cave-detail.efbb280c99cf8722.bin.gz": {
+      "bytes": 5657353,
+      "sha256": "7e3af2bacdadb065a55499d203bd7fca9c7967947247a854eed1cebe232306b0"
+    },
+    "data/atlas7/cave-stars.7e57cb5e52fcd7c3.bin.gz": {
+      "bytes": 526808,
+      "sha256": "a36263fba79a7f7b8fb26b174c0d4fcd68d0ce8804af24b9c5684a220923b710"
+    },
+    "data/atlas7/cave.14aee7311c32da93.bin.gz": {
+      "bytes": 5611649,
+      "sha256": "0229d14380cef422bd7b3744a1ee8c22265d0a4dd55d3c917ad2eb05c171269e"
+    },
+    "data/atlas7/cave.d5e4ddc92f8049a6.json.gz": {
+      "bytes": 2876,
+      "sha256": "64fa3a3c6954467dffb60041aefd3688d5f06cd0aa4158c259853170da51970a"
+    },
+    "data/atlas7/cepheus-detail.87600dee0179be48.bin.gz": {
+      "bytes": 21318001,
+      "sha256": "fceb2a9ee62c4365694d84f3905b9713517d499f6ce6d66a8f7624d939e3cb0b"
+    },
+    "data/atlas7/cepheus-stars.2123e281569685c9.bin.gz": {
+      "bytes": 786564,
+      "sha256": "ff44888fe6df61fb1127b2c003ac31cbb003d209d4d0f0e35f325943a2e3f7e7"
+    },
+    "data/atlas7/cepheus.c4c20365ebbfc92c.bin.gz": {
+      "bytes": 20589138,
+      "sha256": "2acd89134a22758f52e1865ac72534ef5bec108aa1f7f826eff6f436fbf52933"
+    },
+    "data/atlas7/cepheus.cea78bea3cfe9006.json.gz": {
+      "bytes": 3200,
+      "sha256": "9a0251b5b8ff60f583466ac17884ca3f68ceb4957ef7f3a58af87c4f4c21ba43"
+    },
+    "data/atlas7/christmas-tree-detail.d6909604fca7b8fd.bin.gz": {
+      "bytes": 5633210,
+      "sha256": "0a5d1eddb4e1210300c4390de3295a48d8a76f3c6b958a0f5d87ab7185503449"
+    },
+    "data/atlas7/christmas-tree-stars.9d044a95c4e731d7.bin.gz": {
+      "bytes": 758875,
+      "sha256": "8700fe36cb59a771e5133532710cd8730e491e5cdb69d160c6fbe02183a842de"
+    },
+    "data/atlas7/christmas-tree.21c4c0df189277ed.json.gz": {
+      "bytes": 2895,
+      "sha256": "a50780056acea385c595ed2bc2c686d98124307607e55555bbbc81f7f4456360"
+    },
+    "data/atlas7/christmas-tree.26243e389e025115.bin.gz": {
+      "bytes": 5754232,
+      "sha256": "5efef190a9739eddf96b8899a254aa82668c5f47d5764a78e0d9dce9677ae141"
+    },
+    "data/atlas7/cygnus.88297e266c137c7c.json.gz": {
+      "bytes": 6199,
+      "sha256": "8f39d6d004d9c0acf914cb5ecb792bc4bc8dc16ee6eff64f3d29dba6b8e50a40"
+    },
+    "data/atlas7/elephant-trunk-detail.9d60aa8db1b59e5b.bin.gz": {
+      "bytes": 13472011,
+      "sha256": "383fd5c57ce1a3a8da7350fa2540efd1b5a217f9b8b4fd514828649fcc21ac8b"
+    },
+    "data/atlas7/elephant-trunk-stars.8db4452f68bdf870.bin.gz": {
+      "bytes": 811633,
+      "sha256": "b22b2e8f48f0bf704a96c5e61599141a4e61373203f4bb892ab988f0aaedee69"
+    },
+    "data/atlas7/elephant-trunk.65f45d3664d57a08.json.gz": {
+      "bytes": 2897,
+      "sha256": "59117cccddb966804ddfb49be382b2652a5bdb9374b805b2e60093f2c2602a15"
+    },
+    "data/atlas7/elephant-trunk.b0a0c29d5dbe895b.bin.gz": {
+      "bytes": 5870497,
+      "sha256": "ed72cbee3f5e88017a393abd8a81b6af373612ef7f5dfa6691ea40a3a837e219"
+    },
+    "data/atlas7/flaming-star-detail.61edd9f4316c37af.bin.gz": {
+      "bytes": 13254439,
+      "sha256": "a09e856c1079d49c8bdaaabb7041e3f9c80f77e2c5694cd297fd9fd5cd10e23f"
+    },
+    "data/atlas7/flaming-star-stars.0c0b922d173f825d.bin.gz": {
+      "bytes": 719659,
+      "sha256": "0060727c5e52c070e62fc1bff25f98b393e8c819f738e617a34674ea21869956"
+    },
+    "data/atlas7/flaming-star.69f9734ffa1b625d.bin.gz": {
+      "bytes": 5069417,
+      "sha256": "f19af7d7ef1b31d93ea78bd6be7ec99e775cb20bb56aecc63244af711d13acab"
+    },
+    "data/atlas7/flaming-star.95919abd5732e0a9.json.gz": {
+      "bytes": 2900,
+      "sha256": "9a6341be2c032bdd5bfcb2ee514d41795f3e3b81c9493a10a4f21ed09c814e06"
+    },
+    "data/atlas7/flying-bat-detail.1fd9243cdb243bdb.bin.gz": {
+      "bytes": 12694201,
+      "sha256": "441707c0003d0333e2e52d33eb2ea65bc658d87a89f3530e20d7a9881d15bd87"
+    },
+    "data/atlas7/flying-bat-stars.1c3d1cf5b31fd585.bin.gz": {
+      "bytes": 598631,
+      "sha256": "099091063a53f3d7c505a3180b3716d97a37321918733e4d28807aa1055dd2d3"
+    },
+    "data/atlas7/flying-bat.60721eb2eff6d6e7.bin.gz": {
+      "bytes": 5332608,
+      "sha256": "8812e5f9cdf37b30cef0bc4986d28eb84471a385fcc972ef59fe8a7a69d4f946"
+    },
+    "data/atlas7/flying-bat.88d0943fcbc09cde.json.gz": {
+      "bytes": 2917,
+      "sha256": "1c98b13cc887cce2a54eeacd7c53b17a5964b6df2f85649525d67d0658df5fdb"
+    },
+    "data/atlas7/jellyfish-detail.819a395946c26db2.bin.gz": {
+      "bytes": 5964491,
+      "sha256": "fac2b422b8f14e0f3d71c3dbb7166baa1ee47cc68ea8e6b464fbf8f21234ac92"
+    },
+    "data/atlas7/jellyfish-stars.ae3b8ba733a6a767.bin.gz": {
+      "bytes": 715779,
+      "sha256": "2f3a5a355e81c70cffeccf51b113c70ee0104383f5eeea16681c324326615814"
+    },
+    "data/atlas7/jellyfish.20f16e98ed579968.json.gz": {
+      "bytes": 2878,
+      "sha256": "693d93894ffc28986c6fe4e3ca2c3988e30aea205f59b015b78d6b1b7cbd699a"
+    },
+    "data/atlas7/jellyfish.3a4e04d154f0c4c7.bin.gz": {
+      "bytes": 5124304,
+      "sha256": "04a42cf870b14b484c324db0c3c896df236f6cc1a3655d8d34e1e28cc1e0543e"
+    },
+    "data/atlas7/lmc-detail.92af47da613f48fe.bin.gz": {
+      "bytes": 1859900,
+      "sha256": "2e94a78052c4ca2dfd502f78c80269ad2ad031ad27c2d85ba4b0c055f100334c"
+    },
+    "data/atlas7/lmc-stars.a82b3dc405a47b35.bin.gz": {
+      "bytes": 462579,
+      "sha256": "895dad2a9d0f06b871851d065930078f6757a31c6784b42556661f7bd4f88598"
+    },
+    "data/atlas7/lmc.c28fe553e36e8c34.bin.gz": {
+      "bytes": 15626891,
+      "sha256": "d86916bcaab56732d638ec0d9c9ed2ce04555733d49438b549817ef14db0a487"
+    },
+    "data/atlas7/lmc.ea899da9dd565383.json.gz": {
+      "bytes": 2890,
+      "sha256": "545f92930a6f585b15172c2d6a493678e0a512822817732f761c6199a8f11e24"
+    },
+    "data/atlas7/pacman-detail.ba89720ea71ff19a.bin.gz": {
+      "bytes": 5641470,
+      "sha256": "ce7d5d7faaf6562cc7644f6f88836cd6c7d5c6c9d792cc1b582b908bbd6eaf8d"
+    },
+    "data/atlas7/pacman-stars.79c0c0c066d6ac47.bin.gz": {
+      "bytes": 893018,
+      "sha256": "de694c5017b42b315e9f59800b28fcf8505d589872adf315edbffa9df896d12c"
+    },
+    "data/atlas7/pacman.3de0a03f6d677363.json.gz": {
+      "bytes": 2877,
+      "sha256": "b61392c6e946049d2ab2e810a5c0908352421d33560a9aad9a9b4b81b1dc4a35"
+    },
+    "data/atlas7/pacman.ff0219f3ffb8c581.bin.gz": {
+      "bytes": 5094403,
+      "sha256": "c3772181d49fa5ed14b5acf16077a27bf87ca1ecc506dc7cce027130ae7757c4"
+    },
+    "data/atlas7/simeis-147-detail.5adf788f93da2c18.bin.gz": {
+      "bytes": 12364672,
+      "sha256": "a6300d7570778b4f40bc670a97a4e223bcd9008222e6cb65849bcbb09088ff69"
+    },
+    "data/atlas7/simeis-147-stars.a8a0638c1536e3d8.bin.gz": {
+      "bytes": 653916,
+      "sha256": "760c50acea754d7da0f73d4d3958fe17a101bf47fe290a831947225ee680d13a"
+    },
+    "data/atlas7/simeis-147.1a9d1f582f57dc00.bin.gz": {
+      "bytes": 5212433,
+      "sha256": "80bd3b0e1951a390152d6be72a0631766b2e02f8162a0d2278f97988bbf566a5"
+    },
+    "data/atlas7/simeis-147.46ce2ac2dba71a2a.json.gz": {
+      "bytes": 2906,
+      "sha256": "ce982ee7aeb9a280aaa89ea23dc37886307e8af07b6ec75e959ae8fdd7a97d0a"
+    },
     "data/cathode-presets.23634be2becf9942.json.gz": {
       "bytes": 4136,
       "sha256": "c91f58ac400a34c40af12544bdf11cce47cf47b4e5575b69e4834c81a3bdc60e"
@@ -597,11 +813,11 @@
     },
     "index.html": {
       "bytes": 3621,
-      "sha256": "33b8744ce45e84ce011978a15ca17b9dd951b681770e42bcf4d0639aa1a4f9f8"
+      "sha256": "26327a9302ecf02519747eddac88e7e9c9d7afab7283c0e3064dccecc23dc277"
     },
     "product.json": {
       "bytes": 140,
-      "sha256": "041fca4cac46f2a81f1b5536614ffdd24cb139b521bd619da7f806b617d00ee9"
+      "sha256": "3d9e6d52f00c96a4b62bc15716bd26430cc70bb2375de3b82aab564cad7a9e10"
     },
     "share-card.jpg": {
       "bytes": 124603,
@@ -609,7 +825,7 @@
     },
     "sw.js": {
       "bytes": 2883,
-      "sha256": "82b7672480d3743ca9ef374a05eb6a362c74e66001c9ece2a73c6a99816c59c2"
+      "sha256": "941e9c3920e7d4e2f71cc04abce534623661cc1c8d1d5b1656b008a2525c07c8"
     },
     "THIRD_PARTY_NOTICES.txt": {
       "bytes": 30040,
