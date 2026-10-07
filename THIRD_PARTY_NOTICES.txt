@@ -487,3 +487,27 @@ The unit tests decode the code with jsQR 1.4.0 (Apache-2.0, development only, no
 D73: Andrew Crumey (2014), Human Contrast Threshold and Astronomical Visibility, MNRAS 442, 2600; https://arxiv.org/html/1405.4209. Point-source threshold equations and Blackwell spectral reference; project implementation and display coefficients independently authored, no source figures/data copied. Midori Tanaka et al. (2017), DOI10.2352/J.ImagingSci.Technol.2017.61.6.060401, star-size perception research cited as design context only.
 
 D74: CIE 191:2010, Recommended System for Mesopic Photometry Based on Visual Performance (Commission Internationale de l'Eclairage); only the published adaptation-coefficient formula m = 0.7670 + 0.3334 log10(L_mes) is used for the rod/cone weight, implemented independently (bisection). No CIE tables, figures or text copied. Tone curve, star brightness steps and colour coefficients are project display design.
+
+
+Cygnus regional framing presets (0.9.42, 2026-10-07)
+North America / Pelican, Crescent and Veil reuse the existing Cygnus NSNS,
+Finkbeiner-corrected maps and Gaia/Hipparcos catalogue. Existing source
+attributions and restrictions continue to apply; no new survey files are included.
+This work has made use of the SIMBAD database, operated at CDS, Strasbourg, France,
+for catalogue reference positions. The combined North America / Pelican framing
+centre is a project choice; Crescent is framed on WR 136.
+Source record: docs/TARGET_INGESTION.md (regional presets, D86).
+
+Atlas6 (0.9.43, 2026-10-07)
+NSNS DR0.2 by Stefan Ziegenbalg supplies linear H-alpha/[O III]/[S II]
+FITS for North America/Pelican, Crescent, Veil, Heart/Soul and the Double
+Cluster field background. Derived maps: CC BY-NC-SA 4.0.
+https://www.simg.de/nebulae3/dr0_2/ ; https://www.simg.de/licensing.html
+This research made use of hips2fits, a service provided by CDS.
+https://alasky.cds.unistra.fr/hips-image-services/hips2fits
+New Heart/Soul and Double Cluster point catalogues use ESA/Gaia/DPAC
+Gaia DR3 (CC BY-NC 3.0 IGO) and ESA Hipparcos, via VizieR. Existing Gaia
+and Hipparcos acknowledgements above continue to apply. Catalogue reference
+positions use SIMBAD, operated at CDS, Strasbourg, France.
+Raw-file fingerprints and processing: data/scenes/atlas6-downloads.json;
+docs/reviews/2026-10-07/ATLAS6.md. Original atlas2/4/5 assets are unchanged.
