@@ -36,6 +36,7 @@
     .nc { color: #e8b877; }
     a { color: var(--accent); }
     footer { margin-top: 28px; color: var(--faint); font-size: 13px; text-align: center; }
+    footer a[href^="https://beian"] { color: var(--faint); text-decoration: none; font-size: 12px; }
   </style>
 </head>
 <body>
@@ -112,7 +113,7 @@
     <p>When reporting a problem, you can include the text copied from the simulator's Settings → This device → Error log, and the shared link from when it happened.</p>
   </section>
 
-  <footer><a class="back" href="./app.html?lang=en">Back to the simulator</a><p id="version"></p></footer>
+  <footer><a class="back" href="./app.html?lang=en">Back to the simulator</a><p id="version"></p><p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">琼ICP备2026014550号-1</a></p></footer>
 </main>
 <script>
   // Version line from the build's product.json; the page works without it.
