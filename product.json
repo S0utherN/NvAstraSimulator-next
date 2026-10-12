@@ -1,7 +1,7 @@
 {
   "name": "NvAstraSimulator",
-  "version": "0.9.66",
-  "modelVersion": "eyepiece-d127",
-  "dataFamily": "atlas13-v1",
+  "version": "0.9.68",
+  "modelVersion": "eyepiece-d128",
+  "dataFamily": "atlas14-v1",
   "linkVersion": 15
 }
