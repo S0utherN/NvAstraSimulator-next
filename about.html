@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#04070a" />
-  <title>关于 · 隐私与声明 · 增像管天文模拟器</title>
-  <meta name="description" content="增像管天文模拟器的隐私说明（不收集任何数据）、免责声明（模拟结果不代表实物）和数据来源许可。" />
+  <title>关于 · 隐私与声明 · 光子雨 · 夜视天文模拟器</title>
+  <meta name="description" content="光子雨（夜视天文模拟器）的隐私说明（不收集任何数据）、免责声明（模拟结果不代表实物）和数据来源许可。" />
   <link rel="icon" href="./icons/icon-192.png" type="image/png" />
   <style>
     :root { --bg: #04070a; --panel: rgba(12, 19, 24, 0.78); --line: rgba(150, 220, 210, 0.12); --text: #d6e3e1; --muted: #8fa5a2; --faint: #5b6f6d; --accent: #6fe3d1; }
@@ -43,7 +43,7 @@
 <main>
   <header>
     <img src="./icons/icon-192.png" alt="" width="48" height="48" />
-    <div><h1>增像管天文模拟器</h1><p>关于 · 隐私说明 · 免责声明 · 数据许可</p></div>
+    <div><h1>光子雨 · 夜视天文模拟器</h1><p>关于 · 隐私说明 · 免责声明 · 数据许可</p></div>
   </header>
   <nav aria-label="本页目录">
     <a href="./app.html">打开模拟器</a><a href="#privacy">隐私</a><a href="#disclaimer">免责声明</a><a href="#data">数据与许可</a><a href="#contact">联系</a><a href="./about-en.html" lang="en">English</a>
@@ -51,8 +51,8 @@
 
   <section id="about">
     <h2>这是什么</h2>
-    <p class="lead">一个在浏览器里运行的夜视天文目镜模拟器：用公开巡天数据描述星云和恒星，用增像管（阴极、微通道板、荧光屏）的物理模型，在显卡上实时模拟每一个光子事件，展示不同增像管、滤镜和夜空条件下“目镜里大概会看到什么”。</p>
-    <p>本站<strong>免费、非商业</strong>，用于科普与研究，没有广告和付费内容。</p>
+    <p class="lead">光子雨（Phosphor Sky）是一台赛博夜视仪，透过增像管看星空——一个在浏览器里运行的夜视天文目镜模拟器：用公开巡天数据描述星云和恒星，用增像管（阴极、微通道板、荧光屏）的物理模型，在显卡上实时模拟每一个光子事件，展示不同增像管、滤镜和夜空条件下“目镜里大概会看到什么”。</p>
+    <p>本站<strong>免费、非商业</strong>，用于科普与研究，没有广告和付费内容。设置里有自愿打赏的入口（微信赞赏码、Ko-fi），打赏完全自愿，不解锁任何功能或内容。</p>
   </section>
 
   <section id="privacy">
@@ -60,7 +60,7 @@
     <ul>
       <li><strong>没有统计、广告、账号或 Cookie。</strong>页面里没有任何分析或追踪代码，不会把你的操作、参数、设备信息发送到任何服务器。</li>
       <li><strong>参数只在链接里。</strong>分享链接 <code>#s=…</code> 后面编码了模拟参数；按网页规范，<code>#</code> 之后的内容不会发送给服务器，只有你把链接发给别人时对方才能看到。</li>
-      <li><strong>本机存储。</strong>浏览器本地存储（localStorage）里只保存界面偏好：是否看过引导、画质选择、面板折叠状态，以及程序出错时的错误记录（错误信息、版本号和页面路径）。为了下次打开更快，看过的星图等数据文件和网页本身也会缓存在这台设备上（Cache API 与 Service Worker），内容和服务器上公开的文件完全一样。这些都不会上传；可以在模拟器的“设置 → 本机”里清除，或清除浏览器的网站数据。</li>
+      <li><strong>本机存储。</strong>浏览器本地存储（localStorage）里只保存界面偏好：是否看过引导、画质选择、面板折叠状态、“我的增像管”的参数，以及程序出错时的错误记录（错误信息、版本号和页面路径）。为了下次打开更快，看过的星图等数据文件和网页本身也会缓存在这台设备上（Cache API 与 Service Worker），内容和服务器上公开的文件完全一样。这些都不会上传；可以在模拟器的“设置 → 本机”里清除，或清除浏览器的网站数据。</li>
       <li><strong>位置只在本机使用。</strong>手机的“实景模式”会请求定位和方向传感器，用来算出你此刻头顶的星空；计算全部在这台设备上进行，不发送到任何地方。为了下次直接开始，上次的大致位置（保留到 0.01°）存在本机，可在“设置 → 本机 → 清除本机界面记忆”清除；也可以拒绝定位，这时按时区估计经度。</li>
       <li><strong>错误记录只在本机。</strong>出错时你可以在“设置 → 本机 → 错误记录”里复制它，自己决定是否发给作者。复制的文字包含浏览器版本和屏幕尺寸，发送前可以看到全部内容。</li>
       <li><strong>托管服务。</strong>网页和数据文件由静态托管服务（目前是 GitHub Pages，可能经过 Cloudflare 等 CDN）提供，这些服务商可能按其自身政策记录常规访问日志（如 IP 地址）；本站不读取、不使用这些日志。</li>
