@@ -5,21 +5,21 @@
   "layout": "github",
   "product": {
     "name": "NvAstraSimulator",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "modelVersion": "eyepiece-d143",
     "dataFamily": "atlas15-v1",
     "linkVersion": 15
   },
-  "sourceCommit": "e21873b356e9876c0443676567021ba81d0b9869",
-  "sourceSnapshot": "daee0edde00169a2450df860cb113e62f4c26e95a0ef97cb4b58579870879584",
+  "sourceCommit": "61d5c2fdba7d2167447201970afa331b529bb475",
+  "sourceSnapshot": "01c6d2c0d7ebfc3d417dffaf8bce7276bf1720356ad40b5ae062e37dbcafbf7f",
   "budgets": {
     "package": 900000000,
     "file": 90000000
   },
   "packages": {
     "app": {
-      "name": "package-manifest.0b27006f60327de5.json",
-      "sha256": "0b27006f60327de500b7f0ee601cc33f6aa808ad231b9938648668e976a952a0"
+      "name": "package-manifest.ac600c507eee8d65.json",
+      "sha256": "ac600c507eee8d6522d951a576336bfc8c3b2db5ca5070630f0ceaf66aa69806"
     }
   },
   "logicalFiles": {
@@ -275,6 +275,20 @@
       "sha256": "fd9ee9bbc41e47a6b7b17bc391b7ccd2a652026bfa0d6dc50c5777a3770373f7",
       "originalSha256": "ff36bfb112c3205fdbeb0102b82f90287cf9db7bc686547e10f4be6eb9445af8"
     },
+    "atlas12/butterfly-stars-g16.bin": {
+      "bundle": "app",
+      "path": "data/atlas12/butterfly-stars-g16.d37a88b69a38c80a.bin.gz",
+      "bytes": 739433,
+      "sha256": "6207d8979609d5794b88df7e29b9b8b02d234578173280660eea1ea61fbfe308",
+      "originalSha256": "d37a88b69a38c80a4348a5043f9dde18d18dc862e9f54cf6548a120a48ca737a"
+    },
+    "atlas12/crescent-stars-g16.bin": {
+      "bundle": "app",
+      "path": "data/atlas12/crescent-stars-g16.9fd208da38d71b21.bin.gz",
+      "bytes": 492160,
+      "sha256": "69dcfc290c2c8cefb73ed7ca059934367503715fdc1308744a81e4952c152daa",
+      "originalSha256": "9fd208da38d71b216f4b48faab6bd229279f34cc7210e95e4295682ea4c4f59f"
+    },
     "atlas12/crescent.bin": {
       "bundle": "app",
       "path": "data/atlas12/crescent.9a874edc156e34f0.bin.gz",
@@ -284,10 +298,10 @@
     },
     "atlas12/cygnus.json": {
       "bundle": "app",
-      "path": "data/atlas12/cygnus.8db5881fd51ad052.json.gz",
-      "bytes": 6842,
-      "sha256": "6cee7feb836c4892a74d4f36cd56ffd80073a6dc58edcfa0f18b8df2d81a9c31",
-      "originalSha256": "8db5881fd51ad0521e0719818c18d1acc40fb84fcfb96bc72f5c4920c4cfc15b"
+      "path": "data/atlas12/cygnus.e7a69a25914e3b56.json.gz",
+      "bytes": 7152,
+      "sha256": "dd6bc82673767411de23cf584e4b74bf75d8f59a99c574a97ac91cdd907bdbd5",
+      "originalSha256": "e7a69a25914e3b5637907d04b83c9fad4c72109322cc1859286ec01321488237"
     },
     "atlas12/leo-triplet-continuum.bin": {
       "bundle": "app",
@@ -352,6 +366,13 @@
       "sha256": "823a638c2fad4eff2ff833852e03d0b3a2e88babadcc6629216aae7d1104d6ac",
       "originalSha256": "f63f5de59f9d1b9badbce3bbd7cf026170b83cc1e1896c670ec465399edd6b49"
     },
+    "atlas12/m45-continuum-transition.bin": {
+      "bundle": "app",
+      "path": "data/atlas12/m45-continuum-transition.fc50f6f15dad0432.bin.gz",
+      "bytes": 1828322,
+      "sha256": "dbf2d1cf1deb680dbd9722f685c05b0796c6bed74a152d17c9a76ba57df74720",
+      "originalSha256": "fc50f6f15dad04325b4514898862c9c98ce48e4b5f9b80566a71724c21be6112"
+    },
     "atlas12/m45-continuum.bin": {
       "bundle": "app",
       "path": "data/atlas12/m45-continuum.6874ab371caacdd9.bin.gz",
@@ -361,10 +382,10 @@
     },
     "atlas12/m45.json": {
       "bundle": "app",
-      "path": "data/atlas12/m45.aacefa68201ffc82.json.gz",
-      "bytes": 3684,
-      "sha256": "4f7797dc6c1e68cb1a572307177ecf99836b4c4e16da44e01d92fdbb40540eab",
-      "originalSha256": "aacefa68201ffc8271822049f0f9fb672111d0089ff752db84648fa5bbe8e77b"
+      "path": "data/atlas12/m45.53f81716a6021052.json.gz",
+      "bytes": 3747,
+      "sha256": "b45676b6cba53f399055dc8a748c0339aae46c8754b7910a24f3e15692acde0f",
+      "originalSha256": "53f81716a60210521a0ff6739792d0f2a7bd8f426a68df805a8c51fe89fc2e7f"
     },
     "atlas12/m51-continuum.bin": {
       "bundle": "app",
@@ -393,6 +414,20 @@
       "bytes": 3927,
       "sha256": "0cafe0a92f6f94cb69c4660c3cb085674312f3d40d5ec9a0e570e8cafe4d1e54",
       "originalSha256": "09639eb0892a765b79d38aeb00195247c0104520d71f7e677b60e17b8e2df660"
+    },
+    "atlas12/north-america-stars-g16.bin": {
+      "bundle": "app",
+      "path": "data/atlas12/north-america-stars-g16.4e7648cc28f3c372.bin.gz",
+      "bytes": 1967463,
+      "sha256": "2ed3870ba869ec37394a10e1aa6dc12fdf1c6bae6f3d55cf8f856fad159e9611",
+      "originalSha256": "4e7648cc28f3c3721684f397dcf94f2f2a0c1c397309fbfe90a244210b478a73"
+    },
+    "atlas12/veil-stars-g16.bin": {
+      "bundle": "app",
+      "path": "data/atlas12/veil-stars-g16.eb2505fc8aaa7d67.bin.gz",
+      "bytes": 1981582,
+      "sha256": "ea096f585ebfe0a82c88251f5d861e4f636f05db8c5c0a134af54db8bf111046",
+      "originalSha256": "eb2505fc8aaa7d67161e188a470ee9ee361396c8ded21cb8fbd00081904e7326"
     },
     "atlas13/carina-core.bin": {
       "bundle": "app",
@@ -436,12 +471,19 @@
       "sha256": "dae8b34d168bd79026be28d2c2d8858a3ee34b142ce3a996db7c620ef917829c",
       "originalSha256": "7a13d80897ea49d413e568a566202b4de07d08c6792830fc55b3306d0696e176"
     },
+    "atlas13/m16-core-revised.bin": {
+      "bundle": "app",
+      "path": "data/atlas13/m16-core-revised.0133b41d64a28f1d.bin.gz",
+      "bytes": 535892,
+      "sha256": "95bcfc4e6c98cd8def1bc125c08d760c1d7b57782cec44304cd8a43658a8d3db",
+      "originalSha256": "0133b41d64a28f1da63b57c5a269d313d76c1c392bb971b0a295f114efeb4a5d"
+    },
     "atlas13/m16.json": {
       "bundle": "app",
-      "path": "data/atlas13/m16.b9550ff649d59e51.json.gz",
-      "bytes": 3861,
-      "sha256": "2119ed303da9c25c018d7abebf181bc36e575131ebfcfeb599bc07172c2e4b6e",
-      "originalSha256": "b9550ff649d59e5130a38553cc7a2056964bf0ecdc49f14bc1fc30de7cc9efe3"
+      "path": "data/atlas13/m16.484ac2dae9f13c91.json.gz",
+      "bytes": 4069,
+      "sha256": "6303104ccbe1aa658db77f0deab71369b69cd5c33a446a907126110b7de28e9c",
+      "originalSha256": "484ac2dae9f13c9142c3109c53d355d53945a46e9cef795f617a1823ddf06255"
     },
     "atlas13/m17-lines.bin": {
       "bundle": "app",
@@ -508,10 +550,10 @@
     },
     "atlas2-versions.json": {
       "bundle": "app",
-      "path": "data/atlas2-versions.745c9defffc272a5.json.gz",
-      "bytes": 3224,
-      "sha256": "de96fcec34b208fc385116af48cc9eb22cb6c9acd4d1ae2977fa67d6b1b009c3",
-      "originalSha256": "745c9defffc272a5bd4dea3d757d535b0d1f953be9bb559184577e41698af2f8"
+      "path": "data/atlas2-versions.011678fac55dcabf.json.gz",
+      "bytes": 3225,
+      "sha256": "0e097494454bd0e2b7c2874cfe19c500fc4069020c0597ee0002b0bd239d4421",
+      "originalSha256": "011678fac55dcabfbbebddb5453407670744e8e8fa06b576fedfb6d11fc486d5"
     },
     "atlas2/barnard-stars.bin": {
       "bundle": "app",
@@ -1887,10 +1929,10 @@
     },
     "offline-index.json": {
       "bundle": "app",
-      "path": "data/offline-index.d37a57ccfd6fdcad.json.gz",
-      "bytes": 206877,
-      "sha256": "38e0dda6ba1883676ffda8224baaf24f0cf198516a60080502d81912916011a6",
-      "originalSha256": "d37a57ccfd6fdcadedd31ad5a380a3b05d7afd8b08d32b0ba37106624882be36"
+      "path": "data/offline-index.1bda64480b092f1a.json.gz",
+      "bytes": 207187,
+      "sha256": "95d61308c3a6e184a71681eb62395d06ac737436208d227bb58016d1e7bbd07e",
+      "originalSha256": "1bda64480b092f1abf0d27da3322105af40a9686aa18d1f24d40cab7fa367b6e"
     },
     "simulator-versions.json": {
       "bundle": "app",
@@ -32988,7 +33030,7 @@
     },
     "app.html": {
       "bytes": 5935,
-      "sha256": "94f3e369f9d27ccfbe1ea7805bc25d4677fa30436628b6f54b60ab0c671934c8"
+      "sha256": "31a06481464611ea54742cd35cf1edd306bb38bc94cb8a31822a92dc9ed06d27"
     },
     "app.webmanifest": {
       "bytes": 808,
@@ -33010,9 +33052,9 @@
       "bytes": 5488,
       "sha256": "add27af93742966a6f6131e717238f5757beebb82153dd59c42d5d70da1c154f"
     },
-    "assets/app-DWd38Mzs.js": {
-      "bytes": 5499,
-      "sha256": "81b20323ed2dec9e39a5944e44b8457de5bb21124845de05dac40133822b2be5"
+    "assets/app-DeCWduAR.js": {
+      "bytes": 5488,
+      "sha256": "189f6d537ea83ced1bc432df60fee09488e5dfa05f143b0b233751bd2a0c2e90"
     },
     "assets/app-YmOdNWni.js": {
       "bytes": 5488,
@@ -33070,17 +33112,17 @@
       "bytes": 98594,
       "sha256": "3db5a2c8a177fff070985b299724a50ffeefecf40ff0d401df3bd82e65c120b0"
     },
-    "assets/boot-BNurLwwb.js": {
-      "bytes": 914635,
-      "sha256": "c5fb271a46e24642e95399ca3d0f26262463e21e48ba427352b61fd285020ca7"
+    "assets/boot-BnaTFR44.js": {
+      "bytes": 1001461,
+      "sha256": "7fcea3d7654e2a0fc66b0643ee114801f86f0bd9b9d76eb7e6b24d8a54ed5ede"
     },
     "assets/boot-C90f7doY.js": {
       "bytes": 915728,
       "sha256": "ea888bf41e5fa54107860d1297835e7377f0247fa89855a0c038ae3d1cec25b8"
     },
-    "assets/boot-CA2RTqS3.css": {
-      "bytes": 96519,
-      "sha256": "28a57e143217bcab5d9e91abd35681db39fd9f6dfe95477dda5e0df9a02f7f64"
+    "assets/boot-CNBkJ72W.css": {
+      "bytes": 123557,
+      "sha256": "e2e85503070b6f90534acbb21cae4f7ed583700a5e894b6dd49e3834eb1b1d0a"
     },
     "assets/boot-Wd0PxiMV.js": {
       "bytes": 999708,
@@ -33093,6 +33135,10 @@
     "assets/bubble-ENZb9mfc.webp": {
       "bytes": 27878,
       "sha256": "356e6c04c562d098ba5f005cbae23f05d640c9377ff9be26dd7b1ce1bcfdc23d"
+    },
+    "assets/butterfly-BytWdQW5.webp": {
+      "bytes": 8410,
+      "sha256": "9d4ac3ce1e808ae61a7e06a74dce6c0495a058c7f39ff7819891d27fbd9fcc88"
     },
     "assets/butterfly-C5zfqrWo.webp": {
       "bytes": 22710,
@@ -33146,6 +33192,10 @@
       "bytes": 7540,
       "sha256": "693c2e1148763c6f885d1d1364de38f33a44b7e545121d5a870783d1959812df"
     },
+    "assets/crescent-DDbD-QLr.webp": {
+      "bytes": 8314,
+      "sha256": "5091558bdd382d88a9d7e0ff992e4ea254888d0116d9b1c00b75474400d9fba2"
+    },
     "assets/crescent-DmDam5zk.webp": {
       "bytes": 28508,
       "sha256": "f527945fbe5df1bbfb94fdba8d5c44d3379afb756830ff4b58c51477f24c0699"
@@ -33178,17 +33228,13 @@
       "bytes": 891,
       "sha256": "9c20b0994222bb21ede6893e898cd099199ce040e982dccc01293759d8791ed4"
     },
-    "assets/favicon-Cr225KxK.svg": {
-      "bytes": 896,
-      "sha256": "1a62088b173d67ba6de9395aca6912ca301aa8282d3ea579f7b9a8b2f6a9af2c"
-    },
     "assets/FilterBench-6d3lwLFt.js": {
       "bytes": 18620,
       "sha256": "bf94acc7dddd07999dae1ec97766ba6ff7df69a5baaf4b22dd5ccd958d78eea2"
     },
-    "assets/FilterBench-8NpTfHYP.js": {
-      "bytes": 18644,
-      "sha256": "178e491ab9271eb72170d2602e524d385050e8f679c84023633270c6d16c3c40"
+    "assets/FilterBench-Db_qIXrz.js": {
+      "bytes": 18620,
+      "sha256": "6259e1686c2384b645d00ebdad21bbcb26180d71e5d94ed19f9c5f11020cc936"
     },
     "assets/FilterBench-VSoxvOTh.js": {
       "bytes": 18644,
@@ -33250,9 +33296,9 @@
       "bytes": 7219,
       "sha256": "beb8af4bbbfcf34141107eb413b85cbcc731046a5c2f8fb7b68699f206da45c9"
     },
-    "assets/hosting-Cl-4WzMs.js": {
+    "assets/hosting-D4FURvKM.js": {
       "bytes": 7219,
-      "sha256": "dafd19a535acab6c2a360f95620c58673baf914688cf2d8802c7dcc4db2de268"
+      "sha256": "3246612544f690fd2bdb4d891415aeb14efae1e4e14ec15057b01251ee2b4dff"
     },
     "assets/hyper-DQCPtK39.webp": {
       "bytes": 155862,
@@ -33270,13 +33316,13 @@
       "bytes": 38917,
       "sha256": "edda7cffd6d406f06a7996c665346078031df9888756a3e2d8c7edd8561cbd5a"
     },
+    "assets/i18n-en-CAkx6rLa.js": {
+      "bytes": 298102,
+      "sha256": "4f8c688fe8405a4f88d4a92640d82a1037d90a852559fdea1da131dff2205eb8"
+    },
     "assets/i18n-en-DhstJO-E.js": {
       "bytes": 296954,
       "sha256": "10d15d91b94469ab4da059de82f7013907edabeecc90a4f619669f82d2aeeb84"
-    },
-    "assets/i18n-en-DizW8-dv.js": {
-      "bytes": 272014,
-      "sha256": "a34978c9aaac1ae400fbd733b798f11716ae8b45c961e7d37ce009c3aa72090c"
     },
     "assets/i18n-en-HoXQ7qYa.js": {
       "bytes": 276537,
@@ -33302,9 +33348,9 @@
       "bytes": 24252,
       "sha256": "8960851d691c054ed38e259bdcf1a6190d157b4203ed5bb32c632a863fb8ec2f"
     },
-    "assets/iit-engrave-BLXRBCpu.woff2": {
-      "bytes": 58456,
-      "sha256": "9ff9e9914a84afaff434e8312f39ad025c70a49e647612c0de73c12808810571"
+    "assets/iit-engrave-D2_X2pEO.woff2": {
+      "bytes": 60672,
+      "sha256": "95e2f8db5cad77426f4be671c920be0398943b4288831a8fdfadeea237a76b31"
     },
     "assets/iit-engrave-D7ji-Y6q.woff2": {
       "bytes": 58612,
@@ -33357,6 +33403,10 @@
     "assets/m13-DN6-B1an.webp": {
       "bytes": 6324,
       "sha256": "c251c91ad99870a01fa3d15197baa705af07d19fe77ec8c94bbd5e01720e29b6"
+    },
+    "assets/m16-BDnyxiGK.webp": {
+      "bytes": 8098,
+      "sha256": "fdc49b39b2792f6301270095cf1bc3c9f7b8161829ee1ec0891c99073bd2196a"
     },
     "assets/m16-CtsaAKOP.webp": {
       "bytes": 26808,
@@ -33498,6 +33548,10 @@
       "bytes": 7222,
       "sha256": "486316fb46b2bdce4042ab0a51140855ad629281ff293f75ae337d4d297f4740"
     },
+    "assets/north-america-gwy_OlvZ.webp": {
+      "bytes": 8204,
+      "sha256": "52535db5c46aab48f3a725c87363df934bf9917ae0f7bea41b429950fe2aadd1"
+    },
     "assets/omega-cen-L2xsRjDC.webp": {
       "bytes": 24404,
       "sha256": "a650c8ca48944a365cbb60c317218a20aad648137bd8726cceefe7f3413b91f9"
@@ -33574,13 +33628,17 @@
       "bytes": 59275,
       "sha256": "9c4029da44d025389f8dbe4ce64e098d9772c9a8909e0b3406a6aa4e11cd56c0"
     },
-    "assets/snapshot-sheet-D2WK0IaP.js": {
-      "bytes": 59277,
-      "sha256": "7424331b83bc579cf448f3c4d1acc86221545e2be3f43f3c9043b4e7da63a673"
+    "assets/snapshot-sheet-C4D5qLze.js": {
+      "bytes": 59268,
+      "sha256": "2ed7e3885d7a80d16464083043f81d2b1b78ed5b888b1dc439d2388b3983db1c"
     },
     "assets/spectral-worker--OmrzUVo.js": {
       "bytes": 54620,
       "sha256": "a92f2c8de0295be3aa2a7487f0ce85ac1cd4424a9f45b2eb85dc9e566996deaa"
+    },
+    "assets/spectral-worker-DaZTIGTZ.js": {
+      "bytes": 54995,
+      "sha256": "bc0a73c9a16ad9bd39a12930a6b5be696744d22aae843b2b11a48e05cbb55cd1"
     },
     "assets/spectral-worker-DGkiOTiF.js": {
       "bytes": 54908,
@@ -33614,6 +33672,10 @@
       "bytes": 7286,
       "sha256": "2a89fa2d00202105d868e770d608676646acbef27a5700c64e9cabde32c58e7f"
     },
+    "assets/veil-DUVilI_2.webp": {
+      "bytes": 8394,
+      "sha256": "74a611216ad6d3c81886f6e50c886400dc84d9d1ab02c3b3a6029e2cad4988fc"
+    },
     "assets/vendor--Do4GtAm.js": {
       "bytes": 223060,
       "sha256": "4f40c71d78717c5038d981783148aa9139463091b5c52579a7d5eac39daf1d73"
@@ -33622,13 +33684,13 @@
       "bytes": 24953,
       "sha256": "c5abc6cae4059d0e44f152bda6dfbb52f8b6e70b92c31fcdd60415a2768348e4"
     },
+    "assets/VerifyPanel-C0Llr0Nz.js": {
+      "bytes": 24955,
+      "sha256": "1d64cf9322d462a638a9bfdacb86a4137cd60720e1a2fc0d271c1fc01dcf80f8"
+    },
     "assets/VerifyPanel-DgKMcvxf.js": {
       "bytes": 24953,
       "sha256": "1d1b5b37fb8d92a78dee553ddbf238bd7b43701e85a2aad90ba51b06ff7998a4"
-    },
-    "assets/VerifyPanel-DzD9hyDE.js": {
-      "bytes": 24968,
-      "sha256": "235c6f7767d4df888dc7b60b72f9c35e3ea73129dfeb0858d327325262463b1c"
     },
     "assets/wechat-reward-BwbcPbu0.png": {
       "bytes": 44372,
@@ -33782,6 +33844,14 @@
       "bytes": 4646,
       "sha256": "fd9ee9bbc41e47a6b7b17bc391b7ccd2a652026bfa0d6dc50c5777a3770373f7"
     },
+    "data/atlas12/butterfly-stars-g16.d37a88b69a38c80a.bin.gz": {
+      "bytes": 739433,
+      "sha256": "6207d8979609d5794b88df7e29b9b8b02d234578173280660eea1ea61fbfe308"
+    },
+    "data/atlas12/crescent-stars-g16.9fd208da38d71b21.bin.gz": {
+      "bytes": 492160,
+      "sha256": "69dcfc290c2c8cefb73ed7ca059934367503715fdc1308744a81e4952c152daa"
+    },
     "data/atlas12/crescent.9a874edc156e34f0.bin.gz": {
       "bytes": 5892857,
       "sha256": "ead08669bfda062482532fed25ddc87479866190ebef8d0326ff14aa4ccd4a3f"
@@ -33789,6 +33859,10 @@
     "data/atlas12/cygnus.8db5881fd51ad052.json.gz": {
       "bytes": 6842,
       "sha256": "6cee7feb836c4892a74d4f36cd56ffd80073a6dc58edcfa0f18b8df2d81a9c31"
+    },
+    "data/atlas12/cygnus.e7a69a25914e3b56.json.gz": {
+      "bytes": 7152,
+      "sha256": "dd6bc82673767411de23cf584e4b74bf75d8f59a99c574a97ac91cdd907bdbd5"
     },
     "data/atlas12/leo-triplet-continuum.c964b3c9b86c7990.bin.gz": {
       "bytes": 1752101,
@@ -33826,9 +33900,17 @@
       "bytes": 4594,
       "sha256": "823a638c2fad4eff2ff833852e03d0b3a2e88babadcc6629216aae7d1104d6ac"
     },
+    "data/atlas12/m45-continuum-transition.fc50f6f15dad0432.bin.gz": {
+      "bytes": 1828322,
+      "sha256": "dbf2d1cf1deb680dbd9722f685c05b0796c6bed74a152d17c9a76ba57df74720"
+    },
     "data/atlas12/m45-continuum.6874ab371caacdd9.bin.gz": {
       "bytes": 1833707,
       "sha256": "9a30b57c1ee58dc8b7f21343d57697f673c0ba8625c917c095e9522952b510bb"
+    },
+    "data/atlas12/m45.53f81716a6021052.json.gz": {
+      "bytes": 3747,
+      "sha256": "b45676b6cba53f399055dc8a748c0339aae46c8754b7910a24f3e15692acde0f"
     },
     "data/atlas12/m45.aacefa68201ffc82.json.gz": {
       "bytes": 3684,
@@ -33849,6 +33931,14 @@
     "data/atlas12/m81-m82.09639eb0892a765b.json.gz": {
       "bytes": 3927,
       "sha256": "0cafe0a92f6f94cb69c4660c3cb085674312f3d40d5ec9a0e570e8cafe4d1e54"
+    },
+    "data/atlas12/north-america-stars-g16.4e7648cc28f3c372.bin.gz": {
+      "bytes": 1967463,
+      "sha256": "2ed3870ba869ec37394a10e1aa6dc12fdf1c6bae6f3d55cf8f856fad159e9611"
+    },
+    "data/atlas12/veil-stars-g16.eb2505fc8aaa7d67.bin.gz": {
+      "bytes": 1981582,
+      "sha256": "ea096f585ebfe0a82c88251f5d861e4f636f05db8c5c0a134af54db8bf111046"
     },
     "data/atlas13/carina-core.d81300fb936dfd61.bin.gz": {
       "bytes": 1996260,
@@ -33873,6 +33963,14 @@
     "data/atlas13/m101.7a13d80897ea49d4.json.gz": {
       "bytes": 4865,
       "sha256": "dae8b34d168bd79026be28d2c2d8858a3ee34b142ce3a996db7c620ef917829c"
+    },
+    "data/atlas13/m16-core-revised.0133b41d64a28f1d.bin.gz": {
+      "bytes": 535892,
+      "sha256": "95bcfc4e6c98cd8def1bc125c08d760c1d7b57782cec44304cd8a43658a8d3db"
+    },
+    "data/atlas13/m16.484ac2dae9f13c91.json.gz": {
+      "bytes": 4069,
+      "sha256": "6303104ccbe1aa658db77f0deab71369b69cd5c33a446a907126110b7de28e9c"
     },
     "data/atlas13/m16.b9550ff649d59e51.json.gz": {
       "bytes": 3861,
@@ -33913,6 +34011,10 @@
     "data/atlas15/seagull.88796509931db5aa.bin.gz": {
       "bytes": 556348,
       "sha256": "71d50a3fbf56bd58b26bf4a5506b3ce1380d644de3229a59fd8739da7d2a59d2"
+    },
+    "data/atlas2-versions.011678fac55dcabf.json.gz": {
+      "bytes": 3225,
+      "sha256": "0e097494454bd0e2b7c2874cfe19c500fc4069020c0597ee0002b0bd239d4421"
     },
     "data/atlas2-versions.6fc8ca0533a43a1c.json.gz": {
       "bytes": 3177,
@@ -34705,6 +34807,10 @@
     "data/m42/sii6731.6221d7e6e170aec0.bin.gz": {
       "bytes": 141834,
       "sha256": "cd1c8db70a51ae9222c2cbf82435884e99271aa2c0c79c76cd6ce943e02a954e"
+    },
+    "data/offline-index.1bda64480b092f1a.json.gz": {
+      "bytes": 207187,
+      "sha256": "95d61308c3a6e184a71681eb62395d06ac737436208d227bb58016d1e7bbd07e"
     },
     "data/offline-index.40d773d572f681db.json.gz": {
       "bytes": 206608,
@@ -53279,12 +53385,12 @@
       "sha256": "59175705bdfcf9426f06f834eb46fa3cfe09af4800b47d52220234053a6f9a78"
     },
     "devicetest.html": {
-      "bytes": 196402,
-      "sha256": "5821935f518d7e4bba2e606a591968469ac62b51fcc4424a96cf437b03905d7a"
+      "bytes": 196561,
+      "sha256": "1f46d75dd58470d9b86a420452e4345fb1953d7165e24df7e689fed5e50557f6"
     },
     "hosting.json": {
       "bytes": 304,
-      "sha256": "dd75f3f7c2d99b3da5106c0d0a463eb9986fea7de5d996831b72e404517020e8"
+      "sha256": "47f3f0a08a1ab3b172d12170a7cff18e736c3a0bf439fbc4cc7eb59c4237a2c5"
     },
     "icons/apple-touch-icon.png": {
       "bytes": 23815,
@@ -53308,7 +53414,7 @@
     },
     "index.html": {
       "bytes": 5935,
-      "sha256": "94f3e369f9d27ccfbe1ea7805bc25d4677fa30436628b6f54b60ab0c671934c8"
+      "sha256": "31a06481464611ea54742cd35cf1edd306bb38bc94cb8a31822a92dc9ed06d27"
     },
     "package-manifest.0b27006f60327de5.json": {
       "bytes": 1618341,
@@ -53318,25 +53424,29 @@
       "bytes": 1616383,
       "sha256": "8636af41a6b2422db1272e935e2d252a023a85b24350727e76e0e681d33f39d1"
     },
+    "package-manifest.ac600c507eee8d65.json": {
+      "bytes": 1620402,
+      "sha256": "ac600c507eee8d6522d951a576336bfc8c3b2db5ca5070630f0ceaf66aa69806"
+    },
     "prewarm-manifest.json": {
-      "bytes": 74700,
-      "sha256": "e7ecac5030f40ebecefadcde5d1706c3a0eae40153b06d7945af80a9da6c8cd8"
+      "bytes": 74701,
+      "sha256": "cd4f2a81c4ec93b361c700d8467bc41e45ec3b98ded48fdbc0aa2fbc4e823fbd"
     },
     "prewarm-urls.txt": {
       "bytes": 29435,
-      "sha256": "c7056880d3b0e36c56cb05ad6d1034f5b1a55b3ce493f958f755dd9e7597e652"
+      "sha256": "af1f6877228e76c94010f2878e7e99791a195a220e44b63082accd7298963040"
     },
     "product.json": {
       "bytes": 141,
-      "sha256": "9c75b3082f6f2a6f403a7974f0868e86531b4356df55e004382533e8935d2e5b"
+      "sha256": "fc9cf0d81cff3407d83c6b336d8e3195203d87e8a7bc981984040e8863d4e528"
     },
     "refresh-urls.txt": {
       "bytes": 388,
       "sha256": "abc3f34f5fcb063e353fac94da17e324241b215dbfed01656c9baa4e187362bc"
     },
     "release-history.json": {
-      "bytes": 2813409,
-      "sha256": "357163c3e7f9c90f0e9bd7d6c446bfe2d449164e00f47de452e9cbe2e6578f10"
+      "bytes": 2820064,
+      "sha256": "a3934f330b6fc42776df7b5e0a16771071d539164917925a001a89129f786cf9"
     },
     "selftest.html": {
       "bytes": 131367,
@@ -53348,7 +53458,7 @@
     },
     "sw.js": {
       "bytes": 9098,
-      "sha256": "773d39a1a076bb20eb3707122e6e5123d1c1954167bae53a1b1b0a635b36c684"
+      "sha256": "d56a560464f97f770e4fca2d198a306ac96e848fac0d61feb6ad40a4a869912e"
     },
     "THIRD_PARTY_NOTICES.txt": {
       "bytes": 60944,
