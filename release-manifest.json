@@ -5,13 +5,15 @@
   "layout": "github",
   "product": {
     "name": "NvAstraSimulator",
-    "version": "1.1.4",
+    "version": "1.1.3",
+    "preview": 3,
     "modelVersion": "eyepiece-d143",
     "dataFamily": "atlas15-v1",
-    "linkVersion": 16
+    "linkVersion": 16,
+    "displayVersion": "1.1.3-pre.3"
   },
-  "sourceCommit": "ebe4f2747800ab5acb851961fc5d39720b0e711a",
-  "sourceSnapshot": "c11d1644e9e5cb6f3c59fe4d90ab8ec007b0c37a8936629aa69aaa913a24baae",
+  "sourceCommit": "a4b8c29de8824149fcd514c1e7639e7d9323e416",
+  "sourceSnapshot": "97c0e4445e9228bff76fd3954e104327a3d74bb67662d5d45824bf47bf8c63a6",
   "budgets": {
     "package": 900000000,
     "file": 90000000
@@ -33023,7 +33025,7 @@
     },
     "app.html": {
       "bytes": 6035,
-      "sha256": "f257beb80dd507a5ba2e916469a61ff5fe5f68b37bd801316a670c1c68a2eab6"
+      "sha256": "3116e84aff72960e5f9c0656391a406653513fcba0078446efbebb7786376d28"
     },
     "app.webmanifest": {
       "bytes": 808,
@@ -33045,13 +33047,13 @@
       "bytes": 5488,
       "sha256": "75c3b6399c6f89e1d4db2b425093630db72c972253a55f195823dd9e3dca126a"
     },
+    "assets/app-CcpLMNBq.js": {
+      "bytes": 5488,
+      "sha256": "02e060a3eb57bd9103c4ab49af61c39dd7732f7c193baa61931486999a6aff42"
+    },
     "assets/app-CNrSFC6w.js": {
       "bytes": 5488,
       "sha256": "06185ac1d225ed0ecf01806f023f87c8e5278c9050e71a5ce5733abb21fc4c64"
-    },
-    "assets/app-CTfmNSce.js": {
-      "bytes": 5488,
-      "sha256": "e517c2e068a48340d31c2fa628a55f87d3c38c7c8317b7b5f0cd6e863db6cb63"
     },
     "assets/arch-DzdPvdEh.webp": {
       "bytes": 87572,
@@ -33097,13 +33099,17 @@
       "bytes": 76684,
       "sha256": "8b4eea82a714fdf2d6ffb312aeaa3417f0a89cd76d2d77c362de20d26a3ac375"
     },
-    "assets/boot-BjDo1nd3.js": {
-      "bytes": 1036749,
-      "sha256": "238d27922a91b01e128ed294722fa59a3ae72eb057dbffa7d7761ba6aa4f965c"
+    "assets/boot-BMFY-io8.js": {
+      "bytes": 1051000,
+      "sha256": "142c64303f2b62c881ea6a1139093ebc7651b2e9116fa8f0dc262e8edc11e69b"
     },
     "assets/boot-C7ie5wul.js": {
       "bytes": 1041949,
       "sha256": "c600ce73b171e2869cfe252070f8c2a874ae69048f783cbd3882be7d25d855df"
+    },
+    "assets/boot-CRicSw0f.css": {
+      "bytes": 125621,
+      "sha256": "00e387f11300d0d2bdb4af54fe7ed553127dc6378056d7b5b57e920d11e293bf"
     },
     "assets/boot-QEdBDQdC.css": {
       "bytes": 124071,
@@ -33209,9 +33215,9 @@
       "bytes": 18620,
       "sha256": "a13bd20d9b6eb3b3ac3cf2e913b8e517d5dfb9cb001274490770bc4b036b557b"
     },
-    "assets/FilterBench-CEV0TJtE.js": {
+    "assets/FilterBench-CaHMX5Oc.js": {
       "bytes": 18620,
-      "sha256": "87acf24ea629edba07d8b5fda8a4c3f687b485223edd486f67f7bf911bae4322"
+      "sha256": "966fb42bb258dc7f38d41473a12f95a55c6a9199f7ba145924510bc90b4214fa"
     },
     "assets/flaming-star-B9BeObsA.webp": {
       "bytes": 7270,
@@ -33261,10 +33267,6 @@
       "bytes": 7220,
       "sha256": "cfd976600f7b667a7f0f28d8b6891697cd1c3ac7ee48ebaaf7f2e0d561c22a3f"
     },
-    "assets/hosting-BdJOGnj9.js": {
-      "bytes": 7659,
-      "sha256": "448da821d42e88208e3eff413afe898346c81e5be2f46fefdae35fd921e08705"
-    },
     "assets/hosting-CwoKbIXZ.js": {
       "bytes": 7659,
       "sha256": "ac37387f154297b147d3804c6c542160ada9c20fc0a7390667a8dcbcdcc5c2a3"
@@ -33272,6 +33274,10 @@
     "assets/hosting-DW0-2p_0.js": {
       "bytes": 7659,
       "sha256": "5d3b6a458b0c5b98225bb28a18036ab8aff86c4d0843f8f1b38fbbf12c65f8bd"
+    },
+    "assets/hosting-xOKMYrYq.js": {
+      "bytes": 7659,
+      "sha256": "4fa684d7ff1be80e19801efc5084181759e8aefc347f1aebb2cafd7248de3bd5"
     },
     "assets/hyper-DQCPtK39.webp": {
       "bytes": 155862,
@@ -33289,9 +33295,9 @@
       "bytes": 301123,
       "sha256": "90598c60910a0ee61ca446b486cfcc9dffcd05c27ea19b49d59953c983a679a9"
     },
-    "assets/i18n-en-DZi8qvx8.js": {
-      "bytes": 300300,
-      "sha256": "24a720cc495503cdb78101d0996f46660d7456665d47c7dd0fbfae0074ed8514"
+    "assets/i18n-en-vxaBPLLU.js": {
+      "bytes": 303701,
+      "sha256": "8b3264d59de2352cc88a1ed1c9d1537d95395320728481c65a645052ed79edb2"
     },
     "assets/i18n-en-yF2_x4LT.js": {
       "bytes": 301519,
@@ -33573,10 +33579,6 @@
       "bytes": 19845,
       "sha256": "c1155671a808ab030130eefc8b94a6368c91531d97ee80886340f066904bfa81"
     },
-    "assets/snapshot-sheet-CDad6i12.js": {
-      "bytes": 59374,
-      "sha256": "d7d670e6c43dc1e0ceee193e30cc3ebd0b0c5009a202bc7d2ac0cd15c0c87df7"
-    },
     "assets/snapshot-sheet-CMdOJF3E.js": {
       "bytes": 59374,
       "sha256": "98ea2dc5a0bc5823b37f4c9be3026b1477f3ff2613a3e2812b6f420d1cc7d9e1"
@@ -33584,6 +33586,10 @@
     "assets/snapshot-sheet-CVt1YGgN.js": {
       "bytes": 59374,
       "sha256": "6258df7a453b861d450e1b786f0baf3eed3e00d2c932ad75ee961286fd53ba84"
+    },
+    "assets/snapshot-sheet-PODe3cOm.js": {
+      "bytes": 59374,
+      "sha256": "9614586a7809325c81da8f389c5792648658795ac05f909befa619e5136cf915"
     },
     "assets/spectral-worker-BUypmwde.js": {
       "bytes": 55324,
@@ -33625,21 +33631,21 @@
       "bytes": 24955,
       "sha256": "7fca98aa78936d97d3198b1acd7bae44caa3df9b0fa1faa2385076d4208f2de1"
     },
+    "assets/VerifyPanel-DvQd731Y.js": {
+      "bytes": 24947,
+      "sha256": "75bb9a1c5667bb7e5e9c85a13d1e76916c25dfbfc2612525240e1cdb0e93103e"
+    },
     "assets/VerifyPanel-DzbilA6x.js": {
       "bytes": 24955,
       "sha256": "bcc1b135b6666b2981cbc4de4b93c9448899b194888c231978f3ddf59bdc3c22"
-    },
-    "assets/VerifyPanel-mtJmXv3Q.js": {
-      "bytes": 24955,
-      "sha256": "89d49086bc2f44251b5637b27502dfece7892c44bf84d50affa3b8b3530fe044"
     },
     "assets/wechat-reward-BwbcPbu0.png": {
       "bytes": 44372,
       "sha256": "67f6c0b8841ac862dc682f8d45af3b835d7900dbb1a2d34c5160ea1927b6bc58"
     },
     "build-info.json": {
-      "bytes": 934644,
-      "sha256": "010a2646be852f457a62f3ff572f1b797f4432929532a5afab48b85499c28181"
+      "bytes": 935264,
+      "sha256": "d82e0d197dfc1a8336d452ccf0539d5b29e6a909361754b04a667a21ddf0da87"
     },
     "data/.gitattributes": {
       "bytes": 8,
@@ -52494,8 +52500,8 @@
       "sha256": "59175705bdfcf9426f06f834eb46fa3cfe09af4800b47d52220234053a6f9a78"
     },
     "devicetest.html": {
-      "bytes": 213043,
-      "sha256": "aac7577132cc9a7fef535ef70329be6141400dc4dc773fd7c06e05ab5c7c2951"
+      "bytes": 215375,
+      "sha256": "b1bed9750e4945fe52387048d9db28ec36b8f7a7bd4d42785dc0660d3a5183da"
     },
     "hosting.json": {
       "bytes": 304,
@@ -52523,7 +52529,7 @@
     },
     "index.html": {
       "bytes": 6035,
-      "sha256": "f257beb80dd507a5ba2e916469a61ff5fe5f68b37bd801316a670c1c68a2eab6"
+      "sha256": "3116e84aff72960e5f9c0656391a406653513fcba0078446efbebb7786376d28"
     },
     "package-manifest.b8a6ba8503f748d1.json": {
       "bytes": 1620070,
@@ -52531,15 +52537,15 @@
     },
     "prewarm-manifest.json": {
       "bytes": 52379,
-      "sha256": "a1ff535cd876cf0dab4e406dd561d9fe880b12883dc9d688fd98e887ea6335e1"
+      "sha256": "9851288ee7c2fc0a0d7ff8cd5b65df5837fa3fd408e233d044f31546d248be7a"
     },
     "prewarm-urls.txt": {
       "bytes": 21630,
-      "sha256": "8694f373c01279c679d8841a5c1c69d95f99bbe464b0b1eb5c19c01f1903e7be"
+      "sha256": "2b7e99985524825f5d34c235cf047eda7cbe663ebffee1fb54755a6ae3bdbf23"
     },
     "product.json": {
-      "bytes": 141,
-      "sha256": "758433e00117a16333969ec33cf670e5f4e572371e25cd9350ff7e7494e7f4a0"
+      "bytes": 192,
+      "sha256": "8fefdf4d729d2bafbeeba78e6f6bb2c42c187aa71fa2b02331ae1dd5c3ac53b1"
     },
     "refresh-urls.txt": {
       "bytes": 423,
@@ -52547,11 +52553,11 @@
     },
     "release-history.json": {
       "bytes": 2827152,
-      "sha256": "a23d8a605eefbe4dd577b700b030d08439f4331b2e8c11185ed1fdac746ce223"
+      "sha256": "ab6e37cad558bae189789d70f2d6ad1df2797c12929a7d442be502970fa1977f"
     },
     "selftest.html": {
-      "bytes": 135525,
-      "sha256": "d21d3e547890d046b75386f222206284247bf1d1290a6b76ffb675fecd95453d"
+      "bytes": 135674,
+      "sha256": "43d354710769a3a4ec9059cf5a0fbfd258b6112007ba4df885c329846899bad1"
     },
     "share-card.jpg": {
       "bytes": 113298,
@@ -52559,7 +52565,7 @@
     },
     "sw.js": {
       "bytes": 10010,
-      "sha256": "69608e5b1500d67a93a6bcdf619f9d2398c27bc452b7808880ab8278829c2ae1"
+      "sha256": "0a3d266e965864573a5bcb9659264bf37c1d0c8bde8dea71d0d853ffd50cd685"
     },
     "THIRD_PARTY_NOTICES.txt": {
       "bytes": 60944,
@@ -52576,7 +52582,7 @@
     "layout": "github",
     "explicit": true
   },
-  "buildId": "2607ac165dc8664a6212b2adc82c4558d1b43f62ceddc0f1747d70b3b9fd5c79",
+  "buildId": "f8c33f09af2c18d296809738c45264fd32170839c527476aca7c0705e257358a",
   "verification": {
     "schemaVersion": 1,
     "kind": "iit-release-verification",

@@ -849,7 +849,7 @@ uniform float u_gridCentre;
 // D152: 1 = the shown picture was accumulated in another view (frames staged): each pixel reads the picture where the
 // picture's camera saw this pixel's sky. u_warpD = M \u2212 I with picture direction M\xB7(mm / focal, 1); u_warpMm: the live
 // view centre, the picture grid's origin (mm); u_warpScale: focal, grid pitch (mm). Past u_warpRadius texels from the
-// picture's centre its edge repeats.
+// picture's centre it is mirrored back inside.
 uniform int u_warp;
 uniform mat3 u_warpD;
 uniform vec4 u_warpMm;
@@ -1040,16 +1040,17 @@ void main() {
   // At rest u_viewScale is 1 and this is exactly ivec2(frag) + u_margin (frag sits at a half-integer).
   vec2 tex = rel * u_viewScale + u_gridCentre;
   if (u_warp == 1) {
-    // The field stop (view circle, cathode mask) stays; the sky moved under it. Past the picture's own circle, the
-    // leading edge repeats its last texels for the refreshes until the next picture. A pure move lands on whole texels
-    // (centres at half-integers keep floor() exact against float rounding).
+    // The field stop (view circle, cathode mask) stays; the sky moved under it. Sky the picture never saw (the leading
+    // edge, until the next picture) shows the picture mirrored at its own circle: the grain and the stars just inside,
+    // not the radial streaks a repeated edge texel drew (1.1.4). A pure move lands on whole texels (centres at
+    // half-integers keep floor() exact against float rounding).
     vec3 c = vec3((u_warpMm.xy + (tex - u_gridCentre) * u_warpScale.y) / u_warpScale.x, 1.0);
     vec3 r = c + u_warpD * c;
     if (r.z > 0.0) {
       tex = (u_warpScale.x * r.xy / r.z - u_warpMm.zw) / u_warpScale.y + 0.5;
       vec2 d = tex - u_gridCentre;
       float l = length(d);
-      if (l > u_warpRadius) tex = u_gridCentre + d * (u_warpRadius / l);
+      if (l > u_warpRadius) tex = u_gridCentre + d * (max(2.0 * u_warpRadius - l, 0.5 * u_warpRadius) / l);
     }
   }
   ivec2 pixel = ivec2(floor(tex));
