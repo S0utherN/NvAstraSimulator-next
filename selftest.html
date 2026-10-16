@@ -846,6 +846,10 @@ uniform float u_half;          // canvas half-size, px
 // texel coordinate of the view centre (margin + n / 2). Texel positions are scaled about the view centre.
 uniform float u_viewScale;
 uniform float u_gridCentre;
+// D152: whole texels the view moved since the shown picture was accumulated (0 = none, as always unless frames are
+// staged); the picture is read there, its edge repeated beyond u_warpRadius texels from the view centre.
+uniform vec2 u_warp;
+uniform float u_warpRadius;
 uniform vec3 u_xyz;            // XYZ per (electron/s/mm^2) at the screen
 uniform float u_scale;         // 683 / 10 cd/m^2 * 2^EV
 uniform float u_gammaInv;
@@ -1030,6 +1034,14 @@ void main() {
   float cath = clamp((u_cathodeR - length(mm)) / u_pitchMm + 0.5, 0.0, 1.0);
   // At rest u_viewScale is 1 and this is exactly ivec2(frag) + u_margin (frag sits at a half-integer).
   vec2 tex = rel * u_viewScale + u_gridCentre;
+  if (u_warp != vec2(0.0)) {
+    // The field stop (view circle, cathode mask) stays; the sky moved under it. Past the picture's own circle, the
+    // leading edge repeats its last texels for the refreshes until the next picture.
+    tex += u_warp;
+    vec2 d = tex - u_gridCentre;
+    float r = length(d);
+    if (r > u_warpRadius) tex = u_gridCentre + d * (u_warpRadius / r);
+  }
   ivec2 pixel = ivec2(floor(tex));
   if (u_compose == 1) {
     // D118: only texels where the grid-sized pass reshaped a star are drawn again at these pixels; elsewhere that
