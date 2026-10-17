@@ -6,14 +6,14 @@
   "product": {
     "name": "NvAstraSimulator",
     "version": "1.2.0",
-    "preview": 2,
+    "preview": 3,
     "modelVersion": "eyepiece-d143",
     "dataFamily": "atlas15-v1",
     "linkVersion": 16,
-    "displayVersion": "1.2.0-pre.2"
+    "displayVersion": "1.2.0-pre.3"
   },
-  "sourceCommit": "8e05fe2a32d7e7f27c746b228035f80073604c7c",
-  "sourceSnapshot": "dabaa0d75446ebf45790aeb1a4453042f4ad6c637c4df7c65d52670824a02448",
+  "sourceCommit": "6f680572b17cef4f642d1ed2178778bc52d2ff31",
+  "sourceSnapshot": "a0a425f5bbdc0357ee81957886c6f1cd87816c09215bab85f23e2dc4a9735538",
   "budgets": {
     "package": 900000000,
     "file": 90000000
@@ -33025,7 +33025,7 @@
     },
     "app.html": {
       "bytes": 6035,
-      "sha256": "c232df87f12ccffe834b1687cc80b4e41f076df4ce7f3bb88a0bd3fa57e4ad2c"
+      "sha256": "669df60941b5170f0485a939b4be081f2178b52b3b049b77d540e76453da9e5d"
     },
     "app.webmanifest": {
       "bytes": 808,
@@ -33047,9 +33047,9 @@
       "bytes": 5488,
       "sha256": "f5cb0c581b3c406b2fbd898d3e7c6909e86037d04f52088188053f6d6a63ae6b"
     },
-    "assets/app-CMbl5H3H.js": {
+    "assets/app-BYZim6Nw.js": {
       "bytes": 5488,
-      "sha256": "0773c3fe28c8bd768890ef74e81012c8e71272c9a41f59ea264361424ea66b04"
+      "sha256": "01defcc6a5be4e5b062587d7b2d369026aad327238648c28677a7dd71e83be41"
     },
     "assets/app-MzvXxDAn.js": {
       "bytes": 5488,
@@ -33107,21 +33107,21 @@
       "bytes": 130002,
       "sha256": "c1ba5aa6d20d2c9bbe66673f42e0af6655292a6948a0b2d9afd7a328bc31a063"
     },
+    "assets/boot-CHrUhfPH.js": {
+      "bytes": 1090510,
+      "sha256": "ac376838a65484754eb60e7af348ecc6b0cd78758cc30387abbfd21d3b6909cb"
+    },
     "assets/boot-CXQeDvv3.js": {
       "bytes": 1063081,
       "sha256": "32e367dd0c5bc21f26900b10848b7e05a8f65a64ae958b5b1e1966784b782c8d"
     },
-    "assets/boot-D4IdDAwk.js": {
-      "bytes": 1054293,
-      "sha256": "3240a2555f1eaa63173107eab0a3168c7c17116c8a35a368053cbebd91b103de"
-    },
-    "assets/boot-DWEcdSIq.css": {
-      "bytes": 125687,
-      "sha256": "7001839210347d7facb748536d67bd4dc469a693ff023b48c376759a2e862184"
-    },
     "assets/boot-R9RdOUQP.css": {
       "bytes": 129330,
       "sha256": "30fbd13ce32ce00f503e880be05afd9d1759864654a814ea2058568eb69ee1fa"
+    },
+    "assets/boot-tLfNL5LS.css": {
+      "bytes": 135875,
+      "sha256": "5c19959301787c09b922ac310eb04d865f608f73b9f2378fbaa8fec1047ee3ce"
     },
     "assets/bubble-CdGyuMFy.webp": {
       "bytes": 7390,
@@ -33211,13 +33211,13 @@
       "bytes": 7098,
       "sha256": "7d6067f3a1b7b6b1d4df2dd2013f6ef06b25ab0597de02300c708bf023bc59eb"
     },
+    "assets/FilterBench-B_OlFgeR.js": {
+      "bytes": 18789,
+      "sha256": "afb43f78b82c342e39282af8446e7149c4a838d0eb314e04cee25d96c0657496"
+    },
     "assets/FilterBench-BBE1zI1_.js": {
       "bytes": 18789,
       "sha256": "b82c2822c1a1aadb7ce328149b3eff367a6f4590294f279dd965851277c0ecd0"
-    },
-    "assets/FilterBench-BdIy33Z7.js": {
-      "bytes": 18620,
-      "sha256": "49ee9702501ae665f3c90580d8116030e86c06680d2ae32f4863063fda0d4fd9"
     },
     "assets/FilterBench-Bykn3BKq.js": {
       "bytes": 18789,
@@ -33271,9 +33271,9 @@
       "bytes": 7220,
       "sha256": "cfd976600f7b667a7f0f28d8b6891697cd1c3ac7ee48ebaaf7f2e0d561c22a3f"
     },
-    "assets/hosting-BDkVvGvU.js": {
+    "assets/hosting-tdSMjzHF.js": {
       "bytes": 7659,
-      "sha256": "8bab125b2c6b0c7d351c0781300d104d0aa65ff8dcd994cb2e9f10679ce99cc3"
+      "sha256": "cca1c11411f5255653f92f51489bdc14b6dc4aa8d9a38be8a1a3005d8bc31b3c"
     },
     "assets/hosting-wCcPJFDk.js": {
       "bytes": 7659,
@@ -33303,9 +33303,9 @@
       "bytes": 308868,
       "sha256": "f17d6881b01f41541dcf2922c012eeb7077ea43f27c61d61175495d6c7730ac3"
     },
-    "assets/i18n-en-DXLUsF9C.js": {
-      "bytes": 303986,
-      "sha256": "1844a0c776ceb1986eec29567edebfd162e9d7bb0f5ef95d8bde694c11e2923d"
+    "assets/i18n-en-CbKJKCXP.js": {
+      "bytes": 326454,
+      "sha256": "12efe49d3f649e5e04d1ad5351f2553c9017e48cfcb3669f1280972bd10923c1"
     },
     "assets/ibm-plex-mono-latin-400-DMJ8VG8y.woff2": {
       "bytes": 14708,
@@ -33330,10 +33330,6 @@
     "assets/iit-engrave-D97cnjKE.woff2": {
       "bytes": 63544,
       "sha256": "7d713ed2c010fed475b368223b941a84cc4b4c99791ec9d2af01e793ddaa8c37"
-    },
-    "assets/iit-engrave-DaXPM3Uq.woff2": {
-      "bytes": 62648,
-      "sha256": "8bdfff1f3d5b87b0b183feddd7d64cf980f5cae789fa76300f28dd339b530644"
     },
     "assets/jellyfish-C3jywyAt.webp": {
       "bytes": 36752,
@@ -33587,9 +33583,9 @@
       "bytes": 19845,
       "sha256": "c1155671a808ab030130eefc8b94a6368c91531d97ee80886340f066904bfa81"
     },
-    "assets/snapshot-sheet-B3sO5AY0.js": {
+    "assets/snapshot-sheet-B5N5Ozx2.js": {
       "bytes": 59374,
-      "sha256": "2668998cf83fad25365c4b82558622152f60204ca75796c351be509cfe8fc94e"
+      "sha256": "2b7ac735cfe7d4df84a4b41aa927456f46be0352ed0aae5be37d35f1046ffbca"
     },
     "assets/snapshot-sheet-CwGM5D0y.js": {
       "bytes": 59374,
@@ -33635,6 +33631,10 @@
       "bytes": 221959,
       "sha256": "d28080f7ef8d931d7984eeb491e084ed3e06936e983d3335e009f764b2dff67e"
     },
+    "assets/VerifyPanel-Byr1o67A.js": {
+      "bytes": 24947,
+      "sha256": "9b993210aba57d7d5f74deb532f08929bf6ed1143820fb8312420fb2627b04c4"
+    },
     "assets/VerifyPanel-Cx2Pnv7J.js": {
       "bytes": 24947,
       "sha256": "f95afcb916b1e044f57c3c002fa74683a4b197a145223177241801e1fedd4aba"
@@ -33643,17 +33643,13 @@
       "bytes": 24947,
       "sha256": "dab37073cdab19b455739cfd397cc95ae0a752246d6168a0b87eb0c7944e01c8"
     },
-    "assets/VerifyPanel-iIFroz5e.js": {
-      "bytes": 24947,
-      "sha256": "32af3c1f5112b4c8f4d5429322581475b5a5ae93cb78ef62252bc8a40b741b1f"
-    },
     "assets/wechat-reward-BwbcPbu0.png": {
       "bytes": 44372,
       "sha256": "67f6c0b8841ac862dc682f8d45af3b835d7900dbb1a2d34c5160ea1927b6bc58"
     },
     "build-info.json": {
-      "bytes": 935772,
-      "sha256": "e9185fd6cfef356d5e5b64fc1f4f26149b137992548aebee4a7db480207a980c"
+      "bytes": 936173,
+      "sha256": "d6830d954b363b6b7ae1aba1893e8a85bb9cb7369b8079e97c4b12d0e8e0815c"
     },
     "data/.gitattributes": {
       "bytes": 8,
@@ -52537,7 +52533,7 @@
     },
     "index.html": {
       "bytes": 6035,
-      "sha256": "c232df87f12ccffe834b1687cc80b4e41f076df4ce7f3bb88a0bd3fa57e4ad2c"
+      "sha256": "669df60941b5170f0485a939b4be081f2178b52b3b049b77d540e76453da9e5d"
     },
     "package-manifest.b8a6ba8503f748d1.json": {
       "bytes": 1620070,
@@ -52545,15 +52541,15 @@
     },
     "prewarm-manifest.json": {
       "bytes": 52379,
-      "sha256": "7f3ab1959f7f4ef580838d4bbcb0a5e2ccb2c4664ef8777c286a5a5c7656ca60"
+      "sha256": "6c3ea40df1edfdf9b79dfbc8a480bf8a97faa948c84667e9109adab517b0776c"
     },
     "prewarm-urls.txt": {
       "bytes": 21630,
-      "sha256": "ba7ea183ac75da154ee048c25c2736dacb680a423f52d87d976b2339c25b37ab"
+      "sha256": "a0e993c14b822bef8471d265bb5051ecd78acd9f5a67f27921a6114d2c361f24"
     },
     "product.json": {
       "bytes": 192,
-      "sha256": "9c47b0ead0b07aada6f00abe5dee3c60caa0a35720e618667efc9b90f6b66f12"
+      "sha256": "56e7e58e44cdcc9e9c7214acfc3d21428ca727e22703b432882c25ea865b27cc"
     },
     "refresh-urls.txt": {
       "bytes": 423,
@@ -52561,7 +52557,7 @@
     },
     "release-history.json": {
       "bytes": 2827152,
-      "sha256": "2d70a06b36d4158fa7431dc288566f574e0dc113ae0e95ce8fcb4c21a56c246a"
+      "sha256": "0be7002231353eb61e98068cd4593f5c95a31d215eba0589dc8fb2e6d9999295"
     },
     "selftest.html": {
       "bytes": 137799,
@@ -52573,7 +52569,7 @@
     },
     "sw.js": {
       "bytes": 10010,
-      "sha256": "f0a648f6f7e36000dc289a73582257de0a4143b76cd8d16a98f808411623f20f"
+      "sha256": "77438da023dd19c78e433bd6dfd490a61d0a2b864bb96f13a67d7601df0d0d23"
     },
     "THIRD_PARTY_NOTICES.txt": {
       "bytes": 60944,
@@ -52590,7 +52586,7 @@
     "layout": "github",
     "explicit": true
   },
-  "buildId": "09aeac6dd647081a5e43cad8de37afbfa3c9445f579063354aa5684d01520c91",
+  "buildId": "3ca7c7fb9faf84b84eed011c63cacf3b9b3666f5fd0ac38c7fcf2fd00b951baa",
   "verification": {
     "schemaVersion": 1,
     "kind": "iit-release-verification",

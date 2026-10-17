@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "definition": "unique response body bytes, no Content-Encoding; headers/TLS excluded",
-  "totalBytes": 11231666,
+  "totalBytes": 11281715,
   "files": [
     {
       "bundle": "app",
@@ -29,20 +29,20 @@
     },
     {
       "bundle": "app",
-      "path": "assets/FilterBench-BBE1zI1_.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/FilterBench-BBE1zI1_.js",
+      "path": "assets/FilterBench-B_OlFgeR.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/FilterBench-B_OlFgeR.js",
       "bytes": 18789
     },
     {
       "bundle": "app",
-      "path": "assets/VerifyPanel-Cx2Pnv7J.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/VerifyPanel-Cx2Pnv7J.js",
+      "path": "assets/VerifyPanel-Byr1o67A.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/VerifyPanel-Byr1o67A.js",
       "bytes": 24947
     },
     {
       "bundle": "app",
-      "path": "assets/app-54AKI35l.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/app-54AKI35l.js",
+      "path": "assets/app-BYZim6Nw.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/app-BYZim6Nw.js",
       "bytes": 5488
     },
     {
@@ -53,20 +53,20 @@
     },
     {
       "bundle": "app",
-      "path": "assets/boot-3Flt3K4b.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/boot-3Flt3K4b.js",
-      "bytes": 1063920
+      "path": "assets/boot-CHrUhfPH.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/boot-CHrUhfPH.js",
+      "bytes": 1090510
     },
     {
       "bundle": "app",
-      "path": "assets/boot-Cd1kUES9.css",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/boot-Cd1kUES9.css",
-      "bytes": 130002
+      "path": "assets/boot-tLfNL5LS.css",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/boot-tLfNL5LS.css",
+      "bytes": 135875
     },
     {
       "bundle": "app",
-      "path": "assets/hosting-xJhO0j6L.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/hosting-xJhO0j6L.js",
+      "path": "assets/hosting-tdSMjzHF.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/hosting-tdSMjzHF.js",
       "bytes": 7659
     },
     {
@@ -77,9 +77,9 @@
     },
     {
       "bundle": "app",
-      "path": "assets/i18n-en-BsqkkzGw.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/i18n-en-BsqkkzGw.js",
-      "bytes": 308868
+      "path": "assets/i18n-en-CbKJKCXP.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/i18n-en-CbKJKCXP.js",
+      "bytes": 326454
     },
     {
       "bundle": "app",
@@ -131,8 +131,8 @@
     },
     {
       "bundle": "app",
-      "path": "assets/snapshot-sheet-oa7_KWju.js",
-      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/snapshot-sheet-oa7_KWju.js",
+      "path": "assets/snapshot-sheet-B5N5Ozx2.js",
+      "url": "https://s0uthern.github.io/NvAstraSimulator-next/assets/snapshot-sheet-B5N5Ozx2.js",
       "bytes": 59374
     },
     {
