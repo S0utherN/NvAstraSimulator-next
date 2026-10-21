@@ -853,3 +853,14 @@ degrees of the Galactic centre). It is published under ODbL-1.0 as a separate fi
 with (not merged into) the NSNS-derived line bands (CC BY-NC-SA 4.0) at display time; it is not a derivative database
 of NSNS, and the NSNS terms do not apply to it. Raw HiPS FITS tiles stay local (refs/external/sky-gaia-flux-20261019);
 provenance in data/sky/gaia-flux-downloads.json.
+
+1.3.1 unresolved light of large galaxies (2026-10-21): data/sky/galaxies-v1 (published as sky/galaxies-v1)
+Source: the NSNS DR0.2 visual continuum (Stefan Ziegenbalg, https://www.simg.de/nebulae3/dr0_2/ , doi:10.3847/2515-5172/adfec7,
+CC BY-NC-SA 4.0, https://creativecommons.org/licenses/by-nc-sa/4.0/) of the existing deep-sky atlases of M31, M33,
+M81/M82, M51, M101 and the Leo Triplet (M65, M66, NGC 3628); only NSNS-native continuum planes are used (no Pan-STARRS1
+detail). Galaxy centres, D25 sizes, position angles and V_T: RC3 (de Vaucouleurs et al. 1991) / OpenNGC (Mattia Verga,
+CC BY-SA 4.0), geometry only.
+Derived dataset: the atlas continuum resampled to the free sky's HEALPix orders 10-12, minus the atlas's own background,
+times k = 1 - f (the share Gaia already resolves), cosine-feathered at 1.6-2.3 D25. It is an NSNS derivative published
+under CC BY-NC-SA 4.0 (attribution, non-commercial, share-alike) as a separate file per touched sky tile, and is only
+collected with (added at display time to, not merged into) the ODbL-1.0 Gaia continuum.
