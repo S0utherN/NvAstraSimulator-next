@@ -3,8 +3,8 @@
   "packages": {
     "app": {
       "baseUrl": "./",
-      "manifest": "package-manifest.8c8f667e581d4087.json",
-      "sha256": "8c8f667e581d4087124e3ab9faa0f6c722afd2b68cefe6e7e1185b3d6327221f"
+      "manifest": "package-manifest.e662ac6169c89173.json",
+      "sha256": "e662ac6169c89173fa73e495570037330206a628f1abe6c1c71fd222ca4561a4"
     }
   },
   "routes": [
