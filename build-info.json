@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "kind": "iit-app-build",
   "source": {
-    "commit": "c98048e7f5d9520af571459e3ea568b7d6789bb6",
-    "sha256": "ad871a219472fb8ebce0d95796a0d366ff37ddb6ebe07844a1fc268c5eba2639",
+    "commit": "9db73bd53a7ae233c8b28452d2a34b7d6c1a2050",
+    "sha256": "05bdbb5b1aa264f4f4af6e0d1749ef5cfecc1cb7eb58dbd6c9c059cccab55d51",
     "files": {
       "app.html": "f85590a9cbe99ee681b9200b39839f12f1151c5320a8e19160aac6861ed19e48",
       "package-lock.json": "f8a757ddcc76ea75a29054a11ef47c317e46b972bf62840119d4fd2e64a941ce",
       "package.json": "ac8896eb955866499759ea33a7352469926b59b2b96f71acd8c43acb607b6415",
-      "product.json": "c3001efc5795b4a7421e68408634fb0f20b29499cf7ffc9176536a871a311d06",
+      "product.json": "6d764172935b7d9ba535ae7cd1301b21ac47b3c86106fd39e9fb9df49cb3b007",
       "public/about-en.html": "f4f0f97dcac25cf26053cfd9189b706d199d3b314fbd6fbfcf3b17d98fe9202a",
       "public/about.html": "4477ef9241a1233de574ae09b9a0c51c131be56dbfa6ba761628fc0f1c0c10c2",
       "public/app.webmanifest": "beaf56e5ed3be4785fc1d88dccdc1e767079cea0c0492e60e56443df6c2c88e8",
@@ -20,7 +20,7 @@
       "public/icons/share-thumb.jpg": "cdd33b751a32bda8847aac8c9063a867c3deaf7515df85c1dbe0594f8a99d9bd",
       "public/share-card.jpg": "7418257b60a66ce75032cff21f5d66fc2bc7c020c79efa3ec926fc9fa417cd84",
       "scripts/app-achievements.mjs": "53612283720d0a30a38ee99252588a310bc6c5ac3b6cafa1bc511b3e81a7e5d9",
-      "scripts/app-adaptation.mjs": "f545d900eb570fc020e102697e5871be23998cd0c2caaa195fea451353607cdc",
+      "scripts/app-adaptation.mjs": "9107975b8e86cc1838c92db4a5990a47c4be086579d7aef86ab5fbd95cb04660",
       "scripts/app-adaptive-noise.mjs": "fecef5a8a87c9920288384a59aa55a82267b8a2be199b6a7c406554a00758553",
       "scripts/app-afocal.mjs": "70df28a8483e4c11e377f2b8869b0b0a2c840ccba143c8322b2e5c8516a3e249",
       "scripts/app-ar.mjs": "8a2ff4d162ec600261557eedd71fca6b3e469d99cdb56c1b83ad649935cd54d8",
@@ -53,7 +53,7 @@
       "scripts/app-eye-stars.mjs": "04b3ead439e721c065da335c90664091d835d80575fa673f68a460c0ee6db18f",
       "scripts/app-field-snr.mjs": "954242134a6c385ae519c451f2bf8ec777d55f6c564b53362703093a5baf008c",
       "scripts/app-focal-perf.mjs": "2278b881ea28669bc9bc2e3b21dca32dd17c9ada4a71ba09b7e65ceeb1368dc8",
-      "scripts/app-focal-ruler.mjs": "bc1c28ed36973a1efde4257faee4222ffa57b0f1178807a88cdd76f890e8d851",
+      "scripts/app-focal-ruler.mjs": "13e1523e8689deff6fe761aecd1c94109e279e78e5bd752effc1bfba09ba86aa",
       "scripts/app-frame-cap.mjs": "cae2f4543c632e84b4ba4ba258d004fe13f662d7a99376bb6a687c81d33f2986",
       "scripts/app-frame-reuse.mjs": "560dd030d7238f0b910873fd6867b7769107fb14e9816aea0246e66db2034d2d",
       "scripts/app-fullscreen-perf.mjs": "823e6002e732142c5ef4841e9e5506f289d374021dc6669bbcc71d67b16f8023",
@@ -109,7 +109,7 @@
       "scripts/app-star-seeds.mjs": "26b3da8dfa46e73b30898f401c9560593a515318add0ff28c17ccefad5877424",
       "scripts/app-switch.mjs": "96b36d09b03e42e9a3430b18a87e11adc7c7b4807bdbc48cd968ad3579973743",
       "scripts/app-telescope.mjs": "a9ec2a90c85710e0725c11b17a89e4c004f9956ef9f8aea3c35a4b824db70278",
-      "scripts/app-toolbar.mjs": "83d6e10b8310ad42dc0aa6ab49361cad279b46e7a40db093e740c66c5ab145b3",
+      "scripts/app-toolbar.mjs": "bcb3e989873c40498e886765983c321016cf973401d6eb938336c4c37f8a2c7f",
       "scripts/app-traffic.mjs": "802aa91505524c3964d07cf45d3e602b68033210f92d3b1e168079776e788a67",
       "scripts/app-ui-reorg.mjs": "5938328357d70f9300e2b843edf1c8bf1329cfce476300ab91d00c5e84126245",
       "scripts/app-ui-shots.mjs": "10edd1918bc3758019e4774d8ce6cadbb1072a4cf4732bb3a5dba74f3fd6e268",
@@ -351,7 +351,7 @@
       "src/app/app.css": "19b54adb507a2291f923f71a7bb7295cd56ab5dddb1389e33d9d0762b5984a79",
       "src/app/App.tsx": "3ae6d4cd06f31ae5dae139018ef6d0b15f4b2f50467db84507c432bc794e7da7",
       "src/app/boot.tsx": "8694ef740dac5e83617efd88a07caa2653df31376152ca990d4e495570cebae5",
-      "src/app/changelog.ts": "a08b1b367cd3bd03c570fad2bc0e32d39634603d39ee1490e17313f5a6466a4c",
+      "src/app/changelog.ts": "ffbc0c4016f0db0a3244092be6bf8ff2989d2eb90e13061d121312d1dd09724e",
       "src/app/device.ts": "bacd42e7d104de0fcdab3cd3357f7d82facdb096f3caa1eb514584e91a0c385b",
       "src/app/error-log.ts": "0e6f64c2e69f76fbeda9921f975eed5da5a4e0579a0b3496d5b162ca24f1cb72",
       "src/app/fonts/fonts.css": "29067cf481e8508fe9d9a89aa9cfc6a5516b54aab24afd33a4e705ccf3fbadda",
@@ -368,14 +368,14 @@
       "src/app/gpu/gl-resources.ts": "9535ff0ba7a807ff2b70462b2b2d5c75877d0d86bb03d12432055e9232b88b58",
       "src/app/gpu/overlay-gl.ts": "692f86de477b92450bc3b5a4a610abb49b5c805017350289adcbdffdcc2d1e9d",
       "src/app/gpu/overlay-glyphs.ts": "d52946ad4a32b51d8821642d042a59093e08d6227089e112398dfcd5544d9b23",
-      "src/app/gpu/renderer.ts": "3b6689cfa11472b3ae06a64438a0d6806890c24a8899603bfeba8d04ddb64125",
+      "src/app/gpu/renderer.ts": "414d76d8f6a12cb88de69584ac021378e5ad964216a4b233494b5f7085046afa",
       "src/app/gpu/sampler-glsl.ts": "8677cbffe97f9137725060ce127d7c6061eb65be08d9fbaf8392cf587f04056f",
-      "src/app/gpu/shaders.ts": "d35cb944cce1857f8900158cd5105d11bcf20db05053921494750b2c318d49ca",
+      "src/app/gpu/shaders.ts": "ac6cc556eb743c4eb3a9df153279b8e573212a5586fbf5bd2b9a24733c6a3418",
       "src/app/gpu/sky-project.ts": "6aa0d9857031fcaa4cc96ecebd3e00d11099550bfe90c96bd388bdf0eb835702",
       "src/app/gpu/sky-variants.ts": "ac8d2c3869274c7ae74560a2bde60c76f74caa98f19aa1699e032aeb9f31c3de",
       "src/app/hosting.ts": "dfc1c58df196bf48619ec49763288f16b013221bd06bb063c3f50318d477f3c8",
       "src/app/i18n-data-en.ts": "eb4ce1f599af3a08a64610358015f53bc2b7fddd41ee3239d242f35aba522d39",
-      "src/app/i18n-en.ts": "5efd54b78850f0e32e85c14e54b404e3f7d136185c5766a7ae43ba40888e037a",
+      "src/app/i18n-en.ts": "29dd6ada8d48e3156b6f49f6085c0d6ab6df4b18da4eb7314268aa1764c3cacc",
       "src/app/i18n.ts": "d5d6f6b247bff91a863bb39e45282bd50583d4c92c8a4634c617a592dd54ee85",
       "src/app/main.tsx": "7d773fc7df765e580abbeb819b6b5ed5bc80234e13d26e5bdd49eb4e42e0613e",
       "src/app/offline.ts": "8b0244dec529a218b285756e02b27eaad076b0aafc8855852e9888c50900d6ae",
@@ -397,14 +397,14 @@
       "src/app/sim/cathode-presets.ts": "c2d79d7de59005617b43ea5385715b160a90b46c11f582f38785a2b087465806",
       "src/app/sim/cluster-profile.ts": "22a7241bea455c1cb16033c43dc30d068b5dc649e0a47a07b68cc7c934ce0794",
       "src/app/sim/compare.ts": "256fb6813a7e5737b4a233e6dcbe79541a6e9c0c8dcc34ba214194733a0fbf87",
-      "src/app/sim/controller.ts": "66a469d176b580406d55ef3c6be5cef4b7488af52b43b9b257e714e88241fdf0",
+      "src/app/sim/controller.ts": "b780adc86155e84e55246b4401e8cb8576cef6f46e3697d09b4a6d4073011548",
       "src/app/sim/data-names.ts": "1570b90b2c658cd19670247e7c2e37ce235701d9479ce498b955d63974b5c357",
       "src/app/sim/data-store.ts": "1333a648dbc69d4f21f3f3e7a396e9db4970e20351c83671de3ce61c2f8009d8",
       "src/app/sim/data.ts": "f039bc91f376ea016ae73cdfc3d15db318c7cd442c8effbe77adb6b4540eddff",
       "src/app/sim/deep-star-parts.ts": "1d8394039efc019b18ac66cdd59d8b0441a2e44740dc67021512cc482855dea8",
       "src/app/sim/eye-perception.ts": "355fe98a4faf1d65cab86087e8ea6a0501b70b1a86bba43275f2d7026342d19a",
       "src/app/sim/eye-tube.ts": "b8c8f322430c8579020fc23dacad6dbccd49468ecd06d6003aeae06a885b7c0d",
-      "src/app/sim/eye-vision.ts": "04fbf0fde1df8fb83dd8a1a315ff06679442277c96212f2df7a1e154778805c9",
+      "src/app/sim/eye-vision.ts": "279b6b397ed3adb3f81bb81be391679b71bd063667b4e2ea91b45a72f0db8e26",
       "src/app/sim/eye.ts": "24c1fb319f356810d5553647f84bf6e01347a3d2cf20a0bc2f43d240e76e3642",
       "src/app/sim/field-budget.ts": "cc696287f1f66b9771ca05b25d209dca933655384266a150dd5ca8a2b64fc5a0",
       "src/app/sim/frame-pulse.ts": "b777fbc3c5bb70d63e2921a2776736e0c1b39a140a8edb197eb02d61acdb03bd",
@@ -494,7 +494,7 @@
       "src/app/sky/worker-client.ts": "fd04790149c07d9b95f2032cbebc84912feb18d20681db191e2ba7dfc27dce2e",
       "src/app/sky/yield.ts": "c5e699c10dc86f5a70856d6adf30b5d95a243aa64fce9f8df7ce870ba2531760",
       "src/app/sky/zones.ts": "488df464cf1f329956a844b91c03262c70201e149b54bccbbb54d4fd829bf6d4",
-      "src/app/store.ts": "5ed1e7cf85eb64d7451302417fd5d0c73af3ba08efbe5bca98b8528beacbf4d2",
+      "src/app/store.ts": "d9665c9bd522b689dc6858ab592f9c50d5bbc8a4165a6d4a14188a6e83bd8897",
       "src/app/sw-client.ts": "c970e552e8ea20fd195d6a59b2867eb3875c01a364149f7aae98050e669af30c",
       "src/app/ui/achievements.css": "c2784a89276d70bc1c406cbb94d49382220da06a2fd574a0a804b5306edf389c",
       "src/app/ui/Achievements.tsx": "6949b515a37201c43444310b0d0697cedce59ed9443763ca9a3d1cc217bf28d9",
@@ -547,7 +547,7 @@
       "src/app/ui/moments.css": "e071db2cb430743a6a293c9a20dcdca82b5cf565964188be23da141fcbd77da4",
       "src/app/ui/moments.tsx": "d53b83fc723baa2ba2d9ac2240bc2fd043165d768b789ad0afb65853992c7702",
       "src/app/ui/motion-gate.ts": "c3ff4c39bb5a8c8429cee646fb84a8547ebf4d9153ae9e0260b4945d2977e0eb",
-      "src/app/ui/ObservePanel.tsx": "9b8dc6d714e36d58a76e659ef0f5a79313caf2a8a76b01d5efdf3469a59f439b",
+      "src/app/ui/ObservePanel.tsx": "f0203e156b76d90891a272b8ee35c3f3b6d81fbc18a89833f8e00d60d4de0333",
       "src/app/ui/observer.css": "ab3262a1a524e5768e061a999c0540591e8cb23efce98ecfa3ce907f339c08b8",
       "src/app/ui/OfflineData.tsx": "e2f3bee84f5b54d0c31d65f8019e7650af978307cb170b5dde3e2e00c9fe564c",
       "src/app/ui/Onboarding.tsx": "12d43eafec10c82a1900638748f77fccadff9f530feaaf4b03441e7358c39195",
@@ -578,9 +578,9 @@
       "src/app/ui/SkyGuides.tsx": "0a88fff825c6534a86152c8f6e6bfdd48e7ad2f70a541960e5d72e7a822a59e0",
       "src/app/ui/SkyQuality.tsx": "7f0599ab24f149f1892be9efae1d09a9f6bb8b86827c7411c7a7cfc45b1c91c5",
       "src/app/ui/SkyScenes.tsx": "151a6df7c339526b357576bff9a5c0a9ae8c3ef16542365c55156cbbd7554e23",
-      "src/app/ui/snapshot-sheet.ts": "da4efbe6c88c04616a6be4ffb828d834d50e4c5e764afedb70e81b133f544a88",
+      "src/app/ui/snapshot-sheet.ts": "86920aaeff172c3fbcd347e0e3b8a452c6e170b70ca86e0d5312dea889074fd1",
       "src/app/ui/snapshot-station.ts": "21a89fcd5e7c7f39185e6feca769105f23290d3598ea82eee1553e9578e6c137",
-      "src/app/ui/snapshot.ts": "b1a2777402295736d31318d00628e2c6794941c42dff2fcc3b88302c022eff57",
+      "src/app/ui/snapshot.ts": "33db404e595876048b8db9d03678dde92d3670d0bd7326818f444fdd3d6d15ac",
       "src/app/ui/station.css": "bafbac5e1febffeaa126f35b9096f1295bb0d31d3b622dbf452f3da3f359701e",
       "src/app/ui/station.tsx": "ea3085bbe568804e4fe98e37ead4d4823e005364fae6e4f878ea9adf9f60508a",
       "src/app/ui/TelescopeControls.tsx": "65defe1f1bbe413639dcd71115591d7e1fe119056477e1da3ac12415cc3bbfd0",
@@ -648,7 +648,7 @@
       "src/app/ui/themes/station/wall-thumb.webp": "c9bae52ecb02f211b92131c682777740b79e373851c9a825d303269a7f2f141b",
       "src/app/ui/themes/station/wall-wide.webp": "c213d876d95232c6c01e30cd38dc95907c3100b9a9ea9137080e71ca91c2a860",
       "src/app/ui/themes/station/wall.webp": "cf5cb87395762c89285bfd3ea72e499a0586d1bc99a8343979bbb2ae1ad5bc18",
-      "src/app/ui/Toolbar.tsx": "283c676b3b2b8c6a8c74238f984f3c8482bfa20a066bbc2f95fc9b45f2a0f631",
+      "src/app/ui/Toolbar.tsx": "1b03d59056e9bb7ca27dc66e507566a62b44aa54da59b0a5065c648737401c37",
       "src/app/ui/tour.ts": "9db98e6b25b9716f07c0a2d8941690d0f99a5b1b69c2ca2618b7eaf083ddc03c",
       "src/app/ui/tray-motion.ts": "895d2b666db41c86b8d16ead8adbc1f1c1a6fa012486c288b0aba0598091464d",
       "src/app/ui/TubePanel.tsx": "1d247752537c0585e6f9c23d775e6242a0a7c63364f77ba5d11737907ebd73b8",
@@ -754,14 +754,14 @@
     "layout": "github",
     "explicit": true
   },
-  "catalogSha256": "595cc90f77a9b8820d59763695e375b569e32984ddec434ac7c2d2947989ccde",
-  "publicSha256": "fd8f4d028d5f0f8df11ca226b3633fb8e45a6a70ab0622ebe720625146bb3840",
+  "catalogSha256": "b45e3a98990eafae1be5d7e6a911d87fd8726750ed130cdcea276b2fd5244bfe",
+  "publicSha256": "3b2ffbd32ae9a50393cf9805e2decac8bca90ce1d16a9742715e028943712c8e",
   "verification": {
     "schemaVersion": 1,
     "kind": "iit-release-verification",
     "pass": true,
-    "catalogSha256": "595cc90f77a9b8820d59763695e375b569e32984ddec434ac7c2d2947989ccde",
-    "publicSha256": "fd8f4d028d5f0f8df11ca226b3633fb8e45a6a70ab0622ebe720625146bb3840",
+    "catalogSha256": "b45e3a98990eafae1be5d7e6a911d87fd8726750ed130cdcea276b2fd5244bfe",
+    "publicSha256": "3b2ffbd32ae9a50393cf9805e2decac8bca90ce1d16a9742715e028943712c8e",
     "codec": "8d83887f537a",
     "checkedFiles": 6768,
     "largestCodeError": 2048
@@ -781,7 +781,7 @@
     },
     "app.html": {
       "bytes": 8431,
-      "sha256": "08c1317010435014b228044ca5af7447fa95cd4c7b6cb89fd8abb6a0e6c9e7e8"
+      "sha256": "5a6a6c73f1726ea7da42a7039a660a65ab9ae1ea2f67d248ec15f4d0e7965c0c"
     },
     "app.webmanifest": {
       "bytes": 808,
@@ -795,17 +795,17 @@
       "bytes": 7704,
       "sha256": "bc946b8939f3445c1a0e5310860da4e07271a715d7c02ee039c8139ac53671d3"
     },
-    "assets/FilterBench-dxc7jOGv.js": {
+    "assets/FilterBench-D8Lnprl9.js": {
       "bytes": 18789,
-      "sha256": "2b082c779c14ae3a5e4e35d022c1a5df103d0ada54c9e68038300c1eaa40273a"
+      "sha256": "8bce7f9aeb0d9ed646d46716dccbb8d1fac84205b0618a18f88e29fc86c503f7"
     },
-    "assets/VerifyPanel-o_vcFeyG.js": {
+    "assets/VerifyPanel-B9TYRVUN.js": {
       "bytes": 24953,
-      "sha256": "2c4dd1049cc419622cf5ca752593208349ea518ce44d637b9d6925d1e177179f"
+      "sha256": "8a925e1fe874f7de6ee4f63b3821de07d90d463d69de05e033328eb5924e0afe"
     },
-    "assets/app-nYrWqnNT.js": {
+    "assets/app-Dm9r8Cpo.js": {
       "bytes": 5488,
-      "sha256": "80014e32751c102b3c458a254358674d642eec8d7fb9d5fa85b742937bad12c6"
+      "sha256": "b1ca36c2304029b70707da5defade9af40b021357ba9203ddfcbb9d4b4087a3d"
     },
     "assets/arch-DzdPvdEh.webp": {
       "bytes": 87572,
@@ -859,9 +859,9 @@
       "bytes": 76684,
       "sha256": "8b4eea82a714fdf2d6ffb312aeaa3417f0a89cd76d2d77c362de20d26a3ac375"
     },
-    "assets/boot-Bs64ramb.js": {
-      "bytes": 1311829,
-      "sha256": "31ff8635020f421d797db631be676f47b2fe5cffc51afd3369a383842e4dbc30"
+    "assets/boot-BE8sWhQJ.js": {
+      "bytes": 1319582,
+      "sha256": "e56d5419d5a993a13a9ac6ff25bf416a1e6b28f96e666d55f5fa939f3b83a9d9"
     },
     "assets/boot-C4JdKalC.css": {
       "bytes": 203166,
@@ -1059,17 +1059,17 @@
       "bytes": 7220,
       "sha256": "cfd976600f7b667a7f0f28d8b6891697cd1c3ac7ee48ebaaf7f2e0d561c22a3f"
     },
-    "assets/hosting-9X_la0wP.js": {
+    "assets/hosting-D7wLjmyz.js": {
       "bytes": 7666,
-      "sha256": "5029c118ecf4102554709646e7c253d1c929307707d1b2f205f023f8bd92139a"
+      "sha256": "900a204d3bbf55eea9aeba840cebe693903e7e4dda28b17cea38fb62b5a07670"
     },
     "assets/i18n-data-en-C2oW5vhk.js": {
       "bytes": 42872,
       "sha256": "2bcde1249219858eb7ba8214d765b7132af6ec21a8d697aab13cad03c19315bd"
     },
-    "assets/i18n-en-PANNQEQp.js": {
-      "bytes": 370743,
-      "sha256": "3d426ec8fefc3a73ae78b4dcbb732aa702864396260f35d6076c784896fdbf42"
+    "assets/i18n-en-DTE0qE8j.js": {
+      "bytes": 376852,
+      "sha256": "d8eac72a0bf82df4f0397bc1fd9d22a3aab640cb6ec6accc67c6424f18f53ef5"
     },
     "assets/ibm-plex-mono-latin-400-DMJ8VG8y.woff2": {
       "bytes": 14708,
@@ -1383,13 +1383,13 @@
       "bytes": 21512,
       "sha256": "e2217c1f897ab62809997186c8eae7748ab036728d3f51bc4860e0be7e0382d3"
     },
-    "assets/snapshot-sheet-CXF0OmhS.js": {
-      "bytes": 61224,
-      "sha256": "71953aac7385c77e8ca0d177c9fe11b3ed899ae8d020a1e22a5749c46e006ce4"
+    "assets/snapshot-sheet-Brv7F46K.js": {
+      "bytes": 61445,
+      "sha256": "36829ecf5191256b9b0c79e3a6a8f2a2f0ecd5a14f125480c745d0ee6c4a6c6b"
     },
-    "assets/snapshot-station-1JVzODfa.js": {
+    "assets/snapshot-station-0Ek8R8Rf.js": {
       "bytes": 21380,
-      "sha256": "8adf89cf68b85591ffe2fdc537f2c4560a85ebbc1f0fbadcc9ae1857041983e0"
+      "sha256": "3bfd6ddf499e8cfd2b250cb065858f37a8428cfc217f0dc6ed1c88932fe35cdf"
     },
     "assets/spectral-worker-3nCL--uO.js": {
       "bytes": 64850,
@@ -3403,9 +3403,9 @@
       "bytes": 141834,
       "sha256": "cd1c8db70a51ae9222c2cbf82435884e99271aa2c0c79c76cd6ce943e02a954e"
     },
-    "data/offline-index.222b882556b3f2ad.json.gz": {
+    "data/offline-index.f1718efd9e1a07bc.json.gz": {
       "bytes": 311037,
-      "sha256": "7901f10b7ccade659b1737b76129922988382219395a5aa0e7f17e650cce0ab5"
+      "sha256": "0da3650d4cc9651978bf81afe1c6823804bd02f4890ee84558b6cce8bad14b4c"
     },
     "data/simulator-versions.00bf21200f9a9859.json.gz": {
       "bytes": 588,
@@ -11935,9 +11935,9 @@
       "bytes": 34556,
       "sha256": "b89c12aaf1a830261e2003b3b236b74f8c7d71d32275010b0742cc648b274810"
     },
-    "data/sky/galaxies-v1/manifest.44c70b1e7cc6d903.json.gz": {
-      "bytes": 4790,
-      "sha256": "cfc044b6d56317126332190c0447b96fa60480d4f9f3b66d648ee4689f851c45"
+    "data/sky/galaxies-v1/manifest.fb304a869cb94917.json.gz": {
+      "bytes": 4795,
+      "sha256": "aabf0000e992a92a6b0486d17df1f3d583b882987a1bc84cd150baf2f1d0a0f4"
     },
     "data/sky/galaxies-v1/o10/tile-00008.ecee3d856e4e43e4.bin.gz": {
       "bytes": 1277,
@@ -29776,8 +29776,8 @@
       "sha256": "59175705bdfcf9426f06f834eb46fa3cfe09af4800b47d52220234053a6f9a78"
     },
     "devicetest.html": {
-      "bytes": 243745,
-      "sha256": "5e14a232cd616c0a46760d4d97be3b6bec62444e528bc0d06b190ca530f87e2b"
+      "bytes": 245181,
+      "sha256": "11f9ce4bf778af4820ea8fa02ae164ff6e5d8bcde0fff233159c5d5718ed4a0d"
     },
     "icons/apple-touch-icon.png": {
       "bytes": 23815,
@@ -29801,11 +29801,11 @@
     },
     "product.json": {
       "bytes": 192,
-      "sha256": "651ebaa3bad1d30db23a25e0203fc62fd011e5830194c9c8f6ab5e723052c0bb"
+      "sha256": "bb2761595c0d1b964a07d6eae79518ffdcfcee7024c1829ecfc729bb5f503747"
     },
     "selftest.html": {
-      "bytes": 153646,
-      "sha256": "b31e955a9def097bf09b720d3fb9eac04724f3d08e73fc63a58a9d51c8818bab"
+      "bytes": 154982,
+      "sha256": "51c2f841f9fc5a0f56508fcdca3f8d6dae7735f85d0d23dde667a69d99c74d40"
     },
     "share-card.jpg": {
       "bytes": 113298,
@@ -29813,9 +29813,9 @@
     },
     "sw.js": {
       "bytes": 10991,
-      "sha256": "29eb448ed99dbd08c9566259f8427b015f8b9ad46b5a10680c6487a030e0a5f1"
+      "sha256": "0fc31068b8a3fc1fd518cee9425eadae83ed7dcad19036434549123dae387932"
     }
   },
-  "artifactSha256": "52544e68d567a3d15720fb6c9a7d4d6f7b7ecff7d7df35fe20ab320368dc2277",
-  "buildId": "5f249f875b15d8ef323d38fde39fc947d0fc3597210325dbdbd8dff1184681cc"
+  "artifactSha256": "3bc7edb8ff8348db3fc128c2532ac9ac6efe12cbff4c0291aa36d129581a55ad",
+  "buildId": "73329b6e411c344a15553a609eee7779524e354559f6d61b4ee625ae40232673"
 }
