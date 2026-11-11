@@ -126,7 +126,7 @@ textarea { width: 100%; box-sizing: border-box; min-height: 160px; font: 12px/1.
   </section>
 </main>
 
-<script>"use strict";var Diag=(()=>{var B=Object.defineProperty;var Ze=Object.getOwnPropertyDescriptor;var Qe=Object.getOwnPropertyNames;var et=Object.prototype.hasOwnProperty;var tt=(n,e,t)=>e in n?B(n,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):n[e]=t;var rt=(n,e)=>{for(var t in e)B(n,t,{get:e[t],enumerable:!0})},it=(n,e,t,r)=>{if(e&&typeof e=="object"||typeof e=="function")for(let i of Qe(e))!et.call(n,i)&&i!==t&&B(n,i,{get:()=>e[i],enumerable:!(r=Ze(e,i))||r.enumerable});return n};var nt=n=>it(B({},"__esModule",{value:!0}),n);var d=(n,e,t)=>tt(n,typeof e!="symbol"?e+"":e,t);var zt={};rt(zt,{FULLSCREEN_VS:()=>P,GlResources:()=>O,MASKED_CODE:()=>j,SKY_PROJECT_FS:()=>q,SKY_PROJECT_VARIANTS:()=>Q,STEP_ORDER:()=>ne,SkyProjector:()=>N,TILE_PIXELS:()=>W,footprintTiles:()=>Ne,planeGeometry:()=>qe,planePixel:()=>Ve,readShaderReportHash:()=>je,ringNested:()=>ae,shaderReportText:()=>We,tileIndex:()=>Oe,tileKey:()=>Ue});var H=`
+<script>"use strict";var Diag=(()=>{var U=Object.defineProperty;var at=Object.getOwnPropertyDescriptor;var ot=Object.getOwnPropertyNames;var st=Object.prototype.hasOwnProperty;var lt=(n,e,t)=>e in n?U(n,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):n[e]=t;var ut=(n,e)=>{for(var t in e)U(n,t,{get:e[t],enumerable:!0})},ct=(n,e,t,r)=>{if(e&&typeof e=="object"||typeof e=="function")for(let i of ot(e))!st.call(n,i)&&i!==t&&U(n,i,{get:()=>e[i],enumerable:!(r=at(e,i))||r.enumerable});return n};var ft=n=>ct(U({},"__esModule",{value:!0}),n);var m=(n,e,t)=>lt(n,typeof e!="symbol"?e+"":e,t);var Ct={};ut(Ct,{FULLSCREEN_VS:()=>D,GlResources:()=>W,MASKED_CODE:()=>P,SKY_PROJECT_FS:()=>j,SKY_PROJECT_VARIANTS:()=>J,STEP_ORDER:()=>X,SkyProjector:()=>V,TILE_PIXELS:()=>L,footprintTiles:()=>ie,planeGeometry:()=>Xe,planePixel:()=>He,readShaderReportHash:()=>$e,ringNested:()=>ne,shaderReportText:()=>Ye,tileIndex:()=>Ke,tileKey:()=>Q});var $=`
 // Jarzynski & Olano 2020, "Hash Functions for GPU Rendering", pcg4d.
 uvec4 pcg4d(uvec4 v) {
   v = v * 1664525u + 1013904223u;
@@ -218,12 +218,12 @@ float mcpCharge(float n, float gain, float f2) {
   if (f2 <= 1.0000001) return n * gain;
   return gammaSample(n / (f2 - 1.0)) * (f2 - 1.0) * gain;
 }
-`;var h=`#version 300 es
+`;var d=`#version 300 es
 precision highp float;
 precision highp int;
 precision highp sampler2D;
-`,U=n=>h.replace("#version 300 es",`#version 300 es
-#define ${n}`);var P=h+`
+`,O=n=>d.replace("#version 300 es",`#version 300 es
+#define ${n}`);var mt=/^[ \t]*\/\*@slot:([\w-]+)\*\/[ \t]*\n/gm,S=n=>n.replace(mt,"");var D=d+`
 const vec2 P[3] = vec2[3](vec2(-1.0, -1.0), vec2(3.0, -1.0), vec2(-1.0, 3.0));
 void main() { gl_Position = vec4(P[gl_VertexID], 0.0, 1.0); }
 `,T=`
@@ -331,11 +331,7 @@ vec2 hzSeeing(vec3 d, float tiltMm, float scint) {
   return vec2(tiltMm * sqrt(q), scint > 0.0 ? sqrt(log(1.0 + min(1.0, u_scintIndex * q * q * q))) : 0.0);
 }
 #endif
-`,$=`
-const vec2 D65_UV = vec2(0.19784, 0.46832);
-vec2 uvOf(vec3 c) { float q = c.x + 15.0 * c.y + 3.0 * c.z; return q > 0.0 ? vec2(4.0 * c.x, 9.0 * c.y) / q : D65_UV; }
-vec3 xyzOfUv(vec2 uv) { vec2 xy = vec2(9.0 * uv.x, 4.0 * uv.y) / (6.0 * uv.x - 16.0 * uv.y + 12.0); return vec3(xy.x, xy.y, 1.0 - xy.x - xy.y) / xy.y; }
-`,J=`
+`,me=`
 #ifdef STAR_SKY
 layout(location=0) in vec4 a_dir;             // ICRS unit vector, F_lambda(550 nm) W/m^2/nm
 layout(location=1) in uint a_seed;            // stable global sky ID
@@ -347,7 +343,7 @@ layout(location=0) in vec4 a_star;            // TAN-plane X (west+), Y (north+)
 layout(location=1) in uint a_seed;            // original catalogue ordinal or stable global sky ID
 vec4 starAttr() { return a_star; }
 #endif
-`,de=J+`
+`,N=me+`
 uniform vec2 u_originMm;   // mm position of texel (0,0) centre
 uniform float u_pitchMm;
 uniform float u_focalMm;
@@ -363,6 +359,7 @@ uniform uint u_frame;
 uniform mat3 u_point;      // camera -> atlas axes (telescope pointing); its transpose maps atlas -> camera
 out vec2 v_cell;
 out float v_rate;
+/*@slot:star-vs-uniforms*/
 uint hashU(uint x) { x ^= x >> 16; x *= 0x7feb352du; x ^= x >> 15; x *= 0x846ca68bu; x ^= x >> 16; return x; }
 float hashF(uint x) { return float(hashU(x) >> 8) * (1.0 / 16777216.0); }
 void main() {
@@ -407,18 +404,21 @@ void main() {
   vec2 cell = (mm - u_originMm) / u_pitchMm;
   v_cell = cell;
   gl_PointSize = 3.0;
+/*@slot:star-vs-size*/
   gl_Position = r > u_cathodeR || !(rate > 0.0) ? vec4(2.0, 2.0, 2.0, 1.0) : vec4((cell + 0.5) / u_size * 2.0 - 1.0, 0.0, 1.0);
 }
-`,Lt=h+T+de,Ct=U("STAR_SKY")+T+de,Gt=h+`
+`,Nt=S(d+T+N),Ot=S(O("STAR_SKY")+T+N),he=d+`
 in vec2 v_cell;
 in float v_rate;
 out vec4 o;
+/*@slot:star-fs-uniforms*/
 void main() {
   vec2 d = abs(gl_FragCoord.xy - 0.5 - v_cell);
   vec2 w = max(vec2(0.0), 1.0 - d);
   o = vec4(v_rate * w.x * w.y, 0.0, 0.0, 0.0);
+/*@slot:star-fs-main*/
 }
-`,pe=J+`
+`,jt=S(he),de=me+`
 uniform vec2 u_originMm;
 uniform float u_pitchMm;
 uniform float u_focalMm;
@@ -438,24 +438,27 @@ void main() {
   gl_PointSize = 2.0 * u_radius + 2.0;
   gl_Position = length(mm) > u_cathodeR ? vec4(2.0, 2.0, 2.0, 1.0) : vec4((cell + 0.5) / u_size * 2.0 - 1.0, 0.0, 1.0);
 }
-`,It=h+pe,Bt=U("STAR_SKY")+pe,Ut=h+`
+`,Vt=d+de,Wt=O("STAR_SKY")+de,pe=d+`
 uniform float u_radius;
 uniform float u_variance;
 in vec2 v_cell;
 in float v_logFlux;
 out vec4 o;
+/*@slot:star-map-uniforms*/
 void main() {
   vec2 d = v_cell - (gl_FragCoord.xy - 0.5);
   float r2 = dot(d, d);
   if (r2 > u_radius * u_radius) discard;
+/*@slot:star-map-main*/
   // ln F550 spans about -40..-10 here; the score only orders stars, so any monotone map into [0, 1] will do.
   gl_FragDepth = clamp((0.5 * r2 / u_variance - v_logFlux) / 160.0, 0.0, 1.0);
   o = vec4(d, 0.0, 1.0);
 }
-`,xe=`
+`,Xt=S(pe),ge=`
 #ifdef SKY_DIRECT
 uniform vec3 u_axis, u_west, u_north;  // the virtual plane's TAN frame in ICRS (tangent point = the view axis)
 uniform float u_pixelTan;              // HEALPix pixel spacing of the primary order (TAN units): sub-samples per cell
+uniform float u_subSlack;              // an extension's slack: cells this much (in pixels) larger than a map pixel keep one fewer sample row; 0 in the product
 #else
 uniform sampler2D u_atlas;   // RGBA32F: H\u03B1, [O III] 5007, [S II] (W/m^2/sr), continuum (W/m^2/sr/nm @550); H\u03B1 < 0 = invalid
 // D119 (sim/cluster-profile.ts): a globular cluster's modelled unresolved light, added to the continuum. R32F table:
@@ -494,13 +497,14 @@ uniform float u_focalMm;
 uniform float u_cathodeR;
 uniform float u_sceneScale;
 uniform float u_starsInRate;  // 1: bright stars are part of the static rate; 0: rendered per frame (moving seeing)
-uniform int u_eyeDiffuse; // D73 display-only XYZ + rod diffuse scene, with NO catalogue stars
 uniform float u_maxSub;       // cap on k (8 at rest; lower while the view is dragged)
 // D79 (naked eye, blurred base map): 0 = everything; 1 = target + sky only; 2 = the stars added to u_base (R rate, G mask,
 // both blurred: 1.3.3 normalises the rate by the mask).
 uniform int u_part;
 uniform sampler2D u_base;
+/*@slot:rate-outputs*/
 out vec4 o;
+/*@slot:rate-outputs-end*/
 
 // D124: the mip of an image of pixel step "step" for this cell (see u_mips): the coarsest whose texels are at most half
 // the cell, so 2 x 2 to 4 x 4 sub-samples; an image less than four texels across the cell is read at full resolution as
@@ -575,6 +579,7 @@ bool inLevel(int k, vec2 tan, float margin) {
 }
 
 void main() {
+/*@slot:rate-main*/
   ivec2 p = ivec2(gl_FragCoord.xy);
   vec2 mm = u_originMm + vec2(p) * u_pitchMm;
   float r = length(mm);
@@ -606,7 +611,7 @@ void main() {
 #endif
 #ifndef RATE_SINGLE_SAMPLE
 #ifdef SKY_DIRECT
-  float k = ceil(u_cellTan / u_pixelTan);
+  float k = ceil(u_cellTan / u_pixelTan - u_subSlack);
 #else
   float k = ceil(u_cellTan / (u_atlasStep * float(1 << baseMip)));
   for (int l = 0; l < 5; l++) if (l < u_levels && inLevel(l, tan, u_cellTan)) k = max(k, ceil(u_cellTan / (u_levelStep[l] * float(1 << levelMip[l]))));
@@ -665,23 +670,15 @@ void main() {
     sky *= hzSky;
   }
 #endif
+/*@slot:rate-cover*/
   o = vec4(target + sky.x + (u_part == 1 ? 0.0 : star), 1.0, 0.0, 0.0);
-  if (u_eyeDiffuse == 1) {
-    int row = 2 + u_tNodes;
-    vec4 x = lutAt(row, angle), y = lutAt(row + 1, angle), z = lutAt(row + 2, angle);
-    vec3 xyz = valid ? u_sceneScale * vec3(dot(bands, x), dot(bands, y), dot(bands, z)) : vec3(0.0);
-    vec3 skyXyz = lutAt(row + 3, angle).xyz;
-#ifdef SKY_DIRECT
-    if (u_hzOn == 1) skyXyz *= hzSky;
-#endif
-    o = vec4(xyz + skyXyz, target + sky.x);
-  }
+/*@slot:rate-colour*/
 }
-`,at=h+T+xe,qt=at.replace("#version 300 es",`#version 300 es
+`,xe=S(ge),ht=d+T+xe,Kt=ht.replace("#version 300 es",`#version 300 es
 #define RATE_SINGLE_SAMPLE`),b=`
 #define TAP(t, i) t[(i) >> 2][(i) & 3]
 bool inBounds(ivec2 q, ivec2 size) { return q.x >= 0 && q.y >= 0 && q.x < size.x && q.y < size.y; }
-`,Nt=h+b+`
+`,Ht=d+b+`
 uniform sampler2D u_src;
 uniform vec4 u_taps[32];
 uniform int u_radius;
@@ -701,7 +698,7 @@ void main() {
   }
   o = vec4(s, c.g, 0.0, 0.0);
 }
-`,Ot=h+`
+`,Yt=d+`
 uniform sampler2D u_src;
 uniform sampler2D u_extra;    // star deposits when stars are rendered per frame (their halo stays static)
 uniform float u_extraScale;
@@ -716,7 +713,7 @@ void main() {
   }
   o = vec4(s / float(u_k * u_k), 0.0, 0.0, 0.0);
 }
-`,Vt=h+b+`
+`,$t=d+b+`
 uniform sampler2D u_src;
 uniform sampler2D u_kernel;
 uniform int u_count;
@@ -731,7 +728,7 @@ void main() {
   }
   o = vec4(s, 0.0, 0.0, 0.0);
 }
-`,Wt=h+`
+`,Jt=d+`
 uniform sampler2D u_core;
 uniform sampler2D u_halo;
 uniform sampler2D u_outer;
@@ -761,7 +758,7 @@ void main() {
   }
   o = vec4((1.0 - u_w) * rg.r + u_w * h, rg.g, 0.0, 0.0);
 }
-`,jt=h+`
+`,Zt=d+`
 uniform sampler2D u_src;
 out vec4 o;
 void main() {
@@ -773,7 +770,7 @@ void main() {
   }
   o=vec4(s*0.25,0.0,0.0,0.0);
 }
-`,Yt=h+b+`
+`,Qt=d+b+`
 uniform sampler2D u_src;
 uniform vec4 u_t1[32];
 uniform vec4 u_t2[32];
@@ -796,7 +793,7 @@ void main() {
   }
   o = vec4(s1, s2, c.y, 0.0);
 }
-`,Xt=h+b+`
+`,er=d+b+`
 uniform sampler2D u_src;
 uniform vec4 u_t1[32];
 uniform vec4 u_t2[32];
@@ -820,7 +817,7 @@ void main() {
   }
   o = vec4(u_weights.x * s1 + u_weights.y * s2, c.z, 0.0, 0.0);
 }
-`,Kt=h+b+`
+`,tr=d+b+`
 uniform sampler2D u_src;      // RG32F: the charge or its conditional expectation (SAMPLE_FS writes both)
 uniform vec4 u_t1[32];
 uniform vec4 u_t2[32];
@@ -847,7 +844,7 @@ void main() {
   }
   o = vec4(s1, s2, s3, 0.0);
 }
-`,Ht=h+b+`
+`,rr=d+b+`
 uniform sampler2D u_src;
 uniform vec4 u_t1[32];
 uniform vec4 u_t2[32];
@@ -874,7 +871,7 @@ void main() {
   }
   o = vec4(u_weights.x * s1 + u_weights.y * s2 + s3, 0.0, 0.0, 0.0);
 }
-`,$t=h+b+`
+`,ir=d+b+`
 uniform sampler2D u_src;
 uniform sampler2D u_src2;
 uniform vec4 u_t1[32];
@@ -904,7 +901,7 @@ void main() {
   o = vec4(s1, s2, s3, 0.0);
   o2 = vec4(e1, e2, e3, 0.0);
 }
-`,Jt=h+b+`
+`,nr=d+b+`
 uniform sampler2D u_src;
 uniform sampler2D u_src2;
 uniform vec4 u_t1[32];
@@ -935,7 +932,7 @@ void main() {
   o = vec4(u_weights.x * s1 + u_weights.y * s2 + s3, 0.0, 0.0, 0.0);
   o2 = vec4(u_weights.x * e1 + u_weights.y * e2 + e3, 0.0, 0.0, 0.0);
 }
-`,Zt=h+H+`
+`,ve=d+$+`
 uniform sampler2D u_rate;   // R: electron/s/mm^2 after input diffusion, G: cathode mask
 uniform float u_areaTime;   // texel area (mm^2) x frame time (s)
 uniform float u_dark;       // event/s/mm^2
@@ -949,6 +946,7 @@ uniform sampler2D u_starsDyn; // per-frame star rate (moving seeing), texel unit
 uniform float u_starsScale;   // 1e3 / pitch^2 x (1 - halo weight), or 0
 uniform float u_snowRate;     // bright scintillations ("snow"), event/s/mm^2
 uniform float u_snowCharge;   // their mean charge in single-electron units (exponential distribution)
+/*@slot:sample-uniforms*/
 // 0.9.46: two RG32F targets (formerly one RGBA32F), so the output spot reads 8 instead of 16 bytes per tap.
 layout(location = 0) out vec2 oCharge;   // R: ordinary charge, G: snow charge
 layout(location = 1) out vec2 oExpected; // their conditional expectations
@@ -963,13 +961,14 @@ void main() {
   if (u_mean == 1) { oCharge = expected; oExpected = expected; return; }
   rngInit(uvec4(uint(p.x), uint(p.y), u_frame, u_seed));
   float q = mcpCharge(poissonSample(mu), u_gain, u_f2), qs = 0.0;
+/*@slot:sample-lattice*/
   if (u_snowRate > 0.0) {
     float k = poissonSample(muSnow);
     if (k > 0.0) qs = gammaSample(k) * u_snowCharge * u_gain;
   }
   oCharge = vec2(q, qs); oExpected = expected;
 }
-`,Qt=h+`
+`,ar=S(ve),_e=d+`
 uniform sampler2D u_frame;
 uniform sampler2D u_prev;
 uniform sampler2D u_expected;
@@ -984,9 +983,11 @@ uniform vec2 u_originMm;
 uniform float u_pitchMm;
 uniform float u_cathodeR;
 out vec4 o;
+/*@slot:accum-uniforms*/
 void main() {
   ivec2 p = ivec2(gl_FragCoord.xy);
   vec2 cur = vec2(texelFetch(u_frame, p, 0).r, texelFetch(u_expected, p, 0).r) * u_invAreaTime;
+/*@slot:accum-main*/
   ivec2 q = p;
   if (u_reproject == 1) {
     q = p + u_shift;
@@ -995,8 +996,7 @@ void main() {
   vec2 prev = texelFetch(u_prev, q, 0).rg;
   o = vec4(u_alpha >= 1.0 ? cur : prev + u_alpha * (cur - prev), 0.0, 0.0);
 }
-`,er=h+$+T+`
-uniform int u_nakedEye;
+`,or=S(_e),ye=d+T+`
 uniform int u_eyeTube;
 uniform float u_focalMm;
 uniform vec2 u_eyeTubeMechanism; // working gain, dark rate (MCP input); display-only sky reference
@@ -1012,16 +1012,6 @@ uniform vec4 u_eyeSourceShoulder;
 uniform int u_eyeVision;
 uniform vec4 u_eyeVisionCurve;
 uniform vec4 u_eyeVisionBlur;
-uniform sampler2D u_eyeDiffuse;
-uniform sampler2D u_eyeWide;   // the same XYZ + rod scene over ~0.5\xB0 apparent field: drives colour strength
-uniform sampler2D u_eyeStars;  // RGB = star tint x L* increment, A = L* increment (bright stars, twinkling)
-uniform sampler2D u_eyeStarsFaint; // the same for the fainter catalogue stars (static)
-uniform float u_eyeGain;
-uniform float u_eyeScale;      // adaptation gain x 2^(EV-1) / tone reference (cd/m\xB2)
-uniform float u_eyeToneMax;
-uniform vec3 u_eyeColour;      // colour gain on the mesopic weight, maximum strength, maximum u'v' distance
-uniform vec2 u_eyeWhite;       // adapted white (CIE 1976 u'v')
-uniform vec3 u_eyeNebula;      // lift contrast, L* per e-fold, view background (scotopic cd/m\xB2)
 uniform float u_eyeSP;
 uniform sampler2D u_intensity; // electron/s/mm^2 at the screen
 uniform sampler2D u_medium;
@@ -1142,8 +1132,6 @@ float mesopicWeight(float p, float s) {
   }
   return 0.5 * (lo + hi);
 }
-float lightnessOf(float y) { return y > 0.008856 ? 116.0 * pow(y, 1.0 / 3.0) - 16.0 : 903.3 * y; }
-float lightnessInv(float l) { return l > 8.0 ? pow((l + 16.0) / 116.0, 3.0) : l / 903.3; }
 // Luminance before the highlight shoulder that it shows as y (inverse of the log shoulder; identity when off or below the knee).
 float unshoulder(vec4 sh, float y) {
   if (sh.y <= 0.0 || y <= sh.x) return y;
@@ -1172,6 +1160,7 @@ float ditherCode() {
   float b = fract(52.9829189 * fract(dot(q, vec2(0.06711056, 0.00583715))));
   return (a + b - 1.0) / 255.0;
 }
+/*@slot:display-functions*/
 // erf, |error| < 2e-4 (Winitzki): the blurred picture's share of the cathode at the field stop.
 float erfApprox(float x) { float a = x * x; return sign(x) * sqrt(1.0 - exp(-a * (1.2732395 + 0.147 * a) / (1.0 + 0.147 * a))); }
 // D115: screen intensity above b that this pixel shows as white (tube; or the virtual eye's source path).
@@ -1380,9 +1369,11 @@ void main() {
       vec2 clip = u_eyeVisionBlur.yz;
       L = eyeVisionLum(texelFetch(u_medium, pixel, 0).r / max(edge, 0.05)) + L - eyeVisionLum(visionBelow(intensity, clip));
     }
+    /*@slot:display-vision-hdr*/
     float y = clamp(eyeVisionY(L), 0.0, 1.0);
     if (u_eyeTube == 1) {
       float lin = pow(y, u_gammaInv);
+/*@slot:display-vision-colour*/
       o = vec4(vec3(clamp(encodeSrgb(lin) + ditherCode(), 0.0, 1.0)) * cath * view, view); oBright = vec4(starReshaped);
       return;
     }
@@ -1420,35 +1411,6 @@ void main() {
     xyz *= (knee + (u_shoulder.w - knee) * log(1.0 + u_shoulder.y * (y - knee)) / u_shoulder.z) / y;
   }
   vec3 rgb = XYZ_TO_SRGB * xyz;
-  if (u_nakedEye == 1) {
-    // D74: mesopic rod/cone luminance (scotopic scale), u = L G 2^(EV-1) / L_ref, then eyeTone (naked-eye.ts).
-    vec4 d = max(vec4(0.0), texelFetch(u_eyeDiffuse, pixel, 0)) * (u_eyeGain * 1e-7);
-    float L = mix(d.a, d.y * u_eyeSP, mesopicWeight(d.y, d.a)), u = L * u_eyeScale;
-    float v = u <= 1.0 ? u : 1.0 + log(u);
-    float Y = u_eyeToneMax * v / (1.0 + v);
-    // D75 nebula lift above EYE_NEBULA_CONTRAST x the view background (eyeNebulaLift).
-    float lift = u_eyeNebula.y * max(0.0, log(L / (u_eyeNebula.x * max(u_eyeNebula.z, 1e-12))));
-    float top = lightnessOf(u_eyeToneMax), l = lightnessOf(Y);
-    if (lift > 0.0 && l < top) Y = lightnessInv(l + (top - l) * (1.0 - exp(-lift / top)));
-    // Colour needs the cones both here and over a neighbourhood (eyeColourStrength); the hue is the local one.
-    vec4 w = max(vec4(0.0), texelFetch(u_eyeWide, pixel, 0)) * (u_eyeGain * 1e-7);
-    float colour = min(u_eyeColour.y, u_eyeColour.x * min(mesopicWeight(d.y, d.a), mesopicWeight(w.y, w.a)));
-    // Pale mesopic colour: u'v' difference from the adapted white, capped, times the strength, drawn about the display white.
-    vec2 delta = uvOf(d.xyz) - u_eyeWhite;
-    float shift = length(delta);
-    if (shift > u_eyeColour.z) delta *= u_eyeColour.z / shift;
-    rgb = XYZ_TO_SRGB * (xyzOfUv(D65_UV + delta * colour) * Y);
-    // Visibility-tested compact stars raise the displayed lightness of their background (independent of EV and pixel size).
-    vec4 star = texelFetch(u_eyeStars, pixel, 0) + texelFetch(u_eyeStarsFaint, pixel, 0);
-    if (star.a > 0.0) {
-      float yb = max(0.0, dot(rgb, vec3(0.2126, 0.7152, 0.0722)));
-      vec3 tint = star.rgb / star.a;
-      // D75: no brighter than the star's own colour can be shown, so bright red/blue stars keep their hue (not white).
-      float yt = min(lightnessInv(lightnessOf(yb) + star.a), 0.98 / max(max(tint.r, tint.g), max(tint.b, 1e-3)));
-      rgb += max(0.0, yt - yb) * tint;
-    }
-    xyz.y = dot(rgb, vec3(0.2126, 0.7152, 0.0722));
-  }
   float grey = min(1.0, xyz.y), t = 1.0;
   t = limitT(t, rgb.r, grey); t = limitT(t, rgb.g, grey); t = limitT(t, rgb.b, grey);
   vec3 lin = clamp(grey + t * (rgb - grey), 0.0, 1.0);
@@ -1456,11 +1418,11 @@ void main() {
   vec3 srgb = vec3(encodeSrgb(lin.r), encodeSrgb(lin.g), encodeSrgb(lin.b));
   o = vec4(srgb * cath * view, view); oBright = vec4(starReshaped);
 }
-`,tr=h+`
+`,sr=S(ye),lr=d+`
 uniform sampler2D u_src;
 out vec4 o;
 void main() { o = texelFetch(u_src, ivec2(gl_FragCoord.xy), 0); }
-`,rr=h+`
+`,ur=d+`
 uniform sampler2D u_src;
 uniform ivec2 u_srcSize;
 uniform int u_level;
@@ -1497,7 +1459,7 @@ void main() {
   }
   o = vec4(ws > 0.0 ? xs / ws : 0.0, bn.x > 0.0 && 2.0 * bn.x >= nv ? bs.x / bn.x : -1.0, bn.y > 0.0 && 2.0 * bn.y >= nv ? bs.y / bn.y : -1.0, 0.25 * ws);
 }
-`,ir=h+b+`
+`,cr=d+b+`
 uniform sampler2D u_src;
 uniform vec4 u_taps[32];
 uniform int u_radius;
@@ -1527,7 +1489,7 @@ void main() {
   }
   o = vec4(s, 0.0, 0.0);
 }
-`,nr=h+H+`
+`,fr=d+$+`
 uniform sampler2D u_original;
 uniform sampler2D u_grain;
 uniform vec3 u_style; // strength (incl correlation normalization), tail prominence, fixed pattern amplitude
@@ -1570,127 +1532,8 @@ void main() {
   float pattern = 0.65 * patternAt(mm / 0.065) + 0.35 * patternAt(mm / 0.8 + 13.7);
   o = vec4(max(0.0, mean * (1.0 + u_style.z * pattern) + residual), mean, 0.0, 0.0);
 }
-`,ar=h+b+`
-uniform sampler2D u_src;
-uniform vec4 u_taps[32];
-uniform int u_radius;
-uniform ivec2 u_dir;
-out vec4 o;
-void main() {
-  ivec2 p = ivec2(gl_FragCoord.xy), size = textureSize(u_src, 0);
-  vec4 v = texelFetch(u_src, p, 0) * TAP(u_taps, 0);
-  for (int i=1; i<128; i++) {
-    if (i > u_radius) break;
-    ivec2 a=p+u_dir*i, b=p-u_dir*i;
-    if (inBounds(a,size)) v += texelFetch(u_src,a,0)*TAP(u_taps,i);
-    if (inBounds(b,size)) v += texelFetch(u_src,b,0)*TAP(u_taps,i);
-  }
-  o=v;
-}
-`,Z=`
-float eyeFootprint(vec2 d, float sigma) {
-  float v=0.0;
-  for(int j=0;j<2;j++) for(int i=0;i<2;i++) {
-    vec2 q=d+(vec2(i,j)-.5)*.5;
-    float r2=dot(q,q)/(sigma*sigma);
-    if(r2<=9.0) v+=exp(-.5*r2)*.25;
-  }
-  return v;
-}
-`,ve=J+`
-uniform sampler2D u_diffuse;
-uniform vec2 u_originMm;
-uniform vec2 u_size;
-uniform float u_pitchMm;
-uniform float u_focalMm;
-uniform float u_cathodeR;
-uniform mat3 u_point;
-uniform float u_eyeGain;
-uniform float u_pointGain;
-uniform float u_fieldFactor;
-uniform float u_starSigma;
-uniform vec2 u_starLight;  // L* increment at the threshold, per decade of illuminance over it
-uniform vec3 u_starColour; // maximum strength, illuminance ratio where colour starts, where it is full
-// D75 atmosphere for the eye: one-axis rms image motion (mm) and log-normal twinkle sigma over the eye's ~0.1 s
-// summation (0 = static), and the time (s).
-uniform float u_tiltMm;
-uniform float u_scint;
-uniform float u_time;
-out vec2 v_center;
-out vec4 v_star;
-uint hashU(uint x) { x ^= x >> 16; x *= 0x7feb352du; x ^= x >> 15; x *= 0x846ca68bu; x ^= x >> 16; return x; }
-float hashF(uint x) { return float(hashU(x) >> 8) * (1.0 / 16777216.0); }
-void main() {
-  vec4 a_star=starAttr();
-  vec3 cam=transpose(u_point)*vec3(a_star.xy,1.0);
-  vec2 mm=cam.z>1e-6 ? cam.xy/cam.z*u_focalMm : vec2(1e9);
-  float r=length(mm), angle=atan(r/u_focalMm);
-  // Same explicit star identity as STAR_VS.
-  uint id=a_seed*7919u+17u;
-  vec2 seeing=vec2(u_tiltMm,u_scint);
-#ifdef STAR_SKY
-  seeing=hzSeeing(a_dir.xyz,u_tiltMm,u_scint);  // 1.3.2 horizon mode: its own airmass (unchanged when off)
-#endif
-  if (seeing.x>0.0) {
-    // The tube's seeing motion (three sinusoids per axis, 0.7-14 Hz), averaged over the eye's 0.1 s summation.
-    vec2 d=vec2(0.0);
-    for (int k=0;k<6;k++) {
-      uint h=hashU(id+uint(k)*104729u);
-      float f=0.7*exp(hashF(h)*3.0), ph=6.2831853*hashF(h^0x9e3779b9u), z=3.14159265*f*0.1;
-      float v=sin(6.2831853*f*u_time+ph)*sin(z)/z;
-      if (k<3) d.x+=v; else d.y+=v;
-    }
-    mm+=d*seeing.x*.8164966;
-  }
-  float twinkle=1.0;
-  if (seeing.y>0.0) {
-    // Smooth twinkling: four sinusoids of 0.8-8 Hz (unit variance), unit-mean log-normal intensity.
-    float n=0.0;
-    for (int k=0;k<4;k++) {
-      uint h=hashU(id^(uint(k+11)*2654435761u));
-      n+=sin(6.2831853*(0.8*exp(hashF(h)*2.3))*u_time+6.2831853*hashF(h^0x85ebca6bu));
-    }
-    twinkle=exp(seeing.y*n*.7071068-.5*seeing.y*seeing.y);
-  }
-  vec2 cell=(mm-u_originMm)/u_pitchMm;
-  ivec2 q=clamp(ivec2(floor(cell+.5)),ivec2(0),textureSize(u_diffuse,0)-1);
-  // Crumey 2014 eqs 5, 32/33, 65/71. Blackwell S/P correction is applied to BOTH sky and star.
-  float B=max(1e-5,texelFetch(u_diffuse,q,0).a*u_eyeGain*1e-7/1.408);
-  float root=B<.0708 ? 6.505e-4*pow(B,.25)-8.461e-4*sqrt(B) : 1.772e-4*pow(B,.25)+7.167e-5*sqrt(B);
-  float threshold=1.408*u_fieldFactor*root*root;
-  // A twinkling star near the limit drops below it and comes back.
-  float ratio=a_star.z*starWeight(a_star.w,angle)*1e-7*u_pointGain/threshold*twinkle;
-#ifdef STAR_SKY
-  ratio*=hzStar(a_dir.xyz,a_star.w);  // D155 horizon mode (1 when off)
-#endif
-  float visible=smoothstep(.7,1.4,ratio);
-  // D74: equal magnitude steps = equal lightness steps (eyeStarLightness in naked-eye.ts).
-  float lightness=visible*(u_starLight.x+u_starLight.y*log(max(1.0,ratio))*.4342945);
-  float t=clamp((log(a_star.w)-u_logT.x)/(u_logT.y-u_logT.x),0.0,1.0)*float(u_tNodes-1);
-  int k=int(floor(t)), row=2+u_tNodes+4;
-  vec3 xyz=mix(lutAt(row+k,angle).xyz,lutAt(row+min(k+1,u_tNodes-1),angle).xyz,t-float(k));
-  // D75: the star's own warm/cool colour (u'v' about the display white), stronger the further above the limit.
-  float colour=u_starColour.x*smoothstep(u_starColour.y,u_starColour.z,ratio);
-  vec3 chroma=xyzOfUv(D65_UV+(uvOf(xyz)-D65_UV)*colour);
-  mat3 toRgb=mat3(3.2406255,-.9689307,.0557101,-1.537208,1.8757561,-.2040211,-.4986286,.0415175,1.0569959);
-  vec3 tint=max(vec3(0.0),toRgb*chroma);
-  // Unit display luminance: the tint carries hue only, the L* increment carries brightness.
-  tint/=max(dot(tint,vec3(.2126,.7152,.0722)),1e-6);
-  vec2 centre=cell+.5;
-  v_center=centre;
-  // The nearest pixel (the brightest) shows exactly the star's L* increment, whatever its subpixel position.
-  v_star=vec4(tint,1.0)*lightness/max(eyeFootprint(floor(centre)+.5-centre,u_starSigma),1e-6);
-  gl_PointSize=2.0*ceil(3.0*u_starSigma+.5)+1.0;
-  gl_Position=r>u_cathodeR || visible<=0.0 ? vec4(2.0,2.0,2.0,1.0) : vec4((cell+.5)/u_size*2.0-1.0,0.0,1.0);
-}
-`,or=h+T+Z+$+ve,sr=U("STAR_SKY")+T+Z+$+ve,lr=h+Z+`
-uniform float u_starSigma;
-in vec2 v_center;
-in vec4 v_star;
-out vec4 o;
-void main() { o=v_star*eyeFootprint(gl_FragCoord.xy-v_center,u_starSigma); }
-`;var ot="      for (int b = 0; b < 4; b++) if (code[b] != 65535u) { sum[b] += w * (soft[b] * sinhStable(float(code[b]) / 65534.0 * amax[b])); ws[b] += w; }",st="      { vec4 c = vec4(code), mk = vec4(lessThan(c, vec4(65534.5))), xv = c / 65534.0 * amax; sum += mk * w * soft * vec4(sinhStable(xv.x), sinhStable(xv.y), sinhStable(xv.z), sinhStable(xv.w)); ws += mk * w; }",ge="vec4 sum = vec4(0.0), ws = vec4(0.0), soft = vec4(0.0), amax = vec4(0.0);",_e="  value = vec4(ws.x > 0.0 ? sum.x / ws.x : -1.0,",lt="int irt = i - JRLL[face] * n + 1, k = JPLL[face] * nr + kshift + 1,",ut="int jr = 2 + (face >> 2), jp = 2 * (face & 3) + ((face >> 2) == 1 ? 0 : 1); int irt = i - jr * n + 1, k = jp * nr + kshift + 1,",ye=[[ot,st]],be=[["if (layer < 0) return false;","if (layer < 0) { missing = true; layer = 0; }"],[ge,ge+" bool missing = false;"],[_e,`  if (missing) return false;
-`+_e]],we=[[lt,ut]],Q=[{id:"vector",label:"\u6CE2\u6BB5\u6D6E\u70B9\u5411\u91CF\u8FD0\u7B97",edits:ye},{id:"no-return",label:"\u5FAA\u73AF\u5185\u4E0D\u63D0\u524D\u8FD4\u56DE",edits:be},{id:"arithmetic",label:"\u5E38\u91CF\u6570\u7EC4\u6539\u7B97\u5F0F",edits:we},{id:"all",label:"\u4EE5\u4E0A\u4E09\u9879\u4E00\u8D77",edits:[...ye,...be,...we]}];function Te(n,e){if(e===null)return n;let t=Q.find(i=>i.id===e);if(!t)throw new Error(`Unknown sky projection variant ${e}`);let r=n;for(let[i,a]of t.edits){if(!r.includes(i))throw new Error(`Sky projection variant ${e}: source changed near "${i.trim().slice(0,40)}"`);r=r.replace(i,a)}return r}var ct=`
+`,mr={STAR_VS:d+T+N,STAR_SKY_VS:O("STAR_SKY")+T+N,STAR_FS:he,STAR_MAP_FS:pe,RATE_GLSL:ge,SAMPLE_FS:ve,ACCUM_FS:_e,DISPLAY_FS:ye};var dt="      for (int b = 0; b < 4; b++) if (code[b] != 65535u) { sum[b] += w * (soft[b] * sinhStable(float(code[b]) / 65534.0 * amax[b])); ws[b] += w; }",pt="      { vec4 c = vec4(code), mk = vec4(lessThan(c, vec4(65534.5))), xv = c / 65534.0 * amax; sum += mk * w * soft * vec4(sinhStable(xv.x), sinhStable(xv.y), sinhStable(xv.z), sinhStable(xv.w)); ws += mk * w; }",be="vec4 sum = vec4(0.0), ws = vec4(0.0), soft = vec4(0.0), amax = vec4(0.0);",we="  value = vec4(ws.x > 0.0 ? sum.x / ws.x : -1.0,",gt="int irt = i - JRLL[face] * n + 1, k = JPLL[face] * nr + kshift + 1,",xt="int jr = 2 + (face >> 2), jp = 2 * (face & 3) + ((face >> 2) == 1 ? 0 : 1); int irt = i - jr * n + 1, k = jp * nr + kshift + 1,",Se=[[dt,pt]],Te=[["if (layer < 0) return false;","if (layer < 0) { missing = true; layer = 0; }"],[be,be+" bool missing = false;"],[we,`  if (missing) return false;
+`+we]],ke=[[gt,xt]],J=[{id:"vector",label:"\u6CE2\u6BB5\u6D6E\u70B9\u5411\u91CF\u8FD0\u7B97",edits:Se},{id:"no-return",label:"\u5FAA\u73AF\u5185\u4E0D\u63D0\u524D\u8FD4\u56DE",edits:Te},{id:"arithmetic",label:"\u5E38\u91CF\u6570\u7EC4\u6539\u7B97\u5F0F",edits:ke},{id:"all",label:"\u4EE5\u4E0A\u4E09\u9879\u4E00\u8D77",edits:[...Se,...Te,...ke]}];function Ae(n,e){if(e===null)return n;let t=J.find(i=>i.id===e);if(!t)throw new Error(`Unknown sky projection variant ${e}`);let r=n;for(let[i,a]of t.edits){if(!r.includes(i))throw new Error(`Sky projection variant ${e}: source changed near "${i.trim().slice(0,40)}"`);r=r.replace(i,a)}return r}var vt=`
 precision highp usampler2DArray;
 precision highp isampler2D;
 uniform usampler2DArray u_tiles;
@@ -1800,11 +1643,11 @@ vec4 skyValue(vec3 v) {
   if (!ok) value = vec4(-1.0, 0.0, 0.0, 0.0);
   return value;
 }
-`,q=`#version 300 es
+`,j=`#version 300 es
 precision highp float;
 precision highp int;
 precision highp sampler2D;
-`+ct+`
+`+vt+`
 uniform vec3 u_axis, u_west, u_north;
 uniform float u_step;
 uniform vec2 u_ref;
@@ -1814,12 +1657,12 @@ void main() {
   vec3 v = normalize(u_axis + X.x * u_west + X.y * u_north);
   o = skyValue(v);
 }
-`;var ee=class{constructor(e,t){this.gl=e;this.res=t;d(this,"array",null);d(this,"params",null);d(this,"capacity",0);d(this,"slots",new Map);d(this,"maps",new Map);d(this,"present",new Map);d(this,"clock",0);d(this,"uploads",0);d(this,"pbo",null)}staged(e,t){let r=this.gl;this.pbo||(this.pbo=r.createBuffer(),this.res.buffers.add(this.pbo)),r.bindBuffer(r.PIXEL_UNPACK_BUFFER,this.pbo),r.bufferData(r.PIXEL_UNPACK_BUFFER,e,r.STREAM_DRAW),this.res.recordBuffer(this.pbo,e.byteLength),r.pixelStorei(r.UNPACK_ALIGNMENT,1),t(),r.bindBuffer(r.PIXEL_UNPACK_BUFFER,null)}get layerBytes(){return this.capacity*256*256*8}get resident(){return this.slots.size}has(e){return this.slots.has(e)}allocate(e){let t=this.gl,r=this.res.transaction(()=>{let i=t.createTexture();if(!i)throw new Error("GPU sky array creation failed");this.res.textures.add(i),t.bindTexture(t.TEXTURE_2D_ARRAY,i),t.texImage3D(t.TEXTURE_2D_ARRAY,0,t.RGBA16UI,256,256,e,0,t.RGBA_INTEGER,t.UNSIGNED_SHORT,null),this.res.checkAllocation(`Sky array with ${e} layers`),this.res.recordTexture(i,256,256,t.RGBA16UI,0,e);for(let[s,o]of[[t.TEXTURE_MIN_FILTER,t.NEAREST],[t.TEXTURE_MAG_FILTER,t.NEAREST],[t.TEXTURE_WRAP_S,t.CLAMP_TO_EDGE],[t.TEXTURE_WRAP_T,t.CLAMP_TO_EDGE]])t.texParameteri(t.TEXTURE_2D_ARRAY,s,o);t.pixelStorei(t.UNPACK_ALIGNMENT,1),t.texSubImage3D(t.TEXTURE_2D_ARRAY,0,0,0,0,256,256,1,t.RGBA_INTEGER,t.UNSIGNED_SHORT,new Uint16Array(4*65536).fill(65535));let a=this.res.texture(2,e,t.RGBA32F,t.RGBA,t.FLOAT,null);return{array:i,params:a}});this.array&&this.res.deleteTexture(this.array),this.params&&this.res.deleteTexture(this.params),this.array=r.array,this.params=r.params,this.capacity=e,this.slots.clear();for(let[i,a]of this.maps)this.reset(i,a.data),a.dirty=!0}reset(e,t){let r=this.present.get(e);if(!r){t.fill(-1);return}for(let i=0;i<t.length;i++)t[i]=i<r.length&&r[i]?0:-1}map(e){let t=this.maps.get(e);if(!t){let r=Math.ceil(12*4**(e-8)/64),i=new Int32Array(64*r);this.reset(e,i),t={tex:this.res.texture(64,r,this.gl.R32I,this.gl.RED_INTEGER,this.gl.INT,i),data:i,dirty:!1},this.maps.set(e,t)}return t}presence(e,t){let r=12*4**(e-8),i=new Uint8Array(r);for(let s of t)s>=0&&s<r&&(i[s]=1);this.present.set(e,i);let a=this.map(e);for(let s=0;s<a.data.length;s++)a.data[s]<=0&&(a.data[s]=s<r&&i[s]?0:-1);a.dirty=!0}ensure(e,t=1/0){let r=this.gl,i=++this.clock;e.length+1>this.capacity&&this.allocate(Math.max(64,Math.ceil(e.length*1.25)+1));let a=new Set(e.map(u=>u.key)),s=0,o=0;for(let u of e){let l=this.slots.get(u.key);if(l){l.used=i;continue}if(s>=t){o++;continue}let c=this.slots.size+1;if(c>=this.capacity){let p=null;for(let y of this.slots)!a.has(y[0])&&(!p||y[1].used<p[1].used)&&(p=y);let[v,m]=p;this.slots.delete(v),c=m.layer;let w=this.map(m.order);w.data[m.tile]=this.present.get(m.order)?.[m.tile]?0:-1,w.dirty=!0}r.bindTexture(r.TEXTURE_2D_ARRAY,this.array),this.staged(u.codes,()=>r.texSubImage3D(r.TEXTURE_2D_ARRAY,0,0,0,c,256,256,1,r.RGBA_INTEGER,r.UNSIGNED_SHORT,0)),r.bindTexture(r.TEXTURE_2D,this.params),this.staged(Float32Array.from([...Array.from(u.soft),...Array.from(u.amax)]),()=>r.texSubImage2D(r.TEXTURE_2D,0,0,c,2,1,r.RGBA,r.FLOAT,0)),this.slots.set(u.key,{layer:c,order:u.order,tile:u.tile,used:i});let f=this.map(u.order);f.data[u.tile]=c,f.dirty=!0,s++,this.uploads++}return this.flushMaps(),o}flushMaps(){let e=this.gl;for(let t of this.maps.values())t.dirty&&(e.bindTexture(e.TEXTURE_2D,t.tex),this.staged(t.data,()=>e.texSubImage2D(e.TEXTURE_2D,0,0,0,64,t.data.length/64,e.RED_INTEGER,e.INT,0)),t.dirty=!1)}bind(e,t,r){let i=this.gl,a=c=>e.loc.get(c);this.array||this.allocate(64);let[s,o]=[t[0],t[1]??t[0]],u=this.map(s),l=this.map(o);this.flushMaps(),i.activeTexture(i.TEXTURE0+r.tiles),i.bindTexture(i.TEXTURE_2D_ARRAY,this.array),i.uniform1i(a("u_tiles"),r.tiles),this.res.bindTex(r.params,this.params,e,"u_params"),this.res.bindTex(r.map0,u.tex,e,"u_map0"),this.res.bindTex(r.map1,l.tex,e,"u_map1"),i.uniform1i(a("u_order0"),s),i.uniform1i(a("u_order1"),o),i.uniform1i(a("u_orders"),Math.min(2,t.length))}unbind(e){let t=this.gl;t.activeTexture(t.TEXTURE0+e.tiles),t.bindTexture(t.TEXTURE_2D_ARRAY,null)}},N=class{constructor(e,t){this.gl=e;this.res=t;d(this,"store");d(this,"prog");d(this,"variant",null);this.store=new ee(e,t),this.prog=t.programDeferred("skyProject",P,q)}get compiled(){return this.prog.done()}setVariant(e){if(e===this.variant)return;let t=this.prog;if(this.prog=this.res.programDeferred("skyProject"+(e?"-"+e:""),P,Te(q,e)),this.variant=e,t.done()){try{t.check()}catch{}this.gl.deleteProgram(t.prog),this.res.programs.delete(t.prog)}}get layerBytes(){return this.store.layerBytes}get uploads(){return this.store.uploads}ensure(e,t=1/0){return this.store.ensure(e,t)}project(e,t,r,i,a){let s=this.gl,o=this.prog,u=l=>o.loc.get(l);o.check(),s.useProgram(o.prog),s.bindVertexArray(a),s.bindFramebuffer(s.FRAMEBUFFER,e.fbo),s.viewport(0,0,t.size,t.size),s.enable(s.SCISSOR_TEST),s.scissor(0,r,t.size,i-r),this.store.bind(o,t.orders,Se),s.uniform3fv(u("u_axis"),[...t.frame.axis]),s.uniform3fv(u("u_west"),[...t.frame.west]),s.uniform3fv(u("u_north"),[...t.frame.north]),s.uniform1f(u("u_step"),t.stepTan),s.uniform2f(u("u_ref"),t.refPixel[0],t.refPixel[1]),s.drawArrays(s.TRIANGLES,0,3),s.disable(s.SCISSOR_TEST),this.store.unbind(Se)}},Se={tiles:0,params:1,map0:2,map1:3};var x=(n,e)=>e?n.replace(/\{(\d+)\}/g,(t,r)=>String(e[+r])):n;var S=class extends Error{},E=class extends Error{};function ke(n,e){let t=typeof location>"u"?null:new URLSearchParams(location.search).get("shaderFail");return!t||!(t==="1"?n==="rate":t==="sky"&&n.startsWith("rateSky"))?e:`#version 300 es
+`;var Z=class{constructor(e,t){this.gl=e;this.res=t;m(this,"array",null);m(this,"params",null);m(this,"capacity",0);m(this,"slots",new Map);m(this,"maps",new Map);m(this,"present",new Map);m(this,"clock",0);m(this,"uploads",0);m(this,"pbo",null)}staged(e,t){let r=this.gl;this.pbo||(this.pbo=r.createBuffer(),this.res.buffers.add(this.pbo)),r.bindBuffer(r.PIXEL_UNPACK_BUFFER,this.pbo),r.bufferData(r.PIXEL_UNPACK_BUFFER,e,r.STREAM_DRAW),this.res.recordBuffer(this.pbo,e.byteLength),r.pixelStorei(r.UNPACK_ALIGNMENT,1),t(),r.bindBuffer(r.PIXEL_UNPACK_BUFFER,null)}get layerBytes(){return this.capacity*256*256*8}get resident(){return this.slots.size}has(e){return this.slots.has(e)}allocate(e){let t=this.gl,r=this.res.transaction(()=>{let i=t.createTexture();if(!i)throw new Error("GPU sky array creation failed");this.res.textures.add(i),t.bindTexture(t.TEXTURE_2D_ARRAY,i),t.texImage3D(t.TEXTURE_2D_ARRAY,0,t.RGBA16UI,256,256,e,0,t.RGBA_INTEGER,t.UNSIGNED_SHORT,null),this.res.checkAllocation(`Sky array with ${e} layers`),this.res.recordTexture(i,256,256,t.RGBA16UI,0,e);for(let[s,o]of[[t.TEXTURE_MIN_FILTER,t.NEAREST],[t.TEXTURE_MAG_FILTER,t.NEAREST],[t.TEXTURE_WRAP_S,t.CLAMP_TO_EDGE],[t.TEXTURE_WRAP_T,t.CLAMP_TO_EDGE]])t.texParameteri(t.TEXTURE_2D_ARRAY,s,o);t.pixelStorei(t.UNPACK_ALIGNMENT,1),t.texSubImage3D(t.TEXTURE_2D_ARRAY,0,0,0,0,256,256,1,t.RGBA_INTEGER,t.UNSIGNED_SHORT,new Uint16Array(4*65536).fill(65535));let a=this.res.texture(2,e,t.RGBA32F,t.RGBA,t.FLOAT,null);return{array:i,params:a}});this.array&&this.res.deleteTexture(this.array),this.params&&this.res.deleteTexture(this.params),this.array=r.array,this.params=r.params,this.capacity=e,this.slots.clear();for(let[i,a]of this.maps)this.reset(i,a.data),a.dirty=!0}reset(e,t){let r=this.present.get(e);if(!r){t.fill(-1);return}for(let i=0;i<t.length;i++)t[i]=i<r.length&&r[i]?0:-1}map(e){let t=this.maps.get(e);if(!t){let r=Math.ceil(12*4**(e-8)/64),i=new Int32Array(64*r);this.reset(e,i),t={tex:this.res.texture(64,r,this.gl.R32I,this.gl.RED_INTEGER,this.gl.INT,i),data:i,dirty:!1},this.maps.set(e,t)}return t}presence(e,t){let r=12*4**(e-8),i=new Uint8Array(r);for(let s of t)s>=0&&s<r&&(i[s]=1);this.present.set(e,i);let a=this.map(e);for(let s=0;s<a.data.length;s++)a.data[s]<=0&&(a.data[s]=s<r&&i[s]?0:-1);a.dirty=!0}ensure(e,t=1/0){let r=this.gl,i=++this.clock;e.length+1>this.capacity&&this.allocate(Math.max(64,Math.ceil(e.length*1.25)+1));let a=new Set(e.map(l=>l.key)),s=0,o=0;for(let l of e){let u=this.slots.get(l.key);if(u){u.used=i;continue}if(s>=t){o++;continue}let c=this.slots.size+1;if(c>=this.capacity){let p=null;for(let _ of this.slots)!a.has(_[0])&&(!p||_[1].used<p[1].used)&&(p=_);let[x,h]=p;this.slots.delete(x),c=h.layer;let w=this.map(h.order);w.data[h.tile]=this.present.get(h.order)?.[h.tile]?0:-1,w.dirty=!0}r.bindTexture(r.TEXTURE_2D_ARRAY,this.array),this.staged(l.codes,()=>r.texSubImage3D(r.TEXTURE_2D_ARRAY,0,0,0,c,256,256,1,r.RGBA_INTEGER,r.UNSIGNED_SHORT,0)),r.bindTexture(r.TEXTURE_2D,this.params),this.staged(Float32Array.from([...Array.from(l.soft),...Array.from(l.amax)]),()=>r.texSubImage2D(r.TEXTURE_2D,0,0,c,2,1,r.RGBA,r.FLOAT,0)),this.slots.set(l.key,{layer:c,order:l.order,tile:l.tile,used:i});let f=this.map(l.order);f.data[l.tile]=c,f.dirty=!0,s++,this.uploads++}return this.flushMaps(),o}flushMaps(){let e=this.gl;for(let t of this.maps.values())t.dirty&&(e.bindTexture(e.TEXTURE_2D,t.tex),this.staged(t.data,()=>e.texSubImage2D(e.TEXTURE_2D,0,0,0,64,t.data.length/64,e.RED_INTEGER,e.INT,0)),t.dirty=!1)}bind(e,t,r){let i=this.gl,a=c=>e.loc.get(c);this.array||this.allocate(64);let[s,o]=[t[0],t[1]??t[0]],l=this.map(s),u=this.map(o);this.flushMaps(),i.activeTexture(i.TEXTURE0+r.tiles),i.bindTexture(i.TEXTURE_2D_ARRAY,this.array),i.uniform1i(a("u_tiles"),r.tiles),this.res.bindTex(r.params,this.params,e,"u_params"),this.res.bindTex(r.map0,l.tex,e,"u_map0"),this.res.bindTex(r.map1,u.tex,e,"u_map1"),i.uniform1i(a("u_order0"),s),i.uniform1i(a("u_order1"),o),i.uniform1i(a("u_orders"),Math.min(2,t.length))}unbind(e){let t=this.gl;t.activeTexture(t.TEXTURE0+e.tiles),t.bindTexture(t.TEXTURE_2D_ARRAY,null)}},V=class{constructor(e,t){this.gl=e;this.res=t;m(this,"store");m(this,"prog");m(this,"variant",null);this.store=new Z(e,t),this.prog=t.programDeferred("skyProject",D,j)}get compiled(){return this.prog.done()}setVariant(e){if(e===this.variant)return;let t=this.prog;if(this.prog=this.res.programDeferred("skyProject"+(e?"-"+e:""),D,Ae(j,e)),this.variant=e,t.done()){try{t.check()}catch{}this.gl.deleteProgram(t.prog),this.res.programs.delete(t.prog)}}get layerBytes(){return this.store.layerBytes}get uploads(){return this.store.uploads}ensure(e,t=1/0){return this.store.ensure(e,t)}project(e,t,r,i,a){let s=this.gl,o=this.prog,l=u=>o.loc.get(u);o.check(),s.useProgram(o.prog),s.bindVertexArray(a),s.bindFramebuffer(s.FRAMEBUFFER,e.fbo),s.viewport(0,0,t.size,t.size),s.enable(s.SCISSOR_TEST),s.scissor(0,r,t.size,i-r),this.store.bind(o,t.orders,Re),s.uniform3fv(l("u_axis"),[...t.frame.axis]),s.uniform3fv(l("u_west"),[...t.frame.west]),s.uniform3fv(l("u_north"),[...t.frame.north]),s.uniform1f(l("u_step"),t.stepTan),s.uniform2f(l("u_ref"),t.refPixel[0],t.refPixel[1]),s.drawArrays(s.TRIANGLES,0,3),s.disable(s.SCISSOR_TEST),this.store.unbind(Re)}},Re={tiles:0,params:1,map0:2,map1:3};var g=(n,e)=>e?n.replace(/\{(\d+)\}/g,(t,r)=>String(e[+r])):n;var bt={};function _t(n,e=!1){let t=new URLSearchParams(n??"");if(e)for(let s of["tour","eyecal","news","ach"])t.has(s)||t.set(s,"0");let r=t.get("lang"),i=t.get("warp"),a=t.get("skyCheck");return{hasLocation:n!==null,lang:r==="zh"||r==="en"?r:null,noGl:t.has("nogl"),crashTest:t.has("crashtest"),devHooks:t.get("sky")==="free"||a==="1",skyCheck:a==="1",skyCheckValue:a,verify:t.has("verify"),verifyQuick:t.get("verify")==="quick",tour:t.get("tour"),ach:t.get("ach"),news:t.get("news"),eyecal:t.get("eyecal"),intro:t.has("intro"),adapt:t.get("adapt")==="1",warp:i==="1"?1:i==="2"?2:i==="3"?3:null,zoomPitch:t.get("zoomPitch"),deepStars:t.get("deepStars"),starSubtract:t.get("starSubtract")==="1",installSheet:t.get("installSheet")==="1",shaderFail:t.get("shaderFail"),spotPairOff:t.get("spotPair")==="0",search:n??""}}var yt=n=>{if(n===null||!bt.env?.DEV)return!1;let e=new URLSearchParams(n);return e.get("film")==="1"||e.get("scene")==="boxes"||e.get("scene")==="1"},Ee=typeof location>"u"?null:location.search??"",Me=_t(Ee,yt(Ee));var k=class extends Error{},F=class extends Error{};function Fe(n,e){let t=Me.shaderFail;return!t||!(t==="1"?n==="rate":t==="sky"&&n.startsWith("rateSky"))?e:`#version 300 es
 precision highp float;
 out vec4 outColor;
 void main() { outColor = undeclaredSymbolForShaderFailTest; }
-`}var O=class{constructor(e){this.gl=e;d(this,"textures",new Set);d(this,"framebuffers",new Set);d(this,"programs",new Set);d(this,"buffers",new Set);d(this,"vaos",new Set);d(this,"renderbuffers",new Set);d(this,"textureBytes",new Map);d(this,"bufferBytes",new Map);d(this,"renderbufferBytes",new Map);d(this,"peakBytes",0);d(this,"deferred",new Map)}usage(){let e=0,t=0,r=0;for(let a of this.textures)for(let s of this.textureBytes.get(a)?.values()??[])e+=s;for(let a of this.buffers)t+=this.bufferBytes.get(a)??0;for(let a of this.renderbuffers)r+=this.renderbufferBytes.get(a)??0;let i=e+t+r;return this.peakBytes=Math.max(this.peakBytes,i),{textureBytes:e,bufferBytes:t,renderbufferBytes:r,totalBytes:i,peakBytes:this.peakBytes,textures:this.textures.size,buffers:this.buffers.size,renderbuffers:this.renderbuffers.size,framebuffers:this.framebuffers.size,programs:this.programs.size,vaos:this.vaos.size}}recordTexture(e,t,r,i,a=0,s=1){let o=this.gl,u=i===o.R8?1:i===o.RGBA8||i===o.R32F||i===o.R32I?4:i===o.R16F?2:i===o.RG32F||i===o.RGBA16F||i===o.RGBA16UI?8:i===o.RGBA32F?16:null;if(u===null)throw new Error(`Unaccounted texture format 0x${i.toString(16)}`);let l=this.textureBytes.get(e);l||(l=new Map,this.textureBytes.set(e,l)),l.set(a,t*r*s*u),this.usage()}recordBuffer(e,t){this.bufferBytes.set(e,t),this.usage()}recordRenderbuffer(e,t){this.renderbuffers.add(e),this.renderbufferBytes.set(e,t),this.usage()}checkAllocation(e){let t=this.gl.getError();if(t!==this.gl.NO_ERROR)throw new S(`${e}: GPU allocation failed (0x${t.toString(16)}).`)}transaction(e){let t=new Set(this.textures),r=new Set(this.framebuffers),i=new Set(this.buffers),a=new Set(this.renderbuffers);try{return e()}catch(s){for(let o of this.textures)t.has(o)||this.deleteTexture(o);for(let o of this.framebuffers)r.has(o)||(this.gl.deleteFramebuffer(o),this.framebuffers.delete(o));for(let o of this.buffers)i.has(o)||this.deleteBuffer(o);for(let o of this.renderbuffers)a.has(o)||this.deleteRenderbuffer(o);throw this.gl.bindFramebuffer(this.gl.FRAMEBUFFER,null),s}}texture(e,t,r,i,a,s){let o=this.gl,u=o.getParameter(o.MAX_TEXTURE_SIZE);if(!(Number.isInteger(e)&&Number.isInteger(t)&&e>0&&t>0&&e<=u&&t<=u))throw new S(`Texture ${e}\xD7${t} exceeds GPU dimension limit ${u}.`);let l=o.createTexture();if(!l)throw new S("GPU texture creation failed.");this.textures.add(l);try{o.bindTexture(o.TEXTURE_2D,l),o.pixelStorei(o.UNPACK_ALIGNMENT,1),o.texImage2D(o.TEXTURE_2D,0,r,e,t,0,i,a,s);for(let[c,f]of[[o.TEXTURE_MIN_FILTER,o.NEAREST],[o.TEXTURE_MAG_FILTER,o.NEAREST],[o.TEXTURE_WRAP_S,o.CLAMP_TO_EDGE],[o.TEXTURE_WRAP_T,o.CLAMP_TO_EDGE]])o.texParameteri(o.TEXTURE_2D,c,f);return this.checkAllocation(`Texture ${e}\xD7${t}`),this.recordTexture(l,e,t,r),l}catch(c){throw this.deleteTexture(l),c}}target(e,t,r,i){let a=this.gl,s=r===a.R16F?a.HALF_FLOAT:r===a.RGBA8?a.UNSIGNED_BYTE:a.FLOAT,o=this.texture(e,t,r,i,s,null),u=a.createFramebuffer();if(!u)throw this.deleteTexture(o),new S("GPU framebuffer creation failed.");this.framebuffers.add(u),a.bindFramebuffer(a.FRAMEBUFFER,u),a.framebufferTexture2D(a.FRAMEBUFFER,a.COLOR_ATTACHMENT0,a.TEXTURE_2D,o,0);let l=a.checkFramebufferStatus(a.FRAMEBUFFER);if(l!==a.FRAMEBUFFER_COMPLETE)throw this.deleteTarget({tex:o,fbo:u,internal:r,format:i,w:e,h:t}),new S(x("\u6D6E\u70B9\u6E32\u67D3\u76EE\u6807\u4E0D\u53EF\u7528\uFF080x{0}\uFF09\u3002",[l.toString(16)]));return{tex:o,fbo:u,internal:r,format:i,w:e,h:t}}deleteTexture(e){this.gl.deleteTexture(e),this.textures.delete(e),this.textureBytes.delete(e)}deleteBuffer(e){this.gl.deleteBuffer(e),this.buffers.delete(e),this.bufferBytes.delete(e)}deleteRenderbuffer(e){this.gl.deleteRenderbuffer(e),this.renderbuffers.delete(e),this.renderbufferBytes.delete(e)}deleteTarget(e){this.gl.deleteFramebuffer(e.fbo),this.framebuffers.delete(e.fbo),this.deleteTexture(e.tex)}bindTarget(e){this.gl.bindFramebuffer(this.gl.FRAMEBUFFER,e.fbo),this.gl.viewport(0,0,e.w,e.h)}bindTex(e,t,r,i){let a=this.gl;a.activeTexture(a.TEXTURE0+e),a.bindTexture(a.TEXTURE_2D,t),a.uniform1i(r.loc.get(i),e)}program(e,t,r){let i=this.gl,a=i.createProgram();this.programs.add(a);let s=[];try{for(let[l,c]of[[i.VERTEX_SHADER,t],[i.FRAGMENT_SHADER,ke(e,r)]]){let f=i.createShader(l);if(s.push(f),i.shaderSource(f,c),i.compileShader(f),!i.getShaderParameter(f,i.COMPILE_STATUS))throw new E(x("\u7740\u8272\u5668\u7F16\u8BD1\u5931\u8D25\uFF08{0} / {1}\uFF09\uFF1A{2}",[e,l===i.VERTEX_SHADER?x("\u9876\u70B9"):x("\u7247\u5143"),i.getShaderInfoLog(f)||x("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]));i.attachShader(a,f)}if(i.linkProgram(a),!i.getProgramParameter(a,i.LINK_STATUS))throw new E(x("\u7740\u8272\u5668\u94FE\u63A5\u5931\u8D25\uFF08{0}\uFF09\uFF1A{1}",[e,i.getProgramInfoLog(a)||x("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]))}catch(l){throw i.deleteProgram(a),this.programs.delete(a),l}finally{for(let l of s)i.isProgram(a)&&i.getAttachedShaders(a)?.includes(l)&&i.detachShader(a,l),i.deleteShader(l)}let o=new Map;return{prog:a,loc:{get:l=>(o.has(l)||o.set(l,i.getUniformLocation(a,l)),o.get(l))}}}programDeferred(e,t,r){let i=this.gl,a=i.createProgram(),s=!!i.getExtension("KHR_parallel_shader_compile");this.programs.add(a);let o=[[i.VERTEX_SHADER,t],[i.FRAGMENT_SHADER,ke(e,r)]].map(([m,w])=>{let y=i.createShader(m);return i.shaderSource(y,w),i.compileShader(y),i.attachShader(a,y),{s:y,type:m}});i.linkProgram(a);let u=!1,l=null,c=()=>{if(!(u||l||!o.length))try{for(let{s:m,type:w}of o)if(!i.getShaderParameter(m,i.COMPILE_STATUS))throw new E(x("\u7740\u8272\u5668\u7F16\u8BD1\u5931\u8D25\uFF08{0} / {1}\uFF09\uFF1A{2}",[e,w===i.VERTEX_SHADER?x("\u9876\u70B9"):x("\u7247\u5143"),i.getShaderInfoLog(m)||x("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]));if(!i.getProgramParameter(a,i.LINK_STATUS))throw new E(x("\u7740\u8272\u5668\u94FE\u63A5\u5931\u8D25\uFF08{0}\uFF09\uFF1A{1}",[e,i.getProgramInfoLog(a)||x("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]));u=!0}catch(m){l=m instanceof Error?m:new Error(String(m))}finally{for(let{s:m}of o)i.getAttachedShaders(a)?.includes(m)&&i.detachShader(a,m),i.deleteShader(m);o.length=0,this.deferred.delete(a)}},f=()=>!s||i.getProgramParameter(a,37297)===!0;this.deferred.set(a,{shaders:o,ready:f});let p=()=>{u||l||!this.deferred.has(a)||i.isContextLost()||(f()?c():setTimeout(p,50))};setTimeout(p,50);let v=new Map;return{prog:a,loc:{get:m=>(v.has(m)||v.set(m,i.getUniformLocation(a,m)),v.get(m))},done:()=>u||l!==null||f(),check:()=>{if(c(),l)throw l}}}deleteAll(){let e=this.gl;e.bindFramebuffer(e.FRAMEBUFFER,null),e.bindVertexArray(null),e.bindBuffer(e.ARRAY_BUFFER,null),e.useProgram(null);for(let t of this.framebuffers)e.deleteFramebuffer(t);for(let t of this.textures)e.deleteTexture(t);for(let t of this.buffers)e.deleteBuffer(t);for(let t of this.vaos)e.deleteVertexArray(t);for(let t of this.renderbuffers)e.deleteRenderbuffer(t);for(let[t,r]of this.deferred){this.programs.delete(t);let i=()=>{if(!e.isContextLost()){if(!r.ready()){setTimeout(i,50);return}for(let{s:a}of r.shaders)e.detachShader(t,a),e.deleteShader(a);r.shaders.length=0,e.deleteProgram(t)}};i()}this.deferred.clear();for(let t of this.programs)e.deleteProgram(t);this.framebuffers.clear(),this.textures.clear(),this.buffers.clear(),this.vaos.clear(),this.programs.clear(),this.renderbuffers.clear(),this.textureBytes.clear(),this.bufferBytes.clear(),this.renderbufferBytes.clear()}};var D=Math.PI/180;var ft=(n,e)=>[n[1]*e[2]-n[2]*e[1],n[2]*e[0]-n[0]*e[2],n[0]*e[1]-n[1]*e[0]];function Ae(n){if(!Number.isFinite(n))throw new RangeError("RA must be finite");let e=n%360;return e<0?e+360:e===0?0:e}function ht(n,e){if(!Number.isFinite(e)||Math.abs(e)>90)throw new RangeError("Latitude must be in [-90, 90] degrees");let t=Ae(n)*D,r=e*D;if(Math.abs(e)===90)return[0,0,Math.sign(e)];let i=Math.cos(r);return[i*Math.cos(t),i*Math.sin(t),Math.sin(r)]}var te=(n,e)=>ht(n,e);function Re(n){let e=te(...n),t=Ae(n[0])*D,r=n[1]*D;return{axis:e,west:[Math.sin(t),-Math.cos(t),0],north:[-Math.sin(r)*Math.cos(t),-Math.sin(r)*Math.sin(t),Math.cos(r)]}}var mt=te(192.85948,27.12825),re=te(192.85948+90,0),Me=ft(mt,re),V=32.93192*D,Ee=(n,e,t,r)=>[t*n[0]+r*e[0],t*n[1]+r*e[1],t*n[2]+r*e[2]],_r=Ee(re,Me,Math.cos(V),-Math.sin(V)),yr=Ee(re,Me,Math.sin(V),Math.cos(V));var wr=2*Math.PI;function ze(n){let e=0;for(let t=0;n;t++,n>>>=2)e|=(n&1)<<t;return e}var dt=[2,2,2,2,3,3,3,3,4,4,4,4],pt=[1,3,5,7,0,2,4,6,1,3,5,7];function Fe(n,e){let t=2**n,r=Math.floor(e/(t*t)),i=e%(t*t),a=ze(i),s=ze(i>>>1),o=dt[r]*t-a-s-1,u=o<t?o:o>3*t?4*t-o:t,l=o<t?1-u*u/(3*t*t):o>3*t?-1+u*u/(3*t*t):(2*t-o)*2/(3*t),c=o>=t&&o<=3*t?o-t&1:0,p=((pt[r]*u+a-s+1+c)/2-(c+1)*.5)*Math.PI/(2*u),v=Math.sqrt(1-l*l);return[v*Math.cos(p),v*Math.sin(p),l]}var ne={25:10,50:11,85:12};var xt={25:7,50:5,85:3};var vt=2048,W=65536,j=65535,Be=Math.PI/180,gt={2:14.78,3:7.68,4:3.99},Ue=(n,e)=>`${n}/${e}`;function qe(n,e,t,r=vt){let i=Math.tan(Math.atan((9+t)/e)+xt[e]*Be);return{centre:[n[0],n[1]],frame:Re(n),step:e,order:ne[e],supportMm:t,size:r,planeStep:2*i/(r-1),refPixel:[(r-1)/2,(r-1)/2],halfTan:i}}var Pe=(n,e)=>n[0]*e[0]+n[1]*e[1]+n[2]*e[2],_t=n=>{let e=Math.hypot(n[0],n[1],n[2]);return[n[0]/e,n[1]/e,n[2]/e]},De=new Map,yt=n=>{let e=De.get(n);return e||(e=Array.from({length:12*4**n},(t,r)=>Fe(n,r)),De.set(n,e)),e};function Ne(n,e){let t=Math.sin(gt[e]*Be),{axis:r,west:i,north:a}=n.frame,s=n.halfTan,o=[[-1,0],[1,0],[0,-1],[0,1]].map(([l,c])=>_t([0,1,2].map(f=>s*r[f]+l*i[f]+c*a[f]))),u=[];return yt(e).forEach((l,c)=>{Pe(l,r)>-t&&o.every(f=>Pe(l,f)>=-t)&&u.push(c)}),u}var Oe=n=>new Map([...n].map(e=>[e.order*4096+e.tile,e])),bt=[2,2,2,2,3,3,3,3,4,4,4,4],wt=[1,3,5,7,0,2,4,6,1,3,5,7],Le=2*Math.PI,Ce=n=>(n=(n|n<<8)&16711935,n=(n|n<<4)&252645135,n=(n|n<<2)&858993459,(n|n<<1)&1431655765);function ae(n,e,t){let r=1<<n,i,a,s=0;if(e<r)a=e,i=(t-1)/a|0;else if(e<=3*r){a=r,s=e-r&1;let l=e-r,c=t-(l+1>>1)+r-1>>n,f=t-(2*r+1-l>>1)+r-1>>n;i=f===c?f|4:f<c?f:c+8}else a=4*r-e,i=((t-1)/a|0)+8;let o=e-bt[i]*r+1,u=2*t-wt[i]*a-s-1;return u>=2*r&&(u-=8*r),i*r*r+Ce(u-o>>1)+2*Ce(-u-o>>1)}var A=0,C=0;function Ge(n,e){if(n<e){let t=n*n/(3*e*e);A=1-t,C=Math.sqrt(t*(2-t))}else if(n>3*e){let t=4*e-n,r=t*t/(3*e*e);A=r-1,C=Math.sqrt(r*(2-r))}else A=(2*e-n)*2/(3*e),C=Math.sqrt(1-A*A)}var Ie=n=>{let e=n*n;return n*(1+e*(1/6+e*.075))},L=new Float64Array(4),k=new Float64Array(4),Tt=16,ie=[];function St(n){return n.values||(n.values=new Float32Array(4*W).fill(NaN),ie.push(n),ie.length>Tt&&delete ie.shift().values),n.values}function kt(n,e,t,r,i,a){let s=1<<n,o=e*e+t*t,u=Math.sqrt(o),l=r>2/3?s*Math.sqrt(3*o/(1+r)):r<-2/3?4*s-s*Math.sqrt(3*o/(1-r)):2*s-1.5*s*r,c=Math.floor(l),f=Math.max(1,Math.min(4*s-1,c)),p=Math.max(1,Math.min(4*s-1,c+1));Ge(f,s);let v=A,m=C;Ge(p,s);let w=A,y=C,oe=f===p?0:Math.max(0,Math.min(1,Ie(u*v-r*m)/Ie(y*v-w*m))),Ye=Math.atan2(t,e);L.fill(0),k.fill(0);for(let g=0;g<2;g++){let R=g===0?f:p,Xe=g===0?1-oe:oe,se=Math.min(R,s,4*s-R),Ke=R>=s&&R<=3*s?R-s&1:0,X=4*se,le=Math.PI/(2*se),He=(1-(Ke+1)*.5)*le,z=(Ye-He)%Le;z<0&&(z+=Le),z/=le;let M=Math.floor(z),ue=z-M;M>=X&&(M-=X);for(let G=0;G<2;G++){let $e=G===0?M:M+1===X?0:M+1,ce=Xe*(G===0?1-ue:ue),fe=ae(n,R,$e+1),F=i.get(n*4096+(fe>>>16));if(!F)return!1;let K=4*(fe&65535),Je=F.codes,he=St(F);for(let _=0;_<4;_++){let me=Je[K+_];if(me===j)continue;let I=he[K+_];I!==I&&(I=he[K+_]=F.soft[_]*Math.sinh(me/65534*F.amax[_])),L[_]=L[_]+ce*I,k[_]=k[_]+ce}}}a[0]=k[0]>0?L[0]/k[0]:-1;for(let g=1;g<4;g++)a[g]=k[g]>0?L[g]/k[g]:0;return!0}function At(n,e,t,r,i,a=new Float32Array(4)){let{axis:s,west:o,north:u}=n.frame,l=s[0]+r*o[0]+i*u[0],c=s[1]+r*o[1]+i*u[1],f=s[2]+r*o[2]+i*u[2],p=Math.hypot(l,c,f);l/=p,c/=p,f/=p;for(let v of e)if(kt(v,l,c,f,t,a))return a;return a[0]=-1,a[1]=a[2]=a[3]=0,a}var Ve=(n,e,t,r,i,a=new Float32Array(4))=>At(n,e,t,(r-n.refPixel[0])*n.planeStep,(i-n.refPixel[1])*n.planeStep,a);var Fr={key:"blank",order:-1,tile:-1,codes:new Uint16Array(4*W).fill(j),soft:new Float64Array(4),amax:new Float64Array(4)};var Y={version:40,ua:240,gpu:160,message:400},Rt="shader-error";function Mt(n,e,t,r,i=new Date().toISOString()){return{version:n.slice(0,Y.version),at:i.slice(0,40),ua:e.slice(0,Y.ua),gpu:t.slice(0,Y.gpu),message:r.slice(0,Y.message)}}function We(n){return[`\u5149\u5B50\u96E8 ${n.version}`,`\u65F6\u95F4\uFF1A${n.at}`,`\u6D4F\u89C8\u5668\uFF1A${n.ua}`,`\u663E\u5361\uFF1A${n.gpu||"\u672A\u77E5"}`,`\u7740\u8272\u5668\u62A5\u9519\uFF1A${n.message}`].join(`
-`)}function Et(n){let e=n.replace(/-/g,"+").replace(/_/g,"/").padEnd(Math.ceil(n.length/4)*4,"="),t=Uint8Array.from(atob(e),r=>r.charCodeAt(0));return new TextDecoder().decode(t)}function je(n){let e=new RegExp(`^#${Rt}=([A-Za-z0-9_-]+)$`).exec(n);if(!e)return null;try{let t=JSON.parse(Et(e[1])),r=i=>typeof t[i]=="string"?t[i]:"";return r("message")?Mt(r("version"),r("ua"),r("gpu"),r("message"),r("at")||void 0):null}catch{return null}}return nt(zt);})();
+`}var W=class{constructor(e){this.gl=e;m(this,"textures",new Set);m(this,"framebuffers",new Set);m(this,"programs",new Set);m(this,"buffers",new Set);m(this,"vaos",new Set);m(this,"renderbuffers",new Set);m(this,"textureBytes",new Map);m(this,"bufferBytes",new Map);m(this,"renderbufferBytes",new Map);m(this,"textureShapes",new WeakMap);m(this,"peakBytes",0);m(this,"deferred",new Map)}usage(){let e=0,t=0,r=0;for(let a of this.textures)for(let s of this.textureBytes.get(a)?.values()??[])e+=s;for(let a of this.buffers)t+=this.bufferBytes.get(a)??0;for(let a of this.renderbuffers)r+=this.renderbufferBytes.get(a)??0;let i=e+t+r;return this.peakBytes=Math.max(this.peakBytes,i),{textureBytes:e,bufferBytes:t,renderbufferBytes:r,totalBytes:i,peakBytes:this.peakBytes,textures:this.textures.size,buffers:this.buffers.size,renderbuffers:this.renderbuffers.size,framebuffers:this.framebuffers.size,programs:this.programs.size,vaos:this.vaos.size}}recordTexture(e,t,r,i,a=0,s=1){let o=this.gl,l=i===o.R8?1:i===o.RGBA8||i===o.RGB10_A2||i===o.R32F||i===o.R32I?4:i===o.R16F?2:i===o.RG32F||i===o.RGBA16F||i===o.RGBA16UI?8:i===o.RGBA32F?16:null;if(l===null)throw new Error(`Unaccounted texture format 0x${i.toString(16)}`);let u=this.textureBytes.get(e);u||(u=new Map,this.textureBytes.set(e,u)),u.set(a,t*r*s*l),this.usage(),a===0&&this.textureShapes.set(e,`${t}\xD7${r}${s>1?`\xD7${s}`:""} ${l} B`)}textureBreakdown(){let e=new Map;for(let t of this.textures){let r=this.textureShapes.get(t)??"?",i=e.get(r)??{count:0,bytes:0};i.count++;for(let a of this.textureBytes.get(t)?.values()??[])i.bytes+=a;e.set(r,i)}return[...e].map(([t,r])=>({shape:t,count:r.count,mb:Math.round(r.bytes/1048576)})).sort((t,r)=>r.mb-t.mb)}recordBuffer(e,t){this.bufferBytes.set(e,t),this.usage()}recordRenderbuffer(e,t){this.renderbuffers.add(e),this.renderbufferBytes.set(e,t),this.usage()}checkAllocation(e){let t=this.gl.getError();if(t!==this.gl.NO_ERROR)throw new k(`${e}: GPU allocation failed (0x${t.toString(16)}).`)}transaction(e){let t=new Set(this.textures),r=new Set(this.framebuffers),i=new Set(this.buffers),a=new Set(this.renderbuffers);try{return e()}catch(s){for(let o of this.textures)t.has(o)||this.deleteTexture(o);for(let o of this.framebuffers)r.has(o)||(this.gl.deleteFramebuffer(o),this.framebuffers.delete(o));for(let o of this.buffers)i.has(o)||this.deleteBuffer(o);for(let o of this.renderbuffers)a.has(o)||this.deleteRenderbuffer(o);throw this.gl.bindFramebuffer(this.gl.FRAMEBUFFER,null),s}}texture(e,t,r,i,a,s){let o=this.gl,l=o.getParameter(o.MAX_TEXTURE_SIZE);if(!(Number.isInteger(e)&&Number.isInteger(t)&&e>0&&t>0&&e<=l&&t<=l))throw new k(`Texture ${e}\xD7${t} exceeds GPU dimension limit ${l}.`);let u=o.createTexture();if(!u)throw new k("GPU texture creation failed.");this.textures.add(u);try{o.bindTexture(o.TEXTURE_2D,u),o.pixelStorei(o.UNPACK_ALIGNMENT,1),o.texImage2D(o.TEXTURE_2D,0,r,e,t,0,i,a,s);for(let[c,f]of[[o.TEXTURE_MIN_FILTER,o.NEAREST],[o.TEXTURE_MAG_FILTER,o.NEAREST],[o.TEXTURE_WRAP_S,o.CLAMP_TO_EDGE],[o.TEXTURE_WRAP_T,o.CLAMP_TO_EDGE]])o.texParameteri(o.TEXTURE_2D,c,f);return this.checkAllocation(`Texture ${e}\xD7${t}`),this.recordTexture(u,e,t,r),u}catch(c){throw this.deleteTexture(u),c}}target(e,t,r,i){let a=this.gl,s=r===a.R16F?a.HALF_FLOAT:r===a.RGBA8?a.UNSIGNED_BYTE:r===a.RGB10_A2?a.UNSIGNED_INT_2_10_10_10_REV:a.FLOAT,o=this.texture(e,t,r,i,s,null),l=a.createFramebuffer();if(!l)throw this.deleteTexture(o),new k("GPU framebuffer creation failed.");this.framebuffers.add(l),a.bindFramebuffer(a.FRAMEBUFFER,l),a.framebufferTexture2D(a.FRAMEBUFFER,a.COLOR_ATTACHMENT0,a.TEXTURE_2D,o,0);let u=a.checkFramebufferStatus(a.FRAMEBUFFER);if(u!==a.FRAMEBUFFER_COMPLETE)throw this.deleteTarget({tex:o,fbo:l,internal:r,format:i,w:e,h:t}),new k(g("\u6D6E\u70B9\u6E32\u67D3\u76EE\u6807\u4E0D\u53EF\u7528\uFF080x{0}\uFF09\u3002",[u.toString(16)]));return{tex:o,fbo:l,internal:r,format:i,w:e,h:t}}deleteTexture(e){this.gl.deleteTexture(e),this.textures.delete(e),this.textureBytes.delete(e)}deleteBuffer(e){this.gl.deleteBuffer(e),this.buffers.delete(e),this.bufferBytes.delete(e)}deleteRenderbuffer(e){this.gl.deleteRenderbuffer(e),this.renderbuffers.delete(e),this.renderbufferBytes.delete(e)}deleteTarget(e){this.gl.deleteFramebuffer(e.fbo),this.framebuffers.delete(e.fbo),this.deleteTexture(e.tex)}bindTarget(e){this.gl.bindFramebuffer(this.gl.FRAMEBUFFER,e.fbo),this.gl.viewport(0,0,e.w,e.h)}bindTex(e,t,r,i){let a=this.gl;a.activeTexture(a.TEXTURE0+e),a.bindTexture(a.TEXTURE_2D,t),a.uniform1i(r.loc.get(i),e)}program(e,t,r){let i=this.gl,a=i.createProgram();this.programs.add(a);let s=[];try{for(let[u,c]of[[i.VERTEX_SHADER,t],[i.FRAGMENT_SHADER,Fe(e,r)]]){let f=i.createShader(u);if(s.push(f),i.shaderSource(f,c),i.compileShader(f),!i.getShaderParameter(f,i.COMPILE_STATUS))throw new F(g("\u7740\u8272\u5668\u7F16\u8BD1\u5931\u8D25\uFF08{0} / {1}\uFF09\uFF1A{2}",[e,u===i.VERTEX_SHADER?g("\u9876\u70B9"):g("\u7247\u5143"),i.getShaderInfoLog(f)||g("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]));i.attachShader(a,f)}if(i.linkProgram(a),!i.getProgramParameter(a,i.LINK_STATUS))throw new F(g("\u7740\u8272\u5668\u94FE\u63A5\u5931\u8D25\uFF08{0}\uFF09\uFF1A{1}",[e,i.getProgramInfoLog(a)||g("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]))}catch(u){throw i.deleteProgram(a),this.programs.delete(a),u}finally{for(let u of s)i.isProgram(a)&&i.getAttachedShaders(a)?.includes(u)&&i.detachShader(a,u),i.deleteShader(u)}let o=new Map;return{prog:a,loc:{get:u=>(o.has(u)||o.set(u,i.getUniformLocation(a,u)),o.get(u))}}}programDeferred(e,t,r){let i=this.gl,a=i.createProgram(),s=!!i.getExtension("KHR_parallel_shader_compile");this.programs.add(a);let o=[[i.VERTEX_SHADER,t],[i.FRAGMENT_SHADER,Fe(e,r)]].map(([h,w])=>{let _=i.createShader(h);return i.shaderSource(_,w),i.compileShader(_),i.attachShader(a,_),{s:_,type:h}});i.linkProgram(a);let l=!1,u=null,c=()=>{if(!(l||u||!o.length))try{for(let{s:h,type:w}of o)if(!i.getShaderParameter(h,i.COMPILE_STATUS))throw new F(g("\u7740\u8272\u5668\u7F16\u8BD1\u5931\u8D25\uFF08{0} / {1}\uFF09\uFF1A{2}",[e,w===i.VERTEX_SHADER?g("\u9876\u70B9"):g("\u7247\u5143"),i.getShaderInfoLog(h)||g("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]));if(!i.getProgramParameter(a,i.LINK_STATUS))throw new F(g("\u7740\u8272\u5668\u94FE\u63A5\u5931\u8D25\uFF08{0}\uFF09\uFF1A{1}",[e,i.getProgramInfoLog(a)||g("\u9A71\u52A8\u672A\u8FD4\u56DE\u8BE6\u60C5")]));l=!0}catch(h){u=h instanceof Error?h:new Error(String(h))}finally{for(let{s:h}of o)i.getAttachedShaders(a)?.includes(h)&&i.detachShader(a,h),i.deleteShader(h);o.length=0,this.deferred.delete(a)}},f=()=>!s||i.getProgramParameter(a,37297)===!0;this.deferred.set(a,{shaders:o,ready:f});let p=()=>{l||u||!this.deferred.has(a)||i.isContextLost()||(f()?c():setTimeout(p,50))};setTimeout(p,50);let x=new Map;return{prog:a,loc:{get:h=>(x.has(h)||x.set(h,i.getUniformLocation(a,h)),x.get(h))},done:()=>l||u!==null||f(),check:()=>{if(c(),u)throw u}}}deleteAll(){let e=this.gl;e.bindFramebuffer(e.FRAMEBUFFER,null),e.bindVertexArray(null),e.bindBuffer(e.ARRAY_BUFFER,null),e.useProgram(null);for(let t of this.framebuffers)e.deleteFramebuffer(t);for(let t of this.textures)e.deleteTexture(t);for(let t of this.buffers)e.deleteBuffer(t);for(let t of this.vaos)e.deleteVertexArray(t);for(let t of this.renderbuffers)e.deleteRenderbuffer(t);for(let[t,r]of this.deferred){this.programs.delete(t);let i=()=>{if(!e.isContextLost()){if(!r.ready()){setTimeout(i,50);return}for(let{s:a}of r.shaders)e.detachShader(t,a),e.deleteShader(a);r.shaders.length=0,e.deleteProgram(t)}};i()}this.deferred.clear();for(let t of this.programs)e.deleteProgram(t);this.framebuffers.clear(),this.textures.clear(),this.buffers.clear(),this.vaos.clear(),this.programs.clear(),this.renderbuffers.clear(),this.textureBytes.clear(),this.bufferBytes.clear(),this.renderbufferBytes.clear()}};var X={25:10,50:11,85:12};var Pe={25:7,50:5,85:3};var ze=2048,L=65536,P=65535,De={2:14.78,3:7.68,4:3.99};var Q=(n,e)=>`${n}/${e}`;var G=Math.PI/180,ee=(n,e)=>n[0]*e[0]+n[1]*e[1]+n[2]*e[2],wt=(n,e)=>[n[1]*e[2]-n[2]*e[1],n[2]*e[0]-n[0]*e[2],n[0]*e[1]-n[1]*e[0]];function Le(n){if(!Number.isFinite(n))throw new RangeError("RA must be finite");let e=n%360;return e<0?e+360:e===0?0:e}function St(n,e){if(!Number.isFinite(e)||Math.abs(e)>90)throw new RangeError("Latitude must be in [-90, 90] degrees");let t=Le(n)*G,r=e*G;if(Math.abs(e)===90)return[0,0,Math.sign(e)];let i=Math.cos(r);return[i*Math.cos(t),i*Math.sin(t),Math.sin(r)]}var te=(n,e)=>St(n,e);function Ge(n){let e=te(...n),t=Le(n[0])*G,r=n[1]*G;return{axis:e,west:[Math.sin(t),-Math.cos(t),0],north:[-Math.sin(r)*Math.cos(t),-Math.sin(r)*Math.sin(t),Math.cos(r)]}}var Tt=te(192.85948,27.12825),re=te(192.85948+90,0),Ie=wt(Tt,re),K=32.93192*G,Ce=(n,e,t,r)=>[t*n[0]+r*e[0],t*n[1]+r*e[1],t*n[2]+r*e[2]],Er=Ce(re,Ie,Math.cos(K),-Math.sin(K)),Mr=Ce(re,Ie,Math.sin(K),Math.cos(K));var Pr=2*Math.PI;function Be(n){let e=0;for(let t=0;n;t++,n>>>=2)e|=(n&1)<<t;return e}var kt=[2,2,2,2,3,3,3,3,4,4,4,4],At=[1,3,5,7,0,2,4,6,1,3,5,7];function qe(n,e){let t=2**n,r=Math.floor(e/(t*t)),i=e%(t*t),a=Be(i),s=Be(i>>>1),o=kt[r]*t-a-s-1,l=o<t?o:o>3*t?4*t-o:t,u=o<t?1-l*l/(3*t*t):o>3*t?-1+l*l/(3*t*t):(2*t-o)*2/(3*t),c=o>=t&&o<=3*t?o-t&1:0,p=((At[r]*l+a-s+1+c)/2-(c+1)*.5)*Math.PI/(2*l),x=Math.sqrt(1-u*u);return[x*Math.cos(p),x*Math.sin(p),u]}var We=Math.PI/180;function Rt(n,e,t,r,i,a){let s=Math.tan(Math.atan((9+t)/a)+r*We);return{centre:[n[0],n[1]],frame:Ge(n),step:e,order:X[e],supportMm:t,size:i,planeStep:2*s/(i-1),refPixel:[(i-1)/2,(i-1)/2],halfTan:s}}function Xe(n,e,t,r=ze,i=e){return Rt(n,e,t,Pe[e],r,i)}var Et=n=>{let e=Math.hypot(n[0],n[1],n[2]);return[n[0]/e,n[1]/e,n[2]/e]},Ue=new Map,Mt=n=>{let e=Ue.get(n);return e||(e=Array.from({length:12*4**n},(t,r)=>qe(n,r)),Ue.set(n,e)),e};function ie(n,e){let t=Math.sin(De[e]*We),{axis:r,west:i,north:a}=n.frame,s=n.halfTan,o=[[-1,0],[1,0],[0,-1],[0,1]].map(([u,c])=>Et([0,1,2].map(f=>s*r[f]+u*i[f]+c*a[f]))),l=[];return Mt(e).forEach((u,c)=>{ee(u,r)>-t&&o.every(f=>ee(u,f)>=-t)&&l.push(c)}),l}var Ke=n=>new Map([...n].map(e=>[e.order*4096+e.tile,e])),Ft=[2,2,2,2,3,3,3,3,4,4,4,4],Pt=[1,3,5,7,0,2,4,6,1,3,5,7],Ne=2*Math.PI,Oe=n=>(n=(n|n<<8)&16711935,n=(n|n<<4)&252645135,n=(n|n<<2)&858993459,(n|n<<1)&1431655765);function ne(n,e,t){let r=1<<n,i,a,s=0;if(e<r)a=e,i=(t-1)/a|0;else if(e<=3*r){a=r,s=e-r&1;let u=e-r,c=t-(u+1>>1)+r-1>>n,f=t-(2*r+1-u>>1)+r-1>>n;i=f===c?f|4:f<c?f:c+8}else a=4*r-e,i=((t-1)/a|0)+8;let o=e-Ft[i]*r+1,l=2*t-Pt[i]*a-s-1;return l>=2*r&&(l-=8*r),i*r*r+Oe(l-o>>1)+2*Oe(-l-o>>1)}var R=0,C=0;function je(n,e){if(n<e){let t=n*n/(3*e*e);R=1-t,C=Math.sqrt(t*(2-t))}else if(n>3*e){let t=4*e-n,r=t*t/(3*e*e);R=r-1,C=Math.sqrt(r*(2-r))}else R=(2*e-n)*2/(3*e),C=Math.sqrt(1-R*R)}var Ve=n=>{let e=n*n;return n*(1+e*(1/6+e*.075))},I=new Float64Array(4),A=new Float64Array(4);function zt(n,e,t,r,i,a){let s=1<<n,o=e*e+t*t,l=Math.sqrt(o),u=r>2/3?s*Math.sqrt(3*o/(1+r)):r<-2/3?4*s-s*Math.sqrt(3*o/(1-r)):2*s-1.5*s*r,c=Math.floor(u),f=Math.max(1,Math.min(4*s-1,c)),p=Math.max(1,Math.min(4*s-1,c+1));je(f,s);let x=R,h=C;je(p,s);let w=R,_=C,ae=f===p?0:Math.max(0,Math.min(1,Ve(l*x-r*h)/Ve(_*x-w*h))),Je=Math.atan2(t,e);I.fill(0),A.fill(0);for(let v=0;v<2;v++){let E=v===0?f:p,Ze=v===0?1-ae:ae,oe=Math.min(E,s,4*s-E),Qe=E>=s&&E<=3*s?E-s&1:0,Y=4*oe,se=Math.PI/(2*oe),et=(1-(Qe+1)*.5)*se,z=(Je-et)%Ne;z<0&&(z+=Ne),z/=se;let M=Math.floor(z),le=z-M;M>=Y&&(M-=Y);for(let B=0;B<2;B++){let tt=B===0?M:M+1===Y?0:M+1,ue=Ze*(B===0?1-le:le),ce=ne(n,E,tt+1),q=i.get(n*4096+(ce>>>16));if(!q)return!1;let rt=4*(ce&65535),it=q.codes;for(let y=0;y<4;y++){let fe=it[rt+y];if(fe===P)continue;let nt=q.soft[y]*Math.sinh(fe/65534*q.amax[y]);I[y]=I[y]+ue*nt,A[y]=A[y]+ue}}}a[0]=A[0]>0?I[0]/A[0]:-1;for(let v=1;v<4;v++)a[v]=A[v]>0?I[v]/A[v]:0;return!0}function Dt(n,e,t,r,i,a=new Float32Array(4)){let{axis:s,west:o,north:l}=n.frame,u=s[0]+r*o[0]+i*l[0],c=s[1]+r*o[1]+i*l[1],f=s[2]+r*o[2]+i*l[2],p=Math.hypot(u,c,f);u/=p,c/=p,f/=p;for(let x of e)if(zt(x,u,c,f,t,a))return a;return a[0]=-1,a[1]=a[2]=a[3]=0,a}var He=(n,e,t,r,i,a=new Float32Array(4))=>Dt(n,e,t,(r-n.refPixel[0])*n.planeStep,(i-n.refPixel[1])*n.planeStep,a);var Br={key:"blank",order:-1,tile:-1,codes:new Uint16Array(4*L).fill(P),soft:new Float64Array(4),amax:new Float64Array(4)};var H={version:40,ua:240,gpu:160,message:400},Lt="shader-error";function Gt(n,e,t,r,i=new Date().toISOString()){return{version:n.slice(0,H.version),at:i.slice(0,40),ua:e.slice(0,H.ua),gpu:t.slice(0,H.gpu),message:r.slice(0,H.message)}}function Ye(n){return[`\u5149\u5B50\u96E8 ${n.version}`,`\u65F6\u95F4\uFF1A${n.at}`,`\u6D4F\u89C8\u5668\uFF1A${n.ua}`,`\u663E\u5361\uFF1A${n.gpu||"\u672A\u77E5"}`,`\u7740\u8272\u5668\u62A5\u9519\uFF1A${n.message}`].join(`
+`)}function It(n){let e=n.replace(/-/g,"+").replace(/_/g,"/").padEnd(Math.ceil(n.length/4)*4,"="),t=Uint8Array.from(atob(e),r=>r.charCodeAt(0));return new TextDecoder().decode(t)}function $e(n){let e=new RegExp(`^#${Lt}=([A-Za-z0-9_-]+)$`).exec(n);if(!e)return null;try{let t=JSON.parse(It(e[1])),r=i=>typeof t[i]=="string"?t[i]:"";return r("message")?Gt(r("version"),r("ua"),r("gpu"),r("message"),r("at")||void 0):null}catch{return null}}return ft(Ct);})();
 </script>
 <script>
 'use strict';

@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
+  <meta name="phosphor-build" content="cc5c26b21e6de3af">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#04070a" />
@@ -53,11 +54,12 @@
     /* Screen-reader only (no focus stops): the canvas app has no text of its own for search engines and screen readers. */
     .page-intro { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   </style>
-  <script type="module" crossorigin src="./assets/app-Dm9r8Cpo.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/boot-BE8sWhQJ.js">
-  <link rel="modulepreload" crossorigin href="./assets/vendor--Do4GtAm.js">
-  <link rel="modulepreload" crossorigin href="./assets/hosting-D7wLjmyz.js">
-  <link rel="stylesheet" crossorigin href="./assets/boot-C4JdKalC.css">
+  <script type="module" crossorigin src="./assets/app-DRnzXB9j.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/boot-UkV7hPos.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-DHsdD_W9.js">
+  <link rel="modulepreload" crossorigin href="./assets/hosting-Dh4FOwi4.js">
+  <link rel="modulepreload" crossorigin href="./assets/error-log-BZxxJKGB.js">
+  <link rel="stylesheet" crossorigin href="./assets/boot-BZaycnAD.css">
 </head>
 <body>
   <!-- Some in-app browsers use the first large image of the page as the share thumbnail. -->
@@ -75,5 +77,11 @@
       <p class="icp"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">琼ICP备2026014550号-1</a></p>
     </div>
   </div>
+  <!-- Shown by main.tsx when the app's script fails to load (plain DOM: React and the dictionaries may be missing). -->
+  <template id="boot-failed">
+    <p data-lang="zh">光子雨没有载入成功，可能是网络中断或站点刚刚更新。请检查网络后重新加载。</p>
+    <p data-lang="en">Phosphor Sky could not start: the connection dropped or the site was just updated. Please check your connection and reload.</p>
+    <p><button type="button" style="font:inherit;color:#d7e6e3;background:#12201f;border:1px solid #3a5350;border-radius:8px;padding:8px 18px;cursor:pointer"><span data-lang="zh">重新加载</span><span data-lang="en">Reload</span></button></p>
+  </template>
 </body>
 </html>

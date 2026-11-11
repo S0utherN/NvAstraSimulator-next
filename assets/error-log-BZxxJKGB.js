@@ -1,0 +1,9 @@
+import{k as m,t as p,g as f,s as y}from"./app-DRnzXB9j.js";const h="1.4.0",v="eyepiece-d183",E="atlas17-v1",d={version:h,modelVersion:v,dataFamily:E},g="1.4.0-pre.1",L=12,$=1200,s=new Set;function c(){try{const e=f("errorLog"),r=e?JSON.parse(e):[];return Array.isArray(r)?r:[]}catch{return[]}}function a(e,r,t=""){const n=r instanceof Error?r:null,i=(n?`${n.name}: ${n.message}`:String(r)).slice(0,400),u=((n?.stack??"")+(t?`
+--
+${t}`:"")).slice(0,$),l={at:new Date().toISOString(),kind:e,message:i,stack:u,version:`${g} · ${d.modelVersion}`,page:location.pathname};try{const o=c();o.at(-1)?.message===i?o[o.length-1]=l:o.push(l),y("errorLog",JSON.stringify(o.slice(-L)))}catch{}for(const o of s)o()}function A(){try{m("errorLog")}catch{}for(const e of s)e()}function S(e){return s.add(e),()=>{s.delete(e)}}function b(e=c()){return[p(`光子雨 {0}（{1}）
+浏览器：{2}
+窗口：{3}×{4} @{5}`,[g,d.modelVersion,navigator.userAgent,innerWidth,innerHeight,(devicePixelRatio||1).toFixed(2)]),...e.map(t=>`[${t.at}] ${t.kind} ${t.page}
+${t.message}
+${t.stack}`)].join(`
+
+`)}function P(){addEventListener("error",e=>{(e.error||e.message)&&a("error",e.error??e.message)}),addEventListener("unhandledrejection",e=>a("promise",e.reason))}async function O(e){try{return await navigator.clipboard.writeText(e),!0}catch{}try{const r=document.createElement("textarea");r.value=e,r.setAttribute("readonly",""),r.style.cssText="position:fixed;left:-9999px;top:0;opacity:0",document.body.appendChild(r),r.select();const t=document.execCommand("copy");return r.remove(),t}catch{return!1}}const k=Object.freeze(Object.defineProperty({__proto__:null,clearErrorLog:A,copyText:O,errorReport:b,installErrorLog:P,onErrorLog:S,readErrorLog:c,recordError:a},Symbol.toStringTag,{value:"Module"}));export{g as A,c as a,A as b,O as c,k as d,b as e,P as i,S as o,d as p,a as r};
