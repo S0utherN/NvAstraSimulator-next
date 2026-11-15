@@ -926,3 +926,23 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+--------------------------------------------------------------------------------
+Meteor and aurora model tables (data/transients/)
+
+Numerical values and formulae taken from the published literature listed in
+docs/research/2026-11-meteors.md and docs/research/2026-11-aurora.md (among them
+Borovicka et al. 1999 and 2014; Koschack & Rendtel 1990; Sarma & Jones 1985;
+Jacchia, Verniani & Briggs 1967; Vallance Jones 1974 as reproduced in the AFGL
+Handbook of Geophysics and the Space Environment, 1985; Mangina et al. 2011,
+ApJS 196, 13; Shemansky & Vallance Jones 1968). Atomic line data: NIST Atomic
+Spectra Database (public domain). The aurora's N2 band intensities below 800 nm
+are scaled to the shape of the TREx spectrograph data of Gillies et al. 2019
+(Zenodo 10.5281/zenodo.3552801, CC BY 4.0; Geophys. Res. Lett. 46, 7207,
+doi:10.1029/2019GL083272): four window factors derived from it are included.
+Meteor Na/Mg ratios by speed derived from the meteor table of Vojacek V.,
+Borovicka J., Koten P., Spurny P., Stork R. 2015, A&A 580, A67, retrieved from
+VizieR (CDS, Strasbourg; catalogue J/A+A/580/A67). This research has made use
+of the VizieR catalogue access tool, CDS, Strasbourg, France.
+Persistent-train statistics from Cordonnier L. E. et al. 2024,
+arXiv:2407.18344.
