@@ -3414,10 +3414,10 @@
     },
     "offline-index.json": {
       "bundle": "app",
-      "path": "data/offline-index.75deb4f833d11bdb.json.gz",
-      "bytes": 311026,
-      "sha256": "83a15adafd3c92df6052b9dfb7589b52f202b48ecb6edbd827c4ab50c3f66672",
-      "originalSha256": "75deb4f833d11bdbb80d7f2e0a80f446511318a45a5abe8caa5f1d0a7b3b28d0"
+      "path": "data/offline-index.37b9d68b2539eec8.json.gz",
+      "bytes": 311028,
+      "sha256": "e5656417820b21d18b5baa2f8da41a5bb29cd80640fa443bdea69a42f44d5c0d",
+      "originalSha256": "37b9d68b2539eec82e4645a3b6f3050e9fd12f067e2d6b29e974e62e1244bf82"
     },
     "simulator-versions.json": {
       "bundle": "app",
@@ -18345,10 +18345,10 @@
     },
     "sky/galaxies-v1/manifest.json": {
       "bundle": "app",
-      "path": "data/sky/galaxies-v1/manifest.4893996293420c6f.json.gz",
-      "bytes": 4790,
-      "sha256": "e076e05ec83e054b2f72c0da472e3bd8fa79d325c669851cadce1e59c84aeb55",
-      "originalSha256": "4893996293420c6fa16d50e11cc84bf13a7b29914cf474877883996bc3b3bdab"
+      "path": "data/sky/galaxies-v1/manifest.188e57ef78db375a.json.gz",
+      "bytes": 4792,
+      "sha256": "1151e288119dec316d933e6c1d8000d670862b233b2382fe659bd9db27c1ccd2",
+      "originalSha256": "188e57ef78db375ae8629d61dca3049b5760c764ceab1997da873a39c1b00e39"
     },
     "sky/galaxies-v1/o10/tile-00008.bin": {
       "bundle": "app",
