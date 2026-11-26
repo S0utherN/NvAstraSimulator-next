@@ -1,0 +1,1 @@
+import{bt as u}from"./boot-B0X95tcg.js";function s(t){const n=u(),e=o=>t.lut[4*((2+o)*t.nodes)];return{channels:[t.lut[0],t.lut[1],t.lut[2],t.lut[3]],sky:t.lut[4*t.nodes],star:o=>{const a=Math.log(Math.min(n[n.length-1],Math.max(n[0],o))/n[0])/Math.log(n[1]/n[0]),r=Math.min(n.length-2,Math.floor(a)),l=a-r;return e(r)*(1-l)+e(r+1)*l}}}export{s as r};
